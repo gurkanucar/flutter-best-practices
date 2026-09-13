@@ -39,6 +39,10 @@
 		<string>Unlock the app with Face ID.</string>
 		<key>NSCameraUsageDescription</key>
 		<string>Take a photo to compress and preview it.</string>
+		<key>NSMicrophoneUsageDescription</key>
+		<string>Record your voice to convert it to text.</string>
+		<key>NSSpeechRecognitionUsageDescription</key>
+		<string>Convert your speech to text.</string>
 		<key>NSPhotoLibraryUsageDescription</key>
 		<string>Pick a photo to compress and preview it.</string>
 		<key>LSRequiresIPhoneOS</key>

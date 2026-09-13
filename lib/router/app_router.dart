@@ -10,6 +10,16 @@ import '../onboarding/onboarding_page.dart';
 import '../otp/otp_page.dart';
 import '../tilt/tilt_page.dart';
 import '../tour/feature_tour_page.dart';
+import '../chat/chat_demo_page.dart';
+import '../documents/document_scanner_page.dart';
+import '../ids/unique_ids_page.dart';
+import '../media/image_crop_page.dart';
+import '../qr/qr_code_page.dart';
+import '../security/screen_protector_page.dart';
+import '../speech/speech_to_text_page.dart';
+import '../speech/text_to_speech_page.dart';
+import '../stories/stories_page.dart';
+import '../stories/story_viewer_page.dart';
 import '../auth/login_page.dart';
 import '../checkout/checkout_page.dart';
 import '../checkout/order_complete_page.dart';
@@ -148,6 +158,20 @@ GoRouter createAppRouter(AuthController auth, {String initialLocation = Routes.h
       GoRoute(path: Routes.onboarding, builder: (context, state) => const OnboardingPage()),
       GoRoute(path: Routes.tour, builder: (context, state) => const FeatureTourPage()),
       GoRoute(path: Routes.tilt, builder: (context, state) => const TiltPage()),
+      GoRoute(path: Routes.textToSpeech, builder: (context, state) => const TextToSpeechPage()),
+      GoRoute(path: Routes.speechToText, builder: (context, state) => const SpeechToTextPage()),
+      GoRoute(path: Routes.screenProtector, builder: (context, state) => const ScreenProtectorPage()),
+      GoRoute(path: Routes.qrCode, builder: (context, state) => const QrCodePage()),
+      GoRoute(path: Routes.chat, builder: (context, state) => const ChatDemoPage()),
+      GoRoute(path: Routes.stories, builder: (context, state) => const StoriesPage()),
+      GoRoute(
+        path: Routes.storyViewer,
+        // Unknown ids fall back to the first group (e.g. an old deep link).
+        builder: (context, state) => StoryViewerPage(group: StoryGroup.fromName(state.pathParameters['groupId'])),
+      ),
+      GoRoute(path: Routes.imageCrop, builder: (context, state) => const ImageCropPage()),
+      GoRoute(path: Routes.documentScanner, builder: (context, state) => const DocumentScannerPage()),
+      GoRoute(path: Routes.uniqueIds, builder: (context, state) => const UniqueIdsPage()),
     ],
   );
 }

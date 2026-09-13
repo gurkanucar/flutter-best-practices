@@ -542,6 +542,7 @@ jobs:
 ## Troubleshooting
 | Problem | Fix |
 |---|---|
+| Windows: `flutter_tts/windows/CMakeLists.txt … nuget.exe not found. Please install it.` | `winget install Microsoft.NuGet`, then open a new terminal ([033](033-add-flutter-tts.md)) |
 | `No supported devices found with name or id matching 'android'` | `-d` takes a device id/name from `flutter devices` |
 | `Lost connection to device.` | App window closed / app killed. Immediately on start → check the log above for an exception |
 | Android phone not listed | USB debugging off, prompt not accepted, charge-only cable — check `adb devices` |

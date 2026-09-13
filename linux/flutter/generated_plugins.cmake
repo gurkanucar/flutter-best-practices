@@ -4,8 +4,10 @@
 
 list(APPEND FLUTTER_PLUGIN_LIST
   file_selector_linux
+  flutter_doc_scanner
   flutter_secure_storage_linux
   flutter_timezone
+  flutter_udid
   url_launcher_linux
 )
 

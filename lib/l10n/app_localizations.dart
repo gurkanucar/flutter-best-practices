@@ -1633,6 +1633,690 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Parallax layers move with the tilt'**
   String get tiltCardSubtitle;
+
+  /// flutter_tts demo title
+  ///
+  /// In en, this message translates to:
+  /// **'Text to speech (flutter_tts)'**
+  String get ttsTitle;
+
+  /// TTS unsupported platform
+  ///
+  /// In en, this message translates to:
+  /// **'Text to speech isn\'t available on this platform.'**
+  String get ttsUnsupported;
+
+  /// Default text to speak
+  ///
+  /// In en, this message translates to:
+  /// **'Hello! This text is read aloud in the language you choose.'**
+  String get ttsSampleText;
+
+  /// Text field label
+  ///
+  /// In en, this message translates to:
+  /// **'Text'**
+  String get ttsText;
+
+  /// Language dropdown label
+  ///
+  /// In en, this message translates to:
+  /// **'Speech language'**
+  String get ttsLanguage;
+
+  /// Voice dropdown label
+  ///
+  /// In en, this message translates to:
+  /// **'Voice'**
+  String get ttsVoice;
+
+  /// Use the language's default voice
+  ///
+  /// In en, this message translates to:
+  /// **'Default voice'**
+  String get ttsDefaultVoice;
+
+  /// Speech rate slider
+  ///
+  /// In en, this message translates to:
+  /// **'Speed'**
+  String get ttsRate;
+
+  /// Pitch slider
+  ///
+  /// In en, this message translates to:
+  /// **'Pitch'**
+  String get ttsPitch;
+
+  /// Volume slider
+  ///
+  /// In en, this message translates to:
+  /// **'Volume'**
+  String get ttsVolume;
+
+  /// Start speaking
+  ///
+  /// In en, this message translates to:
+  /// **'Speak'**
+  String get ttsSpeak;
+
+  /// Pause speaking
+  ///
+  /// In en, this message translates to:
+  /// **'Pause'**
+  String get ttsPause;
+
+  /// Stop speaking
+  ///
+  /// In en, this message translates to:
+  /// **'Stop'**
+  String get ttsStop;
+
+  /// Empty language list
+  ///
+  /// In en, this message translates to:
+  /// **'No speech languages found. Install a text-to-speech engine or voice data.'**
+  String get ttsNoLanguages;
+
+  /// setLanguage failed
+  ///
+  /// In en, this message translates to:
+  /// **'{language} isn\'t supported by the speech engine.'**
+  String ttsLanguageUnavailable(String language);
+
+  /// Android voice data missing
+  ///
+  /// In en, this message translates to:
+  /// **'Voice data for {language} isn\'t downloaded. Install it in the system text-to-speech settings.'**
+  String ttsLanguageNotInstalled(String language);
+
+  /// TTS error
+  ///
+  /// In en, this message translates to:
+  /// **'Speech error: {details}'**
+  String ttsError(String details);
+
+  /// speech_to_text demo title
+  ///
+  /// In en, this message translates to:
+  /// **'Speech to text (speech_to_text)'**
+  String get sttTitle;
+
+  /// STT unsupported platform
+  ///
+  /// In en, this message translates to:
+  /// **'Speech recognition isn\'t available on this platform.'**
+  String get sttUnsupported;
+
+  /// Windows beta warning
+  ///
+  /// In en, this message translates to:
+  /// **'Windows support is in beta: English only and not ready for production.'**
+  String get sttWindowsBeta;
+
+  /// Mic permission denied
+  ///
+  /// In en, this message translates to:
+  /// **'Microphone permission is denied. Allow it in the app settings.'**
+  String get sttPermissionDenied;
+
+  /// Recognizer unavailable
+  ///
+  /// In en, this message translates to:
+  /// **'Speech recognition isn\'t available on this device.'**
+  String get sttUnavailable;
+
+  /// Open app settings button
+  ///
+  /// In en, this message translates to:
+  /// **'Open app settings'**
+  String get sttOpenSettings;
+
+  /// Empty locale list
+  ///
+  /// In en, this message translates to:
+  /// **'The recognizer didn\'t report languages; the device language is used.'**
+  String get sttNoLocales;
+
+  /// Locale dropdown label
+  ///
+  /// In en, this message translates to:
+  /// **'Recognition language'**
+  String get sttLanguage;
+
+  /// Mic button tooltip
+  ///
+  /// In en, this message translates to:
+  /// **'Start listening'**
+  String get sttStart;
+
+  /// Stop button tooltip
+  ///
+  /// In en, this message translates to:
+  /// **'Stop listening'**
+  String get sttStop;
+
+  /// Listening state
+  ///
+  /// In en, this message translates to:
+  /// **'Listening…'**
+  String get sttListening;
+
+  /// Idle hint
+  ///
+  /// In en, this message translates to:
+  /// **'Tap the microphone and speak'**
+  String get sttTapToSpeak;
+
+  /// Empty result placeholder
+  ///
+  /// In en, this message translates to:
+  /// **'Recognized text appears here'**
+  String get sttEmpty;
+
+  /// Final result label
+  ///
+  /// In en, this message translates to:
+  /// **'Final'**
+  String get sttFinal;
+
+  /// Partial result label
+  ///
+  /// In en, this message translates to:
+  /// **'Partial'**
+  String get sttPartial;
+
+  /// Recognition confidence
+  ///
+  /// In en, this message translates to:
+  /// **'Confidence {percent}%'**
+  String sttConfidence(int percent);
+
+  /// error_no_match
+  ///
+  /// In en, this message translates to:
+  /// **'Nothing was recognized. Try again.'**
+  String get sttNoMatch;
+
+  /// screen_protector demo title
+  ///
+  /// In en, this message translates to:
+  /// **'Screenshot protection (screen_protector)'**
+  String get screenProtectorTitle;
+
+  /// Unsupported platform
+  ///
+  /// In en, this message translates to:
+  /// **'screen_protector supports Android and iOS only.'**
+  String get screenProtectorUnsupported;
+
+  /// Demo card title
+  ///
+  /// In en, this message translates to:
+  /// **'Sensitive data'**
+  String get screenProtectorCardTitle;
+
+  /// Protection switch
+  ///
+  /// In en, this message translates to:
+  /// **'Block screenshots and screen recording'**
+  String get screenProtectorBlock;
+
+  /// Android behavior
+  ///
+  /// In en, this message translates to:
+  /// **'Screenshots and recordings turn black and the app is hidden in recent apps.'**
+  String get screenProtectorBlockAndroid;
+
+  /// iOS behavior
+  ///
+  /// In en, this message translates to:
+  /// **'Screenshots and recordings show a blank screen.'**
+  String get screenProtectorBlockIos;
+
+  /// iOS blur switch
+  ///
+  /// In en, this message translates to:
+  /// **'Blur in the app switcher'**
+  String get screenProtectorBlur;
+
+  /// Screenshot counter
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =0{No screenshots detected} =1{1 screenshot detected} other{{count} screenshots detected}}'**
+  String screenProtectorScreenshots(int count);
+
+  /// Recording active
+  ///
+  /// In en, this message translates to:
+  /// **'The screen is being recorded or mirrored'**
+  String get screenProtectorRecording;
+
+  /// Recording inactive
+  ///
+  /// In en, this message translates to:
+  /// **'The screen isn\'t being recorded'**
+  String get screenProtectorNotRecording;
+
+  /// qr_flutter demo title
+  ///
+  /// In en, this message translates to:
+  /// **'QR code (qr_flutter)'**
+  String get qrTitle;
+
+  /// QR data field label
+  ///
+  /// In en, this message translates to:
+  /// **'Content'**
+  String get qrData;
+
+  /// Data length
+  ///
+  /// In en, this message translates to:
+  /// **'{count} characters'**
+  String qrCharacters(int count);
+
+  /// QR validation error
+  ///
+  /// In en, this message translates to:
+  /// **'Too much data for a QR code'**
+  String get qrTooLong;
+
+  /// QR size info
+  ///
+  /// In en, this message translates to:
+  /// **'Version {version} · {modules}×{modules} modules'**
+  String qrInfo(int version, int modules);
+
+  /// Error correction level label
+  ///
+  /// In en, this message translates to:
+  /// **'Error correction'**
+  String get qrErrorCorrection;
+
+  /// Rounded style switch
+  ///
+  /// In en, this message translates to:
+  /// **'Rounded modules'**
+  String get qrRounded;
+
+  /// Embedded image switch
+  ///
+  /// In en, this message translates to:
+  /// **'Logo in the middle'**
+  String get qrLogo;
+
+  /// Embedded image hint
+  ///
+  /// In en, this message translates to:
+  /// **'Uses error correction H so the code stays readable'**
+  String get qrLogoHint;
+
+  /// Export button
+  ///
+  /// In en, this message translates to:
+  /// **'Export as PNG'**
+  String get qrExport;
+
+  /// Export result
+  ///
+  /// In en, this message translates to:
+  /// **'PNG created ({kb} KB)'**
+  String qrExported(int kb);
+
+  /// flutter_chat_ui demo title
+  ///
+  /// In en, this message translates to:
+  /// **'Chat (flutter_chat_ui)'**
+  String get chatTitle;
+
+  /// First bot message
+  ///
+  /// In en, this message translates to:
+  /// **'Hi! Send a message and I\'ll reply.'**
+  String get chatWelcome;
+
+  /// Bot reply
+  ///
+  /// In en, this message translates to:
+  /// **'You said: {text}'**
+  String chatEcho(String text);
+
+  /// Composer hint
+  ///
+  /// In en, this message translates to:
+  /// **'Type a message'**
+  String get chatHint;
+
+  /// Typing indicator label
+  ///
+  /// In en, this message translates to:
+  /// **'Bot is typing…'**
+  String get chatTyping;
+
+  /// Empty chat
+  ///
+  /// In en, this message translates to:
+  /// **'No messages yet'**
+  String get chatEmpty;
+
+  /// story_view demo title
+  ///
+  /// In en, this message translates to:
+  /// **'Stories (story_view)'**
+  String get storiesTitle;
+
+  /// Stories usage hint
+  ///
+  /// In en, this message translates to:
+  /// **'Tap a story. Tap right/left to skip, hold to pause, swipe down to close.'**
+  String get storiesHint;
+
+  /// Story group name
+  ///
+  /// In en, this message translates to:
+  /// **'Welcome'**
+  String get storyGroupWelcome;
+
+  /// Story group name
+  ///
+  /// In en, this message translates to:
+  /// **'Photos'**
+  String get storyGroupPhotos;
+
+  /// Text story
+  ///
+  /// In en, this message translates to:
+  /// **'Welcome to stories!'**
+  String get storyWelcome;
+
+  /// Text story
+  ///
+  /// In en, this message translates to:
+  /// **'Tap to go forward, hold to pause, swipe down to close.'**
+  String get storyHowTo;
+
+  /// Asset story caption
+  ///
+  /// In en, this message translates to:
+  /// **'Images can also come from assets or memory'**
+  String get storyAssetCaption;
+
+  /// Photo caption
+  ///
+  /// In en, this message translates to:
+  /// **'Network images are cached'**
+  String get storyCaptionMountains;
+
+  /// Photo caption
+  ///
+  /// In en, this message translates to:
+  /// **'The story waits until the image is loaded'**
+  String get storyCaptionCity;
+
+  /// Video caption
+  ///
+  /// In en, this message translates to:
+  /// **'Video story (Android, iOS, macOS)'**
+  String get storyCaptionVideo;
+
+  /// image_cropper demo title
+  ///
+  /// In en, this message translates to:
+  /// **'Crop image (image_cropper)'**
+  String get cropTitle;
+
+  /// Unsupported platform
+  ///
+  /// In en, this message translates to:
+  /// **'image_cropper supports Android, iOS and web only.'**
+  String get cropUnsupported;
+
+  /// Circle crop switch
+  ///
+  /// In en, this message translates to:
+  /// **'Circle crop (profile photo)'**
+  String get cropCircle;
+
+  /// Circle crop hint
+  ///
+  /// In en, this message translates to:
+  /// **'Locks a 1:1 ratio with a round overlay'**
+  String get cropCircleHint;
+
+  /// Gallery button
+  ///
+  /// In en, this message translates to:
+  /// **'Pick from gallery'**
+  String get cropPickGallery;
+
+  /// Camera button
+  ///
+  /// In en, this message translates to:
+  /// **'Take a photo'**
+  String get cropPickCamera;
+
+  /// No result yet
+  ///
+  /// In en, this message translates to:
+  /// **'Pick an image to crop it.'**
+  String get cropEmpty;
+
+  /// Web cropper tooltip
+  ///
+  /// In en, this message translates to:
+  /// **'Rotate left'**
+  String get cropRotateLeft;
+
+  /// Web cropper tooltip
+  ///
+  /// In en, this message translates to:
+  /// **'Rotate right'**
+  String get cropRotateRight;
+
+  /// Web cropper button
+  ///
+  /// In en, this message translates to:
+  /// **'Crop'**
+  String get cropApply;
+
+  /// Result size
+  ///
+  /// In en, this message translates to:
+  /// **'Cropped: {kb} KB'**
+  String cropResultSize(int kb);
+
+  /// Result and original size
+  ///
+  /// In en, this message translates to:
+  /// **'Cropped: {kb} KB (original {originalKb} KB)'**
+  String cropResultSizes(int kb, int originalKb);
+
+  /// flutter_doc_scanner demo title
+  ///
+  /// In en, this message translates to:
+  /// **'Document scanner (flutter_doc_scanner)'**
+  String get docScanTitle;
+
+  /// Unsupported platform
+  ///
+  /// In en, this message translates to:
+  /// **'The document scanner supports Android and iOS only.'**
+  String get docScanUnsupported;
+
+  /// Scanner intro
+  ///
+  /// In en, this message translates to:
+  /// **'The system scanner detects edges, fixes perspective and lets you add pages.'**
+  String get docScanIntro;
+
+  /// Android page limit
+  ///
+  /// In en, this message translates to:
+  /// **'Page limit: {count}'**
+  String docScanPageLimit(int count);
+
+  /// Scan images button
+  ///
+  /// In en, this message translates to:
+  /// **'Scan as images'**
+  String get docScanImages;
+
+  /// Scan PDF button
+  ///
+  /// In en, this message translates to:
+  /// **'Scan as PDF'**
+  String get docScanPdf;
+
+  /// Scanned page count
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =1{1 page} other{{count} pages}}'**
+  String docScanPages(int count);
+
+  /// PDF without page count
+  ///
+  /// In en, this message translates to:
+  /// **'PDF created'**
+  String get docScanPdfReady;
+
+  /// IDs demo title
+  ///
+  /// In en, this message translates to:
+  /// **'Unique IDs (uuid, nanoid, flutter_udid)'**
+  String get idsTitle;
+
+  /// Copy tooltip
+  ///
+  /// In en, this message translates to:
+  /// **'Copy'**
+  String get idsCopy;
+
+  /// Copied snackbar
+  ///
+  /// In en, this message translates to:
+  /// **'Copied'**
+  String get idsCopied;
+
+  /// Generate button
+  ///
+  /// In en, this message translates to:
+  /// **'Generate'**
+  String get idsGenerate;
+
+  /// UUID section
+  ///
+  /// In en, this message translates to:
+  /// **'UUID'**
+  String get idsUuidTitle;
+
+  /// UUID section text
+  ///
+  /// In en, this message translates to:
+  /// **'Globally unique without a central counter — clients can create ids offline.'**
+  String get idsUuidBody;
+
+  /// v4 explanation
+  ///
+  /// In en, this message translates to:
+  /// **'v4: fully random. Good default when order doesn\'t matter.'**
+  String get idsV4Hint;
+
+  /// v7 explanation
+  ///
+  /// In en, this message translates to:
+  /// **'v7: starts with a timestamp, so ids sort by creation time. Best for database keys.'**
+  String get idsV7Hint;
+
+  /// v5 section
+  ///
+  /// In en, this message translates to:
+  /// **'Name-based UUID (v5)'**
+  String get idsV5Title;
+
+  /// v5 section text
+  ///
+  /// In en, this message translates to:
+  /// **'The same name always gives the same UUID.'**
+  String get idsV5Body;
+
+  /// v5 input label
+  ///
+  /// In en, this message translates to:
+  /// **'Name (URL namespace)'**
+  String get idsV5Name;
+
+  /// Validation section
+  ///
+  /// In en, this message translates to:
+  /// **'Validate a UUID'**
+  String get idsValidateTitle;
+
+  /// Validation input label
+  ///
+  /// In en, this message translates to:
+  /// **'UUID'**
+  String get idsValidateLabel;
+
+  /// Validation hint
+  ///
+  /// In en, this message translates to:
+  /// **'Paste a UUID to check it'**
+  String get idsValidateHint;
+
+  /// Invalid UUID
+  ///
+  /// In en, this message translates to:
+  /// **'Not a valid UUID'**
+  String get idsInvalid;
+
+  /// Valid UUID
+  ///
+  /// In en, this message translates to:
+  /// **'Valid UUID (version {version})'**
+  String idsValid(int version);
+
+  /// nanoid section
+  ///
+  /// In en, this message translates to:
+  /// **'Nano ID'**
+  String get idsNanoTitle;
+
+  /// nanoid section text
+  ///
+  /// In en, this message translates to:
+  /// **'Shorter, URL-safe random ids with a custom alphabet and length.'**
+  String get idsNanoBody;
+
+  /// Default nanoid label
+  ///
+  /// In en, this message translates to:
+  /// **'Default (21 characters)'**
+  String get idsNanoDefault;
+
+  /// Custom alphabet label
+  ///
+  /// In en, this message translates to:
+  /// **'Order code (no 0/O/1/I)'**
+  String get idsOrderCode;
+
+  /// Device id section
+  ///
+  /// In en, this message translates to:
+  /// **'Device ID (flutter_udid)'**
+  String get idsDeviceTitle;
+
+  /// Device id section text
+  ///
+  /// In en, this message translates to:
+  /// **'Hashed platform id. Survives reinstalls (usually), changes on factory reset. Treat it as personal data.'**
+  String get idsDeviceBody;
+
+  /// Device id on web
+  ///
+  /// In en, this message translates to:
+  /// **'Not available on web.'**
+  String get idsDeviceUnsupported;
 }
 
 class _AppLocalizationsDelegate

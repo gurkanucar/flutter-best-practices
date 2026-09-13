@@ -6,10 +6,14 @@ list(APPEND FLUTTER_PLUGIN_LIST
   connectivity_plus
   file_selector_windows
   flutter_blue_plus_winrt
+  flutter_doc_scanner
   flutter_secure_storage_windows
   flutter_timezone
+  flutter_tts
+  flutter_udid
   local_auth_windows
   permission_handler_windows
+  speech_to_text_windows
   url_launcher_windows
 )
 

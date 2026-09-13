@@ -40,6 +40,17 @@ abstract final class Routes {
   static const onboarding = '/demos/onboarding';
   static const tour = '/demos/tour';
   static const tilt = '/demos/tilt';
+  static const textToSpeech = '/demos/text-to-speech';
+  static const speechToText = '/demos/speech-to-text';
+  static const screenProtector = '/demos/screen-protector';
+  static const qrCode = '/demos/qr-code';
+  static const chat = '/demos/chat';
+  static const stories = '/demos/stories';
+  static const storyViewer = '/demos/stories/:groupId';
+  static String storyViewerFor(String groupId) => '$stories/$groupId';
+  static const imageCrop = '/demos/image-crop';
+  static const documentScanner = '/demos/document-scanner';
+  static const uniqueIds = '/demos/unique-ids';
 
   /// Locations that require a signed-in user (prefix match).
   static const protectedPrefixes = [profile, checkout];

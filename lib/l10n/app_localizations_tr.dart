@@ -888,4 +888,405 @@ class AppLocalizationsTr extends AppLocalizations {
   @override
   String get tiltCardSubtitle =>
       'Paralaks katmanlar eğimle birlikte hareket eder';
+
+  @override
+  String get ttsTitle => 'Metin okuma (flutter_tts)';
+
+  @override
+  String get ttsUnsupported => 'Bu platformda metin okuma kullanılamıyor.';
+
+  @override
+  String get ttsSampleText => 'Merhaba! Bu metin seçtiğin dilde sesli okunur.';
+
+  @override
+  String get ttsText => 'Metin';
+
+  @override
+  String get ttsLanguage => 'Konuşma dili';
+
+  @override
+  String get ttsVoice => 'Ses';
+
+  @override
+  String get ttsDefaultVoice => 'Varsayılan ses';
+
+  @override
+  String get ttsRate => 'Hız';
+
+  @override
+  String get ttsPitch => 'Ses tonu';
+
+  @override
+  String get ttsVolume => 'Ses düzeyi';
+
+  @override
+  String get ttsSpeak => 'Oku';
+
+  @override
+  String get ttsPause => 'Duraklat';
+
+  @override
+  String get ttsStop => 'Durdur';
+
+  @override
+  String get ttsNoLanguages =>
+      'Konuşma dili bulunamadı. Bir metin okuma motoru veya ses verisi yükle.';
+
+  @override
+  String ttsLanguageUnavailable(String language) {
+    return '$language konuşma motoru tarafından desteklenmiyor.';
+  }
+
+  @override
+  String ttsLanguageNotInstalled(String language) {
+    return '$language ses verisi indirilmemiş. Sistemin metin okuma ayarlarından yükle.';
+  }
+
+  @override
+  String ttsError(String details) {
+    return 'Okuma hatası: $details';
+  }
+
+  @override
+  String get sttTitle => 'Sesi yazıya çevirme (speech_to_text)';
+
+  @override
+  String get sttUnsupported => 'Bu platformda konuşma tanıma kullanılamıyor.';
+
+  @override
+  String get sttWindowsBeta =>
+      'Windows desteği beta: yalnızca İngilizce ve canlı kullanıma hazır değil.';
+
+  @override
+  String get sttPermissionDenied =>
+      'Mikrofon izni reddedildi. Uygulama ayarlarından izin ver.';
+
+  @override
+  String get sttUnavailable => 'Bu cihazda konuşma tanıma kullanılamıyor.';
+
+  @override
+  String get sttOpenSettings => 'Uygulama ayarlarını aç';
+
+  @override
+  String get sttNoLocales =>
+      'Tanıyıcı dil listesi vermedi; cihaz dili kullanılıyor.';
+
+  @override
+  String get sttLanguage => 'Tanıma dili';
+
+  @override
+  String get sttStart => 'Dinlemeye başla';
+
+  @override
+  String get sttStop => 'Dinlemeyi durdur';
+
+  @override
+  String get sttListening => 'Dinleniyor…';
+
+  @override
+  String get sttTapToSpeak => 'Mikrofona dokun ve konuş';
+
+  @override
+  String get sttEmpty => 'Tanınan metin burada görünür';
+
+  @override
+  String get sttFinal => 'Kesin';
+
+  @override
+  String get sttPartial => 'Ara sonuç';
+
+  @override
+  String sttConfidence(int percent) {
+    return 'Güven %$percent';
+  }
+
+  @override
+  String get sttNoMatch => 'Hiçbir şey tanınmadı. Tekrar dene.';
+
+  @override
+  String get screenProtectorTitle =>
+      'Ekran görüntüsü koruması (screen_protector)';
+
+  @override
+  String get screenProtectorUnsupported =>
+      'screen_protector yalnızca Android ve iOS\'u destekler.';
+
+  @override
+  String get screenProtectorCardTitle => 'Hassas veri';
+
+  @override
+  String get screenProtectorBlock => 'Ekran görüntüsünü ve kaydını engelle';
+
+  @override
+  String get screenProtectorBlockAndroid =>
+      'Ekran görüntüleri ve kayıtlar siyah çıkar, uygulama son uygulamalarda gizlenir.';
+
+  @override
+  String get screenProtectorBlockIos =>
+      'Ekran görüntüleri ve kayıtlar boş ekran gösterir.';
+
+  @override
+  String get screenProtectorBlur => 'Uygulama değiştiricide bulanıklaştır';
+
+  @override
+  String screenProtectorScreenshots(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count ekran görüntüsü algılandı',
+      zero: 'Ekran görüntüsü algılanmadı',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get screenProtectorRecording => 'Ekran kaydediliyor veya yansıtılıyor';
+
+  @override
+  String get screenProtectorNotRecording => 'Ekran kaydedilmiyor';
+
+  @override
+  String get qrTitle => 'QR kod (qr_flutter)';
+
+  @override
+  String get qrData => 'İçerik';
+
+  @override
+  String qrCharacters(int count) {
+    return '$count karakter';
+  }
+
+  @override
+  String get qrTooLong => 'QR kod için veri çok uzun';
+
+  @override
+  String qrInfo(int version, int modules) {
+    return 'Sürüm $version · $modules×$modules modül';
+  }
+
+  @override
+  String get qrErrorCorrection => 'Hata düzeltme';
+
+  @override
+  String get qrRounded => 'Yuvarlak modüller';
+
+  @override
+  String get qrLogo => 'Ortada logo';
+
+  @override
+  String get qrLogoHint =>
+      'Kod okunabilir kalsın diye H hata düzeltme seviyesi kullanılır';
+
+  @override
+  String get qrExport => 'PNG olarak dışa aktar';
+
+  @override
+  String qrExported(int kb) {
+    return 'PNG oluşturuldu ($kb KB)';
+  }
+
+  @override
+  String get chatTitle => 'Sohbet (flutter_chat_ui)';
+
+  @override
+  String get chatWelcome => 'Merhaba! Bir mesaj gönder, cevap vereyim.';
+
+  @override
+  String chatEcho(String text) {
+    return 'Şunu yazdın: $text';
+  }
+
+  @override
+  String get chatHint => 'Mesaj yaz';
+
+  @override
+  String get chatTyping => 'Bot yazıyor…';
+
+  @override
+  String get chatEmpty => 'Henüz mesaj yok';
+
+  @override
+  String get storiesTitle => 'Hikayeler (story_view)';
+
+  @override
+  String get storiesHint =>
+      'Bir hikayeye dokun. Sağa/sola dokunarak geç, basılı tutarak duraklat, aşağı kaydırarak kapat.';
+
+  @override
+  String get storyGroupWelcome => 'Hoş geldin';
+
+  @override
+  String get storyGroupPhotos => 'Fotoğraflar';
+
+  @override
+  String get storyWelcome => 'Hikayelere hoş geldin!';
+
+  @override
+  String get storyHowTo =>
+      'İlerlemek için dokun, duraklatmak için basılı tut, kapatmak için aşağı kaydır.';
+
+  @override
+  String get storyAssetCaption =>
+      'Görseller asset\'lerden veya bellekten de gelebilir';
+
+  @override
+  String get storyCaptionMountains => 'Ağdan gelen görseller önbelleğe alınır';
+
+  @override
+  String get storyCaptionCity => 'Hikaye, görsel yüklenene kadar bekler';
+
+  @override
+  String get storyCaptionVideo => 'Video hikaye (Android, iOS, macOS)';
+
+  @override
+  String get cropTitle => 'Görsel kırpma (image_cropper)';
+
+  @override
+  String get cropUnsupported =>
+      'image_cropper yalnızca Android, iOS ve web\'i destekler.';
+
+  @override
+  String get cropCircle => 'Daire kırpma (profil fotoğrafı)';
+
+  @override
+  String get cropCircleHint => '1:1 oranı ve yuvarlak çerçeveyi sabitler';
+
+  @override
+  String get cropPickGallery => 'Galeriden seç';
+
+  @override
+  String get cropPickCamera => 'Fotoğraf çek';
+
+  @override
+  String get cropEmpty => 'Kırpmak için bir görsel seç.';
+
+  @override
+  String get cropRotateLeft => 'Sola döndür';
+
+  @override
+  String get cropRotateRight => 'Sağa döndür';
+
+  @override
+  String get cropApply => 'Kırp';
+
+  @override
+  String cropResultSize(int kb) {
+    return 'Kırpılan: $kb KB';
+  }
+
+  @override
+  String cropResultSizes(int kb, int originalKb) {
+    return 'Kırpılan: $kb KB (orijinal $originalKb KB)';
+  }
+
+  @override
+  String get docScanTitle => 'Belge tarayıcı (flutter_doc_scanner)';
+
+  @override
+  String get docScanUnsupported =>
+      'Belge tarayıcı yalnızca Android ve iOS\'u destekler.';
+
+  @override
+  String get docScanIntro =>
+      'Sistem tarayıcısı kenarları bulur, perspektifi düzeltir ve sayfa eklemeye izin verir.';
+
+  @override
+  String docScanPageLimit(int count) {
+    return 'Sayfa sınırı: $count';
+  }
+
+  @override
+  String get docScanImages => 'Görsel olarak tara';
+
+  @override
+  String get docScanPdf => 'PDF olarak tara';
+
+  @override
+  String docScanPages(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count sayfa',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get docScanPdfReady => 'PDF oluşturuldu';
+
+  @override
+  String get idsTitle => 'Benzersiz kimlikler (uuid, nanoid, flutter_udid)';
+
+  @override
+  String get idsCopy => 'Kopyala';
+
+  @override
+  String get idsCopied => 'Kopyalandı';
+
+  @override
+  String get idsGenerate => 'Üret';
+
+  @override
+  String get idsUuidTitle => 'UUID';
+
+  @override
+  String get idsUuidBody =>
+      'Merkezi bir sayaç olmadan dünya çapında benzersiz — istemci çevrimdışıyken de kimlik üretebilir.';
+
+  @override
+  String get idsV4Hint =>
+      'v4: tamamen rastgele. Sıra önemli değilse iyi bir varsayılan.';
+
+  @override
+  String get idsV7Hint =>
+      'v7: zaman damgasıyla başlar, oluşturulma sırasına göre sıralanır. Veritabanı anahtarları için en iyisi.';
+
+  @override
+  String get idsV5Title => 'İsim tabanlı UUID (v5)';
+
+  @override
+  String get idsV5Body => 'Aynı isim her zaman aynı UUID\'yi verir.';
+
+  @override
+  String get idsV5Name => 'İsim (URL namespace)';
+
+  @override
+  String get idsValidateTitle => 'UUID doğrula';
+
+  @override
+  String get idsValidateLabel => 'UUID';
+
+  @override
+  String get idsValidateHint => 'Kontrol etmek için bir UUID yapıştır';
+
+  @override
+  String get idsInvalid => 'Geçerli bir UUID değil';
+
+  @override
+  String idsValid(int version) {
+    return 'Geçerli UUID (sürüm $version)';
+  }
+
+  @override
+  String get idsNanoTitle => 'Nano ID';
+
+  @override
+  String get idsNanoBody =>
+      'Özel alfabe ve uzunlukla daha kısa, URL\'de güvenli rastgele kimlikler.';
+
+  @override
+  String get idsNanoDefault => 'Varsayılan (21 karakter)';
+
+  @override
+  String get idsOrderCode => 'Sipariş kodu (0/O/1/I yok)';
+
+  @override
+  String get idsDeviceTitle => 'Cihaz kimliği (flutter_udid)';
+
+  @override
+  String get idsDeviceBody =>
+      'Hash\'lenmiş platform kimliği. Genelde yeniden yüklemede korunur, fabrika ayarlarına dönünce değişir. Kişisel veri gibi davran.';
+
+  @override
+  String get idsDeviceUnsupported => 'Web\'de kullanılamaz.';
 }

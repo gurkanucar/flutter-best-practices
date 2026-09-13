@@ -17,5 +17,11 @@
 	<!-- flutter_blue_plus: Bluetooth LE -->
 	<key>com.apple.security.device.bluetooth</key>
 	<true/>
+	<!-- Outgoing connections: network images (story_view, chat), HTTP calls -->
+	<key>com.apple.security.network.client</key>
+	<true/>
+	<!-- speech_to_text: microphone -->
+	<key>com.apple.security.device.audio-input</key>
+	<true/>
 </dict>
 </plist>

@@ -888,4 +888,409 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get tiltCardSubtitle => 'Parallax layers move with the tilt';
+
+  @override
+  String get ttsTitle => 'Text to speech (flutter_tts)';
+
+  @override
+  String get ttsUnsupported =>
+      'Text to speech isn\'t available on this platform.';
+
+  @override
+  String get ttsSampleText =>
+      'Hello! This text is read aloud in the language you choose.';
+
+  @override
+  String get ttsText => 'Text';
+
+  @override
+  String get ttsLanguage => 'Speech language';
+
+  @override
+  String get ttsVoice => 'Voice';
+
+  @override
+  String get ttsDefaultVoice => 'Default voice';
+
+  @override
+  String get ttsRate => 'Speed';
+
+  @override
+  String get ttsPitch => 'Pitch';
+
+  @override
+  String get ttsVolume => 'Volume';
+
+  @override
+  String get ttsSpeak => 'Speak';
+
+  @override
+  String get ttsPause => 'Pause';
+
+  @override
+  String get ttsStop => 'Stop';
+
+  @override
+  String get ttsNoLanguages =>
+      'No speech languages found. Install a text-to-speech engine or voice data.';
+
+  @override
+  String ttsLanguageUnavailable(String language) {
+    return '$language isn\'t supported by the speech engine.';
+  }
+
+  @override
+  String ttsLanguageNotInstalled(String language) {
+    return 'Voice data for $language isn\'t downloaded. Install it in the system text-to-speech settings.';
+  }
+
+  @override
+  String ttsError(String details) {
+    return 'Speech error: $details';
+  }
+
+  @override
+  String get sttTitle => 'Speech to text (speech_to_text)';
+
+  @override
+  String get sttUnsupported =>
+      'Speech recognition isn\'t available on this platform.';
+
+  @override
+  String get sttWindowsBeta =>
+      'Windows support is in beta: English only and not ready for production.';
+
+  @override
+  String get sttPermissionDenied =>
+      'Microphone permission is denied. Allow it in the app settings.';
+
+  @override
+  String get sttUnavailable =>
+      'Speech recognition isn\'t available on this device.';
+
+  @override
+  String get sttOpenSettings => 'Open app settings';
+
+  @override
+  String get sttNoLocales =>
+      'The recognizer didn\'t report languages; the device language is used.';
+
+  @override
+  String get sttLanguage => 'Recognition language';
+
+  @override
+  String get sttStart => 'Start listening';
+
+  @override
+  String get sttStop => 'Stop listening';
+
+  @override
+  String get sttListening => 'Listening…';
+
+  @override
+  String get sttTapToSpeak => 'Tap the microphone and speak';
+
+  @override
+  String get sttEmpty => 'Recognized text appears here';
+
+  @override
+  String get sttFinal => 'Final';
+
+  @override
+  String get sttPartial => 'Partial';
+
+  @override
+  String sttConfidence(int percent) {
+    return 'Confidence $percent%';
+  }
+
+  @override
+  String get sttNoMatch => 'Nothing was recognized. Try again.';
+
+  @override
+  String get screenProtectorTitle => 'Screenshot protection (screen_protector)';
+
+  @override
+  String get screenProtectorUnsupported =>
+      'screen_protector supports Android and iOS only.';
+
+  @override
+  String get screenProtectorCardTitle => 'Sensitive data';
+
+  @override
+  String get screenProtectorBlock => 'Block screenshots and screen recording';
+
+  @override
+  String get screenProtectorBlockAndroid =>
+      'Screenshots and recordings turn black and the app is hidden in recent apps.';
+
+  @override
+  String get screenProtectorBlockIos =>
+      'Screenshots and recordings show a blank screen.';
+
+  @override
+  String get screenProtectorBlur => 'Blur in the app switcher';
+
+  @override
+  String screenProtectorScreenshots(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count screenshots detected',
+      one: '1 screenshot detected',
+      zero: 'No screenshots detected',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get screenProtectorRecording =>
+      'The screen is being recorded or mirrored';
+
+  @override
+  String get screenProtectorNotRecording => 'The screen isn\'t being recorded';
+
+  @override
+  String get qrTitle => 'QR code (qr_flutter)';
+
+  @override
+  String get qrData => 'Content';
+
+  @override
+  String qrCharacters(int count) {
+    return '$count characters';
+  }
+
+  @override
+  String get qrTooLong => 'Too much data for a QR code';
+
+  @override
+  String qrInfo(int version, int modules) {
+    return 'Version $version · $modules×$modules modules';
+  }
+
+  @override
+  String get qrErrorCorrection => 'Error correction';
+
+  @override
+  String get qrRounded => 'Rounded modules';
+
+  @override
+  String get qrLogo => 'Logo in the middle';
+
+  @override
+  String get qrLogoHint => 'Uses error correction H so the code stays readable';
+
+  @override
+  String get qrExport => 'Export as PNG';
+
+  @override
+  String qrExported(int kb) {
+    return 'PNG created ($kb KB)';
+  }
+
+  @override
+  String get chatTitle => 'Chat (flutter_chat_ui)';
+
+  @override
+  String get chatWelcome => 'Hi! Send a message and I\'ll reply.';
+
+  @override
+  String chatEcho(String text) {
+    return 'You said: $text';
+  }
+
+  @override
+  String get chatHint => 'Type a message';
+
+  @override
+  String get chatTyping => 'Bot is typing…';
+
+  @override
+  String get chatEmpty => 'No messages yet';
+
+  @override
+  String get storiesTitle => 'Stories (story_view)';
+
+  @override
+  String get storiesHint =>
+      'Tap a story. Tap right/left to skip, hold to pause, swipe down to close.';
+
+  @override
+  String get storyGroupWelcome => 'Welcome';
+
+  @override
+  String get storyGroupPhotos => 'Photos';
+
+  @override
+  String get storyWelcome => 'Welcome to stories!';
+
+  @override
+  String get storyHowTo =>
+      'Tap to go forward, hold to pause, swipe down to close.';
+
+  @override
+  String get storyAssetCaption => 'Images can also come from assets or memory';
+
+  @override
+  String get storyCaptionMountains => 'Network images are cached';
+
+  @override
+  String get storyCaptionCity => 'The story waits until the image is loaded';
+
+  @override
+  String get storyCaptionVideo => 'Video story (Android, iOS, macOS)';
+
+  @override
+  String get cropTitle => 'Crop image (image_cropper)';
+
+  @override
+  String get cropUnsupported =>
+      'image_cropper supports Android, iOS and web only.';
+
+  @override
+  String get cropCircle => 'Circle crop (profile photo)';
+
+  @override
+  String get cropCircleHint => 'Locks a 1:1 ratio with a round overlay';
+
+  @override
+  String get cropPickGallery => 'Pick from gallery';
+
+  @override
+  String get cropPickCamera => 'Take a photo';
+
+  @override
+  String get cropEmpty => 'Pick an image to crop it.';
+
+  @override
+  String get cropRotateLeft => 'Rotate left';
+
+  @override
+  String get cropRotateRight => 'Rotate right';
+
+  @override
+  String get cropApply => 'Crop';
+
+  @override
+  String cropResultSize(int kb) {
+    return 'Cropped: $kb KB';
+  }
+
+  @override
+  String cropResultSizes(int kb, int originalKb) {
+    return 'Cropped: $kb KB (original $originalKb KB)';
+  }
+
+  @override
+  String get docScanTitle => 'Document scanner (flutter_doc_scanner)';
+
+  @override
+  String get docScanUnsupported =>
+      'The document scanner supports Android and iOS only.';
+
+  @override
+  String get docScanIntro =>
+      'The system scanner detects edges, fixes perspective and lets you add pages.';
+
+  @override
+  String docScanPageLimit(int count) {
+    return 'Page limit: $count';
+  }
+
+  @override
+  String get docScanImages => 'Scan as images';
+
+  @override
+  String get docScanPdf => 'Scan as PDF';
+
+  @override
+  String docScanPages(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count pages',
+      one: '1 page',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get docScanPdfReady => 'PDF created';
+
+  @override
+  String get idsTitle => 'Unique IDs (uuid, nanoid, flutter_udid)';
+
+  @override
+  String get idsCopy => 'Copy';
+
+  @override
+  String get idsCopied => 'Copied';
+
+  @override
+  String get idsGenerate => 'Generate';
+
+  @override
+  String get idsUuidTitle => 'UUID';
+
+  @override
+  String get idsUuidBody =>
+      'Globally unique without a central counter — clients can create ids offline.';
+
+  @override
+  String get idsV4Hint =>
+      'v4: fully random. Good default when order doesn\'t matter.';
+
+  @override
+  String get idsV7Hint =>
+      'v7: starts with a timestamp, so ids sort by creation time. Best for database keys.';
+
+  @override
+  String get idsV5Title => 'Name-based UUID (v5)';
+
+  @override
+  String get idsV5Body => 'The same name always gives the same UUID.';
+
+  @override
+  String get idsV5Name => 'Name (URL namespace)';
+
+  @override
+  String get idsValidateTitle => 'Validate a UUID';
+
+  @override
+  String get idsValidateLabel => 'UUID';
+
+  @override
+  String get idsValidateHint => 'Paste a UUID to check it';
+
+  @override
+  String get idsInvalid => 'Not a valid UUID';
+
+  @override
+  String idsValid(int version) {
+    return 'Valid UUID (version $version)';
+  }
+
+  @override
+  String get idsNanoTitle => 'Nano ID';
+
+  @override
+  String get idsNanoBody =>
+      'Shorter, URL-safe random ids with a custom alphabet and length.';
+
+  @override
+  String get idsNanoDefault => 'Default (21 characters)';
+
+  @override
+  String get idsOrderCode => 'Order code (no 0/O/1/I)';
+
+  @override
+  String get idsDeviceTitle => 'Device ID (flutter_udid)';
+
+  @override
+  String get idsDeviceBody =>
+      'Hashed platform id. Survives reinstalls (usually), changes on factory reset. Treat it as personal data.';
+
+  @override
+  String get idsDeviceUnsupported => 'Not available on web.';
 }
