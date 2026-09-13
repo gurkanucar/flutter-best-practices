@@ -20,6 +20,7 @@ void main() {
     expect(find.text('Notifications'), findsOneWidget);
     expect(find.text('Schedule in 5 seconds'), findsOneWidget);
     expect(find.text('Cancel all'), findsOneWidget);
+    expect(find.text('Set alarm at date & time'), findsOneWidget);
   });
 
   testWidgets('shows Turkish notification demo section', (tester) async {
@@ -30,5 +31,6 @@ void main() {
     expect(find.text('Bildirimler'), findsOneWidget);
     expect(find.text('5 saniye sonra planla'), findsOneWidget);
     expect(find.text('Tümünü iptal et'), findsOneWidget);
+    expect(find.text('Tarih ve saatte alarm kur'), findsOneWidget);
   });
 }

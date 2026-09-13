@@ -217,6 +217,48 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Last tapped notification: {payload}'**
   String lastTappedNotification(String payload);
+
+  /// Button that opens date and time pickers to schedule an alarm
+  ///
+  /// In en, this message translates to:
+  /// **'Set alarm at date & time'**
+  String get setAlarm;
+
+  /// Android notification channel name for alarms, shown in system app settings
+  ///
+  /// In en, this message translates to:
+  /// **'Alarms'**
+  String get alarmChannelName;
+
+  /// Title of the alarm notification
+  ///
+  /// In en, this message translates to:
+  /// **'Alarm'**
+  String get alarmTitle;
+
+  /// Body of the alarm notification
+  ///
+  /// In en, this message translates to:
+  /// **'Time\'s up!'**
+  String get alarmBody;
+
+  /// Snackbar after an exact alarm was scheduled
+  ///
+  /// In en, this message translates to:
+  /// **'Alarm set for {date} {time}'**
+  String alarmScheduled(DateTime date, DateTime time);
+
+  /// Snackbar when the picked alarm time has already passed
+  ///
+  /// In en, this message translates to:
+  /// **'Pick a time in the future'**
+  String get alarmTimeInPast;
+
+  /// Snackbar when Android exact alarms aren't allowed and the alarm was scheduled inexact
+  ///
+  /// In en, this message translates to:
+  /// **'Exact alarm permission not granted — the alarm may be delayed'**
+  String get alarmInexact;
 }
 
 class _AppLocalizationsDelegate

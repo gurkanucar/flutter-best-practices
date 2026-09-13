@@ -84,5 +84,32 @@
   "@lastTappedNotification": {
     "description": "Payload of the notification the user tapped",
     "placeholders": { "payload": { "type": "String", "example": "demo-now" } }
-  }
+  },
+
+  "setAlarm": "Tarih ve saatte alarm kur",
+  "@setAlarm": { "description": "Button that opens date and time pickers to schedule an alarm" },
+
+  "alarmChannelName": "Alarmlar",
+  "@alarmChannelName": { "description": "Android notification channel name for alarms, shown in system app settings" },
+
+  "alarmTitle": "Alarm",
+  "@alarmTitle": { "description": "Title of the alarm notification" },
+
+  "alarmBody": "Zaman doldu!",
+  "@alarmBody": { "description": "Body of the alarm notification" },
+
+  "alarmScheduled": "Alarm kuruldu: {date} {time}",
+  "@alarmScheduled": {
+    "description": "Snackbar after an exact alarm was scheduled",
+    "placeholders": {
+      "date": { "type": "DateTime", "format": "yMMMd" },
+      "time": { "type": "DateTime", "format": "jm" }
+    }
+  },
+
+  "alarmTimeInPast": "İleri bir zaman seç",
+  "@alarmTimeInPast": { "description": "Snackbar when the picked alarm time has already passed" },
+
+  "alarmInexact": "Tam zamanlı alarm izni verilmedi — alarm gecikebilir",
+  "@alarmInexact": { "description": "Snackbar when Android exact alarms aren't allowed and the alarm was scheduled inexact" }
 }

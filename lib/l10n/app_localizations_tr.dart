@@ -107,4 +107,33 @@ class AppLocalizationsTr extends AppLocalizations {
   String lastTappedNotification(String payload) {
     return 'Son dokunulan bildirim: $payload';
   }
+
+  @override
+  String get setAlarm => 'Tarih ve saatte alarm kur';
+
+  @override
+  String get alarmChannelName => 'Alarmlar';
+
+  @override
+  String get alarmTitle => 'Alarm';
+
+  @override
+  String get alarmBody => 'Zaman doldu!';
+
+  @override
+  String alarmScheduled(DateTime date, DateTime time) {
+    final intl.DateFormat dateDateFormat = intl.DateFormat.yMMMd(localeName);
+    final String dateString = dateDateFormat.format(date);
+    final intl.DateFormat timeDateFormat = intl.DateFormat.jm(localeName);
+    final String timeString = timeDateFormat.format(time);
+
+    return 'Alarm kuruldu: $dateString $timeString';
+  }
+
+  @override
+  String get alarmTimeInPast => 'İleri bir zaman seç';
+
+  @override
+  String get alarmInexact =>
+      'Tam zamanlı alarm izni verilmedi — alarm gecikebilir';
 }

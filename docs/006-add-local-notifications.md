@@ -13,6 +13,7 @@ Uses [`flutter_local_notifications`](https://pub.dev/packages/flutter_local_noti
 |---|---|---|---|---|---|---|
 | Show now | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ (after user-initiated permission) |
 | Schedule (`zonedSchedule`) | ✅ | ✅ (max 64 pending) | ✅ | ✅ | ❌ `UnimplementedError` | ❌ `UnsupportedError` |
+| Alarm at exact date & time | ✅ (needs exact alarm permission) | ✅ | ✅ | ✅ | ❌ | ❌ |
 | Repeat (`periodicallyShow`) | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ |
 | `cancel` / active notifications | ✅ | ✅ | ✅ | ⚠️ only MSIX-packaged apps | ✅ | ✅ |
 | Runtime permission | Android 13+ | ✅ | ✅ | – | – | ✅ (only from a click) |
@@ -272,6 +273,100 @@ await _plugin.zonedSchedule(
 );
 ```
 
+**Alarm at an exact date & time** (e.g. "ring on 20 Sep 2026 at 07:30"):
+
+Use a **separate channel** for alarms — Android locks a channel's sound/importance when it's first
+created, so reusing `general` can't make it louder later.
+```dart
+Future<bool> scheduleAlarm({
+  required DateTime at,          // local date & time picked by the user
+  required String title,
+  required String body,
+  required String channelName,
+  String? payload,
+}) async {
+  if (!at.isAfter(DateTime.now())) {
+    throw ArgumentError.value(at, 'at', 'must be in the future');
+  }
+
+  final android = _plugin.resolvePlatformSpecificImplementation<AndroidFlutterLocalNotificationsPlugin>();
+  final exact = android == null || (await android.canScheduleExactNotifications() ?? false);
+
+  await _plugin.zonedSchedule(
+    // same minute → same id → replaces the previous alarm for that minute
+    id: (at.millisecondsSinceEpoch ~/ Duration.millisecondsPerMinute) & 0x7FFFFFFF,
+    title: title,
+    body: body,
+    payload: payload,
+    scheduledDate: tz.TZDateTime.from(at, tz.local),   // same instant as `at`
+    notificationDetails: NotificationDetails(
+      android: AndroidNotificationDetails(
+        'alarm',
+        channelName,
+        importance: Importance.max,
+        priority: Priority.max,
+        category: AndroidNotificationCategory.alarm,
+        audioAttributesUsage: AudioAttributesUsage.alarm,   // alarm volume stream
+      ),
+    ),
+    androidScheduleMode: exact
+        ? AndroidScheduleMode.alarmClock                   // exact, even in Doze
+        : AndroidScheduleMode.inexactAllowWhileIdle,       // fallback, OS may delay
+  );
+  return exact;
+}
+```
+
+Ask for the exact alarm permission first (Android 12+; opens *Settings → Alarms & reminders*):
+```dart
+Future<bool> requestExactAlarmPermission() async {
+  final android = _plugin.resolvePlatformSpecificImplementation<AndroidFlutterLocalNotificationsPlugin>();
+  if (android == null) return true;
+  if (await android.canScheduleExactNotifications() ?? false) return true;
+
+  await android.requestExactAlarmsPermission();
+  return await android.canScheduleExactNotifications() ?? false;
+}
+```
+
+Pick date + time in the UI (`notification_demo_section.dart`):
+```dart
+final date = await showDatePicker(
+  context: context,
+  initialDate: now,
+  firstDate: DateUtils.dateOnly(now),
+  lastDate: now.add(const Duration(days: 365)),
+);
+if (date == null || !context.mounted) return;
+
+final time = await showTimePicker(context: context, initialTime: TimeOfDay.fromDateTime(now));
+if (time == null) return;
+
+final at = DateTime(date.year, date.month, date.day, time.hour, time.minute);
+await service.requestPermission();
+await service.requestExactAlarmPermission();
+final exact = await service.scheduleAlarm(at: at, title: ..., body: ..., channelName: ...);
+```
+
+| Android schedule mode | Exact? | Fires in Doze? | Permission |
+|---|---|---|---|
+| `alarmClock` | ✅ | ✅ (shows alarm icon in status bar) | `SCHEDULE_EXACT_ALARM` granted |
+| `exactAllowWhileIdle` | ✅ | ✅ | `SCHEDULE_EXACT_ALARM` granted |
+| `exact` | ✅ | ❌ | `SCHEDULE_EXACT_ALARM` granted |
+| `inexactAllowWhileIdle` | ❌ (can be minutes late) | ✅ | none |
+| `inexact` | ❌ | ❌ | none |
+
+- **Android 14+:** `SCHEDULE_EXACT_ALARM` is **off by default** for new installs. If the user revokes it,
+  Android **cancels all exact alarms** of the app — reschedule when the app starts.
+- The picked `DateTime` is local wall time; `TZDateTime.from(at, tz.local)` keeps the same instant,
+  so it's correct even if `tz.local` fell back to UTC.
+- Repeating alarm: pass `matchDateTimeComponents: DateTimeComponents.time` (every day at that time) or
+  `DateTimeComponents.dayOfWeekAndTime` (every week).
+- A notification is not a real alarm-clock screen. For a full-screen alarm over the lock screen add
+  `USE_FULL_SCREEN_INTENT`, `fullScreenIntent: true` and `showWhenLocked`/`turnScreenOn` on the activity
+  (see plugin README "Full-screen intent notifications"). Google Play only allows this for alarm/call apps.
+- iOS: max **64 pending** notifications; alarms follow the device's silent switch / Focus mode.
+
 ### 6. Initialize in `lib/main.dart`
 ```dart
 Future<void> main() async {
@@ -295,7 +390,8 @@ Future<void> main() async {
 Notification texts come from the ARB files (both `app_en.arb` and `app_tr.arb`, same structure — see
 [005-add-localization.md](005-add-localization.md)): `notifications`, `notificationChannelName`,
 `showNotification`, `scheduleNotification`, `cancelNotifications`, `notificationTitle`, `notificationBody`,
-`notificationScheduled`, `notificationPermissionDenied`, `schedulingNotSupported`, `lastTappedNotification`.
+`notificationScheduled`, `notificationPermissionDenied`, `schedulingNotSupported`, `lastTappedNotification`,
+`setAlarm`, `alarmChannelName`, `alarmTitle`, `alarmBody`, `alarmScheduled`, `alarmTimeInPast`, `alarmInexact`.
 
 The service takes already-localized strings (`title`, `body`, `channelName`) — it has no `BuildContext`.
 Scheduled notifications keep the language they were scheduled in.
@@ -305,6 +401,8 @@ Scheduled notifications keep the language they were scheduled in.
 Shown at the bottom of `HomePage`:
 - **Show notification** → requests permission → `show`
 - **Schedule in 5 seconds** → requests permission → `schedule` (disabled on web/Linux)
+- **Set alarm at date & time** → date picker → time picker → permission → exact alarm permission (Android)
+  → `scheduleAlarm` (disabled on web/Linux)
 - **Cancel all** → `cancelAll`
 - Displays the payload of the last tapped notification
 
@@ -337,7 +435,8 @@ flutter run -d <android> # Android 13+: permission dialog on first tap
 | Android build: `this and base files have different roots` (Kotlin incremental caches) | Pub cache and project are on different drives (e.g. `C:` vs `D:`) → add `kotlin.incremental=false` to `android/gradle.properties`, then `flutter clean` |
 | Notification not shown on Android, no error | Missing/invalid `ic_notification` drawable, or permission denied, or channel importance too low |
 | Works in debug, not in release (Android) | `keep.xml` missing (step 2d) |
-| Scheduled notification late on Android 14+ | Exact alarm permission not granted → inexact mode |
+| Scheduled notification / alarm late on Android 14+ | Exact alarm permission not granted → inexact mode. Settings → Apps → *app* → **Alarms & reminders** → allow, then set the alarm again |
+| Alarms disappeared after changing permission | Revoking "Alarms & reminders" cancels all exact alarms — reschedule on app start |
 | Scheduled notifications gone after reboot | `RECEIVE_BOOT_COMPLETED` + boot receiver missing |
 | Android build warning: `plugins that apply Kotlin Gradle Plugin (KGP): flutter_timezone` | Only a warning (plugin not yet migrated to Built-in Kotlin); build still succeeds. Upgrade `flutter_timezone` when a migrated version is released |
 | `ArgumentError` on `initialize` | Settings for the current platform not passed |

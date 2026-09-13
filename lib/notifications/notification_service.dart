@@ -12,6 +12,9 @@ class NotificationService {
 
   static const _channelId = 'general';
 
+  /// Separate channel: Android fixes sound/importance per channel once created.
+  static const _alarmChannelId = 'alarm';
+
   /// Windows toast identity. Generate your own GUID per app.
   static const _windowsAppName = 'Flutter Best Practices';
   static const _windowsAppUserModelId = 'FlutterBestPractices';
@@ -141,6 +144,60 @@ class NotificationService {
     );
   }
 
+  /// Android 12+: opens the "Alarms & reminders" settings screen if exact alarms
+  /// aren't allowed yet. Returns `true` if exact alarms can be scheduled
+  /// (always `true` on other platforms).
+  Future<bool> requestExactAlarmPermission() async {
+    final android = _plugin.resolvePlatformSpecificImplementation<
+        AndroidFlutterLocalNotificationsPlugin>();
+    if (android == null) return true;
+    if (await android.canScheduleExactNotifications() ?? false) return true;
+
+    await android.requestExactAlarmsPermission();
+    return await android.canScheduleExactNotifications() ?? false;
+  }
+
+  /// Shows an alarm-style notification at [at] (device local date & time).
+  ///
+  /// Returns `false` if Android exact alarms aren't allowed and the alarm was
+  /// scheduled inexact instead (the OS may delay it).
+  /// Throws [ArgumentError] if [at] isn't in the future and
+  /// [UnsupportedError] when ![supportsScheduling].
+  Future<bool> scheduleAlarm({
+    required DateTime at,
+    required String title,
+    required String body,
+    required String channelName,
+    String? payload,
+  }) async {
+    if (!supportsScheduling) {
+      throw UnsupportedError('Scheduled notifications are not supported here');
+    }
+    if (!at.isAfter(DateTime.now())) {
+      throw ArgumentError.value(at, 'at', 'must be in the future');
+    }
+
+    final android = _plugin.resolvePlatformSpecificImplementation<
+        AndroidFlutterLocalNotificationsPlugin>();
+    final exact =
+        android == null || (await android.canScheduleExactNotifications() ?? false);
+
+    await _plugin.zonedSchedule(
+      // One alarm per minute: setting the same minute again replaces it.
+      id: (at.millisecondsSinceEpoch ~/ Duration.millisecondsPerMinute) & 0x7FFFFFFF,
+      title: title,
+      body: body,
+      payload: payload,
+      // `from` keeps the same instant, so this is correct even if tz.local fell back to UTC.
+      scheduledDate: tz.TZDateTime.from(at, tz.local),
+      notificationDetails: _alarmDetails(channelName),
+      androidScheduleMode: exact
+          ? AndroidScheduleMode.alarmClock
+          : AndroidScheduleMode.inexactAllowWhileIdle,
+    );
+    return exact;
+  }
+
   /// On Windows without MSIX packaging this does nothing (OS limitation).
   Future<void> cancelAll() => _plugin.cancelAll();
 
@@ -175,6 +232,20 @@ class NotificationService {
         channelName,
         importance: Importance.high,
         priority: Priority.high,
+      ),
+    );
+  }
+
+  NotificationDetails _alarmDetails(String channelName) {
+    return NotificationDetails(
+      android: AndroidNotificationDetails(
+        _alarmChannelId,
+        channelName,
+        importance: Importance.max,
+        priority: Priority.max,
+        category: AndroidNotificationCategory.alarm,
+        // Plays on the alarm volume stream (not muted by notification volume).
+        audioAttributesUsage: AudioAttributesUsage.alarm,
       ),
     );
   }

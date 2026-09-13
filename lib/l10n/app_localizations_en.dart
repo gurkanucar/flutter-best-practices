@@ -107,4 +107,33 @@ class AppLocalizationsEn extends AppLocalizations {
   String lastTappedNotification(String payload) {
     return 'Last tapped notification: $payload';
   }
+
+  @override
+  String get setAlarm => 'Set alarm at date & time';
+
+  @override
+  String get alarmChannelName => 'Alarms';
+
+  @override
+  String get alarmTitle => 'Alarm';
+
+  @override
+  String get alarmBody => 'Time\'s up!';
+
+  @override
+  String alarmScheduled(DateTime date, DateTime time) {
+    final intl.DateFormat dateDateFormat = intl.DateFormat.yMMMd(localeName);
+    final String dateString = dateDateFormat.format(date);
+    final intl.DateFormat timeDateFormat = intl.DateFormat.jm(localeName);
+    final String timeString = timeDateFormat.format(time);
+
+    return 'Alarm set for $dateString $timeString';
+  }
+
+  @override
+  String get alarmTimeInPast => 'Pick a time in the future';
+
+  @override
+  String get alarmInexact =>
+      'Exact alarm permission not granted — the alarm may be delayed';
 }

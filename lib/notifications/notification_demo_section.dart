@@ -33,6 +33,11 @@ class NotificationDemoSection extends StatelessWidget {
               label: Text(l10n.scheduleNotification(_scheduleDelay.inSeconds)),
               onPressed: _service.supportsScheduling ? () => _schedule(context) : null,
             ),
+            FilledButton.tonalIcon(
+              icon: const Icon(Icons.alarm_add),
+              label: Text(l10n.setAlarm),
+              onPressed: _service.supportsScheduling ? () => _setAlarm(context) : null,
+            ),
             TextButton(
               onPressed: _service.cancelAll,
               child: Text(l10n.cancelNotifications),
@@ -90,6 +95,51 @@ class NotificationDemoSection extends StatelessWidget {
     );
     messenger.showSnackBar(
       SnackBar(content: Text(l10n.notificationScheduled(_scheduleDelay.inSeconds))),
+    );
+  }
+
+  /// Pick a date, then a time → alarm notification at exactly that moment.
+  Future<void> _setAlarm(BuildContext context) async {
+    final l10n = context.l10n;
+    final messenger = ScaffoldMessenger.of(context);
+    final now = DateTime.now();
+
+    final date = await showDatePicker(
+      context: context,
+      initialDate: now,
+      firstDate: DateUtils.dateOnly(now),
+      lastDate: now.add(const Duration(days: 365)),
+    );
+    if (date == null || !context.mounted) return;
+
+    final time = await showTimePicker(
+      context: context,
+      initialTime: TimeOfDay.fromDateTime(now.add(const Duration(minutes: 1))),
+    );
+    if (time == null) return;
+
+    final at = DateTime(date.year, date.month, date.day, time.hour, time.minute);
+    if (!at.isAfter(DateTime.now())) {
+      messenger.showSnackBar(SnackBar(content: Text(l10n.alarmTimeInPast)));
+      return;
+    }
+
+    if (!await _service.requestPermission()) {
+      messenger.showSnackBar(SnackBar(content: Text(l10n.notificationPermissionDenied)));
+      return;
+    }
+    // Android 12+: may open system settings; falls back to inexact if still not allowed.
+    await _service.requestExactAlarmPermission();
+
+    final exact = await _service.scheduleAlarm(
+      at: at,
+      title: l10n.alarmTitle,
+      body: l10n.alarmBody,
+      channelName: l10n.alarmChannelName,
+      payload: 'alarm-${at.toIso8601String()}',
+    );
+    messenger.showSnackBar(
+      SnackBar(content: Text(exact ? l10n.alarmScheduled(at, at) : l10n.alarmInexact)),
     );
   }
 }
