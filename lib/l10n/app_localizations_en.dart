@@ -136,4 +136,154 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get alarmInexact =>
       'Exact alarm permission not granted — the alarm may be delayed';
+
+  @override
+  String get demos => 'Demos';
+
+  @override
+  String get yes => 'Yes';
+
+  @override
+  String get no => 'No';
+
+  @override
+  String get unknown => 'Unknown';
+
+  @override
+  String loadError(String error) {
+    return 'Could not load: $error';
+  }
+
+  @override
+  String get openSettings => 'Settings';
+
+  @override
+  String get deviceInfoTitle => 'Device info';
+
+  @override
+  String get deviceInfoPlatform => 'Platform';
+
+  @override
+  String get deviceInfoModel => 'Model';
+
+  @override
+  String get deviceInfoOsVersion => 'OS version';
+
+  @override
+  String get deviceInfoPhysicalDevice => 'Physical device';
+
+  @override
+  String get deviceInfoRawData => 'All data';
+
+  @override
+  String get connectivityTitle => 'Connectivity';
+
+  @override
+  String get connectivityOnline => 'Connected to a network';
+
+  @override
+  String get connectivityOffline => 'No network connection';
+
+  @override
+  String connectivityTypes(String types) {
+    return 'Connection types: $types';
+  }
+
+  @override
+  String get connectivityNoInternetGuarantee =>
+      'A network connection doesn\'t guarantee internet access (e.g. hotel Wi-Fi login pages).';
+
+  @override
+  String get connectivityCheckAgain => 'Check again';
+
+  @override
+  String get connectivityOpenWifiSettings => 'Wi-Fi settings';
+
+  @override
+  String get appSettingsTitle => 'System settings';
+
+  @override
+  String get appSettingsUnsupported =>
+      'Opening system settings is only supported on Android, iOS and macOS.';
+
+  @override
+  String get appSettingsApp => 'App info';
+
+  @override
+  String get appSettingsAlarms => 'Alarms & reminders (Android 12+)';
+
+  @override
+  String get appSettingsLanguage => 'App language (Android 13+)';
+
+  @override
+  String get appSettingsLocation => 'Location';
+
+  @override
+  String get appSettingsWifi => 'Wi-Fi';
+
+  @override
+  String get appSettingsBluetooth => 'Bluetooth';
+
+  @override
+  String get appSettingsBattery => 'Battery optimization';
+
+  @override
+  String get appSettingsPanels => 'Quick panels (Android 10+)';
+
+  @override
+  String get appSettingsPanelInternet => 'Internet';
+
+  @override
+  String get appSettingsPanelVolume => 'Volume';
+
+  @override
+  String get formTitle => 'Sign-up form';
+
+  @override
+  String get formName => 'Full name';
+
+  @override
+  String get formEmail => 'Email';
+
+  @override
+  String get formPassword => 'Password';
+
+  @override
+  String get formConfirmPassword => 'Confirm password';
+
+  @override
+  String get formPasswordsDoNotMatch => 'Passwords don\'t match';
+
+  @override
+  String get formBirthDate => 'Birth date';
+
+  @override
+  String get formRole => 'Role';
+
+  @override
+  String get formAcceptTerms => 'I accept the terms';
+
+  @override
+  String get formTermsRequired => 'You must accept the terms';
+
+  @override
+  String get formSubmit => 'Submit';
+
+  @override
+  String get formReset => 'Reset';
+
+  @override
+  String get formSubmitted => 'Form submitted';
+
+  @override
+  String get formInvalid => 'Please fix the errors';
+
+  @override
+  String get keyboardVisible => 'Keyboard is open';
+
+  @override
+  String get keyboardHidden => 'Keyboard is closed';
+
+  @override
+  String get keyboardTip => 'Tap outside a field to close the keyboard.';
 }

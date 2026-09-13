@@ -259,6 +259,294 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Exact alarm permission not granted — the alarm may be delayed'**
   String get alarmInexact;
+
+  /// Title of the home page section that links to demo pages
+  ///
+  /// In en, this message translates to:
+  /// **'Demos'**
+  String get demos;
+
+  /// Generic yes
+  ///
+  /// In en, this message translates to:
+  /// **'Yes'**
+  String get yes;
+
+  /// Generic no
+  ///
+  /// In en, this message translates to:
+  /// **'No'**
+  String get no;
+
+  /// Value is not available on this platform
+  ///
+  /// In en, this message translates to:
+  /// **'Unknown'**
+  String get unknown;
+
+  /// Generic loading error
+  ///
+  /// In en, this message translates to:
+  /// **'Could not load: {error}'**
+  String loadError(String error);
+
+  /// Snackbar action that opens system settings
+  ///
+  /// In en, this message translates to:
+  /// **'Settings'**
+  String get openSettings;
+
+  /// Title of the device info page
+  ///
+  /// In en, this message translates to:
+  /// **'Device info'**
+  String get deviceInfoTitle;
+
+  /// Device info label: operating system family
+  ///
+  /// In en, this message translates to:
+  /// **'Platform'**
+  String get deviceInfoPlatform;
+
+  /// Device info label: device / computer / browser model
+  ///
+  /// In en, this message translates to:
+  /// **'Model'**
+  String get deviceInfoModel;
+
+  /// Device info label: operating system version
+  ///
+  /// In en, this message translates to:
+  /// **'OS version'**
+  String get deviceInfoOsVersion;
+
+  /// Device info label: real device vs emulator/simulator
+  ///
+  /// In en, this message translates to:
+  /// **'Physical device'**
+  String get deviceInfoPhysicalDevice;
+
+  /// Expandable list with every raw device info field
+  ///
+  /// In en, this message translates to:
+  /// **'All data'**
+  String get deviceInfoRawData;
+
+  /// Title of the connectivity page
+  ///
+  /// In en, this message translates to:
+  /// **'Connectivity'**
+  String get connectivityTitle;
+
+  /// Some network interface is available
+  ///
+  /// In en, this message translates to:
+  /// **'Connected to a network'**
+  String get connectivityOnline;
+
+  /// No network interface is available
+  ///
+  /// In en, this message translates to:
+  /// **'No network connection'**
+  String get connectivityOffline;
+
+  /// Comma separated list of active connection types
+  ///
+  /// In en, this message translates to:
+  /// **'Connection types: {types}'**
+  String connectivityTypes(String types);
+
+  /// Warning that connectivity type is not internet reachability
+  ///
+  /// In en, this message translates to:
+  /// **'A network connection doesn\'t guarantee internet access (e.g. hotel Wi-Fi login pages).'**
+  String get connectivityNoInternetGuarantee;
+
+  /// Button that re-checks connectivity
+  ///
+  /// In en, this message translates to:
+  /// **'Check again'**
+  String get connectivityCheckAgain;
+
+  /// Button that opens system Wi-Fi settings
+  ///
+  /// In en, this message translates to:
+  /// **'Wi-Fi settings'**
+  String get connectivityOpenWifiSettings;
+
+  /// Title of the page that opens system settings screens
+  ///
+  /// In en, this message translates to:
+  /// **'System settings'**
+  String get appSettingsTitle;
+
+  /// Shown on Windows, Linux and web
+  ///
+  /// In en, this message translates to:
+  /// **'Opening system settings is only supported on Android, iOS and macOS.'**
+  String get appSettingsUnsupported;
+
+  /// Opens this app's page in system settings
+  ///
+  /// In en, this message translates to:
+  /// **'App info'**
+  String get appSettingsApp;
+
+  /// Opens the exact alarm permission screen
+  ///
+  /// In en, this message translates to:
+  /// **'Alarms & reminders (Android 12+)'**
+  String get appSettingsAlarms;
+
+  /// Opens the per-app language screen
+  ///
+  /// In en, this message translates to:
+  /// **'App language (Android 13+)'**
+  String get appSettingsLanguage;
+
+  /// Opens location settings
+  ///
+  /// In en, this message translates to:
+  /// **'Location'**
+  String get appSettingsLocation;
+
+  /// Opens Wi-Fi settings
+  ///
+  /// In en, this message translates to:
+  /// **'Wi-Fi'**
+  String get appSettingsWifi;
+
+  /// Opens Bluetooth settings
+  ///
+  /// In en, this message translates to:
+  /// **'Bluetooth'**
+  String get appSettingsBluetooth;
+
+  /// Opens battery optimization settings (Android)
+  ///
+  /// In en, this message translates to:
+  /// **'Battery optimization'**
+  String get appSettingsBattery;
+
+  /// Header for Android settings panels shown over the app
+  ///
+  /// In en, this message translates to:
+  /// **'Quick panels (Android 10+)'**
+  String get appSettingsPanels;
+
+  /// Android internet connectivity panel
+  ///
+  /// In en, this message translates to:
+  /// **'Internet'**
+  String get appSettingsPanelInternet;
+
+  /// Android volume panel
+  ///
+  /// In en, this message translates to:
+  /// **'Volume'**
+  String get appSettingsPanelVolume;
+
+  /// Title of the form builder demo page
+  ///
+  /// In en, this message translates to:
+  /// **'Sign-up form'**
+  String get formTitle;
+
+  /// Form field label
+  ///
+  /// In en, this message translates to:
+  /// **'Full name'**
+  String get formName;
+
+  /// Form field label
+  ///
+  /// In en, this message translates to:
+  /// **'Email'**
+  String get formEmail;
+
+  /// Form field label
+  ///
+  /// In en, this message translates to:
+  /// **'Password'**
+  String get formPassword;
+
+  /// Form field label
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm password'**
+  String get formConfirmPassword;
+
+  /// Validation error when confirm password differs
+  ///
+  /// In en, this message translates to:
+  /// **'Passwords don\'t match'**
+  String get formPasswordsDoNotMatch;
+
+  /// Form field label
+  ///
+  /// In en, this message translates to:
+  /// **'Birth date'**
+  String get formBirthDate;
+
+  /// Form field label for the role dropdown
+  ///
+  /// In en, this message translates to:
+  /// **'Role'**
+  String get formRole;
+
+  /// Checkbox label
+  ///
+  /// In en, this message translates to:
+  /// **'I accept the terms'**
+  String get formAcceptTerms;
+
+  /// Validation error when the terms checkbox is not ticked
+  ///
+  /// In en, this message translates to:
+  /// **'You must accept the terms'**
+  String get formTermsRequired;
+
+  /// Form submit button
+  ///
+  /// In en, this message translates to:
+  /// **'Submit'**
+  String get formSubmit;
+
+  /// Form reset button
+  ///
+  /// In en, this message translates to:
+  /// **'Reset'**
+  String get formReset;
+
+  /// Dialog title after a valid submit
+  ///
+  /// In en, this message translates to:
+  /// **'Form submitted'**
+  String get formSubmitted;
+
+  /// Snackbar when the form has validation errors
+  ///
+  /// In en, this message translates to:
+  /// **'Please fix the errors'**
+  String get formInvalid;
+
+  /// Keyboard visibility status
+  ///
+  /// In en, this message translates to:
+  /// **'Keyboard is open'**
+  String get keyboardVisible;
+
+  /// Keyboard visibility status
+  ///
+  /// In en, this message translates to:
+  /// **'Keyboard is closed'**
+  String get keyboardHidden;
+
+  /// Hint shown while the keyboard is closed
+  ///
+  /// In en, this message translates to:
+  /// **'Tap outside a field to close the keyboard.'**
+  String get keyboardTip;
 }
 
 class _AppLocalizationsDelegate

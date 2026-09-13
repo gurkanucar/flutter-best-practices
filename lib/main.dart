@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:form_builder_validators/form_builder_validators.dart';
 
 import 'home_page.dart';
 import 'l10n/app_localizations.dart';
@@ -31,7 +32,10 @@ class MainApp extends StatelessWidget {
       builder: (context, locale, _) => MaterialApp(
         locale: locale,
         onGenerateTitle: (context) => AppLocalizations.of(context).appTitle,
-        localizationsDelegates: AppLocalizations.localizationsDelegates,
+        localizationsDelegates: const [
+          ...AppLocalizations.localizationsDelegates,
+          FormBuilderLocalizations.delegate, // translated validator error messages
+        ],
         supportedLocales: AppLocalizations.supportedLocales,
         home: const HomePage(),
       ),

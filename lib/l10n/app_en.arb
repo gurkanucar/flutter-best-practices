@@ -111,5 +111,155 @@
   "@alarmTimeInPast": { "description": "Snackbar when the picked alarm time has already passed" },
 
   "alarmInexact": "Exact alarm permission not granted — the alarm may be delayed",
-  "@alarmInexact": { "description": "Snackbar when Android exact alarms aren't allowed and the alarm was scheduled inexact" }
+  "@alarmInexact": { "description": "Snackbar when Android exact alarms aren't allowed and the alarm was scheduled inexact" },
+
+  "demos": "Demos",
+  "@demos": { "description": "Title of the home page section that links to demo pages" },
+
+  "yes": "Yes",
+  "@yes": { "description": "Generic yes" },
+
+  "no": "No",
+  "@no": { "description": "Generic no" },
+
+  "unknown": "Unknown",
+  "@unknown": { "description": "Value is not available on this platform" },
+
+  "loadError": "Could not load: {error}",
+  "@loadError": {
+    "description": "Generic loading error",
+    "placeholders": { "error": { "type": "String", "example": "MissingPluginException" } }
+  },
+
+  "openSettings": "Settings",
+  "@openSettings": { "description": "Snackbar action that opens system settings" },
+
+  "deviceInfoTitle": "Device info",
+  "@deviceInfoTitle": { "description": "Title of the device info page" },
+
+  "deviceInfoPlatform": "Platform",
+  "@deviceInfoPlatform": { "description": "Device info label: operating system family" },
+
+  "deviceInfoModel": "Model",
+  "@deviceInfoModel": { "description": "Device info label: device / computer / browser model" },
+
+  "deviceInfoOsVersion": "OS version",
+  "@deviceInfoOsVersion": { "description": "Device info label: operating system version" },
+
+  "deviceInfoPhysicalDevice": "Physical device",
+  "@deviceInfoPhysicalDevice": { "description": "Device info label: real device vs emulator/simulator" },
+
+  "deviceInfoRawData": "All data",
+  "@deviceInfoRawData": { "description": "Expandable list with every raw device info field" },
+
+  "connectivityTitle": "Connectivity",
+  "@connectivityTitle": { "description": "Title of the connectivity page" },
+
+  "connectivityOnline": "Connected to a network",
+  "@connectivityOnline": { "description": "Some network interface is available" },
+
+  "connectivityOffline": "No network connection",
+  "@connectivityOffline": { "description": "No network interface is available" },
+
+  "connectivityTypes": "Connection types: {types}",
+  "@connectivityTypes": {
+    "description": "Comma separated list of active connection types",
+    "placeholders": { "types": { "type": "String", "example": "wifi, vpn" } }
+  },
+
+  "connectivityNoInternetGuarantee": "A network connection doesn't guarantee internet access (e.g. hotel Wi-Fi login pages).",
+  "@connectivityNoInternetGuarantee": { "description": "Warning that connectivity type is not internet reachability" },
+
+  "connectivityCheckAgain": "Check again",
+  "@connectivityCheckAgain": { "description": "Button that re-checks connectivity" },
+
+  "connectivityOpenWifiSettings": "Wi-Fi settings",
+  "@connectivityOpenWifiSettings": { "description": "Button that opens system Wi-Fi settings" },
+
+  "appSettingsTitle": "System settings",
+  "@appSettingsTitle": { "description": "Title of the page that opens system settings screens" },
+
+  "appSettingsUnsupported": "Opening system settings is only supported on Android, iOS and macOS.",
+  "@appSettingsUnsupported": { "description": "Shown on Windows, Linux and web" },
+
+  "appSettingsApp": "App info",
+  "@appSettingsApp": { "description": "Opens this app's page in system settings" },
+
+  "appSettingsAlarms": "Alarms & reminders (Android 12+)",
+  "@appSettingsAlarms": { "description": "Opens the exact alarm permission screen" },
+
+  "appSettingsLanguage": "App language (Android 13+)",
+  "@appSettingsLanguage": { "description": "Opens the per-app language screen" },
+
+  "appSettingsLocation": "Location",
+  "@appSettingsLocation": { "description": "Opens location settings" },
+
+  "appSettingsWifi": "Wi-Fi",
+  "@appSettingsWifi": { "description": "Opens Wi-Fi settings" },
+
+  "appSettingsBluetooth": "Bluetooth",
+  "@appSettingsBluetooth": { "description": "Opens Bluetooth settings" },
+
+  "appSettingsBattery": "Battery optimization",
+  "@appSettingsBattery": { "description": "Opens battery optimization settings (Android)" },
+
+  "appSettingsPanels": "Quick panels (Android 10+)",
+  "@appSettingsPanels": { "description": "Header for Android settings panels shown over the app" },
+
+  "appSettingsPanelInternet": "Internet",
+  "@appSettingsPanelInternet": { "description": "Android internet connectivity panel" },
+
+  "appSettingsPanelVolume": "Volume",
+  "@appSettingsPanelVolume": { "description": "Android volume panel" },
+
+  "formTitle": "Sign-up form",
+  "@formTitle": { "description": "Title of the form builder demo page" },
+
+  "formName": "Full name",
+  "@formName": { "description": "Form field label" },
+
+  "formEmail": "Email",
+  "@formEmail": { "description": "Form field label" },
+
+  "formPassword": "Password",
+  "@formPassword": { "description": "Form field label" },
+
+  "formConfirmPassword": "Confirm password",
+  "@formConfirmPassword": { "description": "Form field label" },
+
+  "formPasswordsDoNotMatch": "Passwords don't match",
+  "@formPasswordsDoNotMatch": { "description": "Validation error when confirm password differs" },
+
+  "formBirthDate": "Birth date",
+  "@formBirthDate": { "description": "Form field label" },
+
+  "formRole": "Role",
+  "@formRole": { "description": "Form field label for the role dropdown" },
+
+  "formAcceptTerms": "I accept the terms",
+  "@formAcceptTerms": { "description": "Checkbox label" },
+
+  "formTermsRequired": "You must accept the terms",
+  "@formTermsRequired": { "description": "Validation error when the terms checkbox is not ticked" },
+
+  "formSubmit": "Submit",
+  "@formSubmit": { "description": "Form submit button" },
+
+  "formReset": "Reset",
+  "@formReset": { "description": "Form reset button" },
+
+  "formSubmitted": "Form submitted",
+  "@formSubmitted": { "description": "Dialog title after a valid submit" },
+
+  "formInvalid": "Please fix the errors",
+  "@formInvalid": { "description": "Snackbar when the form has validation errors" },
+
+  "keyboardVisible": "Keyboard is open",
+  "@keyboardVisible": { "description": "Keyboard visibility status" },
+
+  "keyboardHidden": "Keyboard is closed",
+  "@keyboardHidden": { "description": "Keyboard visibility status" },
+
+  "keyboardTip": "Tap outside a field to close the keyboard.",
+  "@keyboardTip": { "description": "Hint shown while the keyboard is closed" }
 }

@@ -136,4 +136,154 @@ class AppLocalizationsTr extends AppLocalizations {
   @override
   String get alarmInexact =>
       'Tam zamanlı alarm izni verilmedi — alarm gecikebilir';
+
+  @override
+  String get demos => 'Örnekler';
+
+  @override
+  String get yes => 'Evet';
+
+  @override
+  String get no => 'Hayır';
+
+  @override
+  String get unknown => 'Bilinmiyor';
+
+  @override
+  String loadError(String error) {
+    return 'Yüklenemedi: $error';
+  }
+
+  @override
+  String get openSettings => 'Ayarlar';
+
+  @override
+  String get deviceInfoTitle => 'Cihaz bilgisi';
+
+  @override
+  String get deviceInfoPlatform => 'Platform';
+
+  @override
+  String get deviceInfoModel => 'Model';
+
+  @override
+  String get deviceInfoOsVersion => 'İşletim sistemi sürümü';
+
+  @override
+  String get deviceInfoPhysicalDevice => 'Fiziksel cihaz';
+
+  @override
+  String get deviceInfoRawData => 'Tüm veriler';
+
+  @override
+  String get connectivityTitle => 'Bağlantı durumu';
+
+  @override
+  String get connectivityOnline => 'Bir ağa bağlı';
+
+  @override
+  String get connectivityOffline => 'Ağ bağlantısı yok';
+
+  @override
+  String connectivityTypes(String types) {
+    return 'Bağlantı türleri: $types';
+  }
+
+  @override
+  String get connectivityNoInternetGuarantee =>
+      'Ağ bağlantısı internet erişimini garanti etmez (ör. otel Wi-Fi giriş sayfaları).';
+
+  @override
+  String get connectivityCheckAgain => 'Tekrar kontrol et';
+
+  @override
+  String get connectivityOpenWifiSettings => 'Wi-Fi ayarları';
+
+  @override
+  String get appSettingsTitle => 'Sistem ayarları';
+
+  @override
+  String get appSettingsUnsupported =>
+      'Sistem ayarlarını açmak yalnızca Android, iOS ve macOS\'ta destekleniyor.';
+
+  @override
+  String get appSettingsApp => 'Uygulama bilgisi';
+
+  @override
+  String get appSettingsAlarms => 'Alarmlar ve anımsatıcılar (Android 12+)';
+
+  @override
+  String get appSettingsLanguage => 'Uygulama dili (Android 13+)';
+
+  @override
+  String get appSettingsLocation => 'Konum';
+
+  @override
+  String get appSettingsWifi => 'Wi-Fi';
+
+  @override
+  String get appSettingsBluetooth => 'Bluetooth';
+
+  @override
+  String get appSettingsBattery => 'Pil optimizasyonu';
+
+  @override
+  String get appSettingsPanels => 'Hızlı paneller (Android 10+)';
+
+  @override
+  String get appSettingsPanelInternet => 'İnternet';
+
+  @override
+  String get appSettingsPanelVolume => 'Ses düzeyi';
+
+  @override
+  String get formTitle => 'Kayıt formu';
+
+  @override
+  String get formName => 'Ad soyad';
+
+  @override
+  String get formEmail => 'E-posta';
+
+  @override
+  String get formPassword => 'Şifre';
+
+  @override
+  String get formConfirmPassword => 'Şifre tekrar';
+
+  @override
+  String get formPasswordsDoNotMatch => 'Şifreler eşleşmiyor';
+
+  @override
+  String get formBirthDate => 'Doğum tarihi';
+
+  @override
+  String get formRole => 'Rol';
+
+  @override
+  String get formAcceptTerms => 'Koşulları kabul ediyorum';
+
+  @override
+  String get formTermsRequired => 'Koşulları kabul etmelisin';
+
+  @override
+  String get formSubmit => 'Gönder';
+
+  @override
+  String get formReset => 'Sıfırla';
+
+  @override
+  String get formSubmitted => 'Form gönderildi';
+
+  @override
+  String get formInvalid => 'Lütfen hataları düzeltin';
+
+  @override
+  String get keyboardVisible => 'Klavye açık';
+
+  @override
+  String get keyboardHidden => 'Klavye kapalı';
+
+  @override
+  String get keyboardTip => 'Klavyeyi kapatmak için alanın dışına dokun.';
 }

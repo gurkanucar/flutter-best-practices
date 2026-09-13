@@ -1,5 +1,8 @@
+import 'package:app_settings/app_settings.dart';
 import 'package:flutter/material.dart';
 
+import '../app_settings/app_settings_page.dart';
+import '../l10n/app_localizations.dart';
 import '../l10n/l10n_extension.dart';
 import 'notification_service.dart';
 
@@ -67,7 +70,7 @@ class NotificationDemoSection extends StatelessWidget {
     final messenger = ScaffoldMessenger.of(context);
 
     if (!await _service.requestPermission()) {
-      messenger.showSnackBar(SnackBar(content: Text(l10n.notificationPermissionDenied)));
+      _showPermissionDenied(messenger, l10n);
       return;
     }
     await _service.show(
@@ -83,7 +86,7 @@ class NotificationDemoSection extends StatelessWidget {
     final messenger = ScaffoldMessenger.of(context);
 
     if (!await _service.requestPermission()) {
-      messenger.showSnackBar(SnackBar(content: Text(l10n.notificationPermissionDenied)));
+      _showPermissionDenied(messenger, l10n);
       return;
     }
     await _service.schedule(
@@ -95,6 +98,22 @@ class NotificationDemoSection extends StatelessWidget {
     );
     messenger.showSnackBar(
       SnackBar(content: Text(l10n.notificationScheduled(_scheduleDelay.inSeconds))),
+    );
+  }
+
+  /// Denied permissions can only be changed in system settings — offer a shortcut.
+  void _showPermissionDenied(ScaffoldMessengerState messenger, AppLocalizations l10n) {
+    messenger.showSnackBar(
+      SnackBar(
+        content: Text(l10n.notificationPermissionDenied),
+        action: AppSettingsPage.isSupported
+            ? SnackBarAction(
+                label: l10n.openSettings,
+                onPressed: () =>
+                    AppSettings.openAppSettings(type: AppSettingsType.notification),
+              )
+            : null,
+      ),
     );
   }
 
@@ -125,7 +144,7 @@ class NotificationDemoSection extends StatelessWidget {
     }
 
     if (!await _service.requestPermission()) {
-      messenger.showSnackBar(SnackBar(content: Text(l10n.notificationPermissionDenied)));
+      _showPermissionDenied(messenger, l10n);
       return;
     }
     // Android 12+: may open system settings; falls back to inexact if still not allowed.

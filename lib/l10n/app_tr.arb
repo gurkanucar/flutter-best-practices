@@ -111,5 +111,155 @@
   "@alarmTimeInPast": { "description": "Snackbar when the picked alarm time has already passed" },
 
   "alarmInexact": "Tam zamanlı alarm izni verilmedi — alarm gecikebilir",
-  "@alarmInexact": { "description": "Snackbar when Android exact alarms aren't allowed and the alarm was scheduled inexact" }
+  "@alarmInexact": { "description": "Snackbar when Android exact alarms aren't allowed and the alarm was scheduled inexact" },
+
+  "demos": "Örnekler",
+  "@demos": { "description": "Title of the home page section that links to demo pages" },
+
+  "yes": "Evet",
+  "@yes": { "description": "Generic yes" },
+
+  "no": "Hayır",
+  "@no": { "description": "Generic no" },
+
+  "unknown": "Bilinmiyor",
+  "@unknown": { "description": "Value is not available on this platform" },
+
+  "loadError": "Yüklenemedi: {error}",
+  "@loadError": {
+    "description": "Generic loading error",
+    "placeholders": { "error": { "type": "String", "example": "MissingPluginException" } }
+  },
+
+  "openSettings": "Ayarlar",
+  "@openSettings": { "description": "Snackbar action that opens system settings" },
+
+  "deviceInfoTitle": "Cihaz bilgisi",
+  "@deviceInfoTitle": { "description": "Title of the device info page" },
+
+  "deviceInfoPlatform": "Platform",
+  "@deviceInfoPlatform": { "description": "Device info label: operating system family" },
+
+  "deviceInfoModel": "Model",
+  "@deviceInfoModel": { "description": "Device info label: device / computer / browser model" },
+
+  "deviceInfoOsVersion": "İşletim sistemi sürümü",
+  "@deviceInfoOsVersion": { "description": "Device info label: operating system version" },
+
+  "deviceInfoPhysicalDevice": "Fiziksel cihaz",
+  "@deviceInfoPhysicalDevice": { "description": "Device info label: real device vs emulator/simulator" },
+
+  "deviceInfoRawData": "Tüm veriler",
+  "@deviceInfoRawData": { "description": "Expandable list with every raw device info field" },
+
+  "connectivityTitle": "Bağlantı durumu",
+  "@connectivityTitle": { "description": "Title of the connectivity page" },
+
+  "connectivityOnline": "Bir ağa bağlı",
+  "@connectivityOnline": { "description": "Some network interface is available" },
+
+  "connectivityOffline": "Ağ bağlantısı yok",
+  "@connectivityOffline": { "description": "No network interface is available" },
+
+  "connectivityTypes": "Bağlantı türleri: {types}",
+  "@connectivityTypes": {
+    "description": "Comma separated list of active connection types",
+    "placeholders": { "types": { "type": "String", "example": "wifi, vpn" } }
+  },
+
+  "connectivityNoInternetGuarantee": "Ağ bağlantısı internet erişimini garanti etmez (ör. otel Wi-Fi giriş sayfaları).",
+  "@connectivityNoInternetGuarantee": { "description": "Warning that connectivity type is not internet reachability" },
+
+  "connectivityCheckAgain": "Tekrar kontrol et",
+  "@connectivityCheckAgain": { "description": "Button that re-checks connectivity" },
+
+  "connectivityOpenWifiSettings": "Wi-Fi ayarları",
+  "@connectivityOpenWifiSettings": { "description": "Button that opens system Wi-Fi settings" },
+
+  "appSettingsTitle": "Sistem ayarları",
+  "@appSettingsTitle": { "description": "Title of the page that opens system settings screens" },
+
+  "appSettingsUnsupported": "Sistem ayarlarını açmak yalnızca Android, iOS ve macOS'ta destekleniyor.",
+  "@appSettingsUnsupported": { "description": "Shown on Windows, Linux and web" },
+
+  "appSettingsApp": "Uygulama bilgisi",
+  "@appSettingsApp": { "description": "Opens this app's page in system settings" },
+
+  "appSettingsAlarms": "Alarmlar ve anımsatıcılar (Android 12+)",
+  "@appSettingsAlarms": { "description": "Opens the exact alarm permission screen" },
+
+  "appSettingsLanguage": "Uygulama dili (Android 13+)",
+  "@appSettingsLanguage": { "description": "Opens the per-app language screen" },
+
+  "appSettingsLocation": "Konum",
+  "@appSettingsLocation": { "description": "Opens location settings" },
+
+  "appSettingsWifi": "Wi-Fi",
+  "@appSettingsWifi": { "description": "Opens Wi-Fi settings" },
+
+  "appSettingsBluetooth": "Bluetooth",
+  "@appSettingsBluetooth": { "description": "Opens Bluetooth settings" },
+
+  "appSettingsBattery": "Pil optimizasyonu",
+  "@appSettingsBattery": { "description": "Opens battery optimization settings (Android)" },
+
+  "appSettingsPanels": "Hızlı paneller (Android 10+)",
+  "@appSettingsPanels": { "description": "Header for Android settings panels shown over the app" },
+
+  "appSettingsPanelInternet": "İnternet",
+  "@appSettingsPanelInternet": { "description": "Android internet connectivity panel" },
+
+  "appSettingsPanelVolume": "Ses düzeyi",
+  "@appSettingsPanelVolume": { "description": "Android volume panel" },
+
+  "formTitle": "Kayıt formu",
+  "@formTitle": { "description": "Title of the form builder demo page" },
+
+  "formName": "Ad soyad",
+  "@formName": { "description": "Form field label" },
+
+  "formEmail": "E-posta",
+  "@formEmail": { "description": "Form field label" },
+
+  "formPassword": "Şifre",
+  "@formPassword": { "description": "Form field label" },
+
+  "formConfirmPassword": "Şifre tekrar",
+  "@formConfirmPassword": { "description": "Form field label" },
+
+  "formPasswordsDoNotMatch": "Şifreler eşleşmiyor",
+  "@formPasswordsDoNotMatch": { "description": "Validation error when confirm password differs" },
+
+  "formBirthDate": "Doğum tarihi",
+  "@formBirthDate": { "description": "Form field label" },
+
+  "formRole": "Rol",
+  "@formRole": { "description": "Form field label for the role dropdown" },
+
+  "formAcceptTerms": "Koşulları kabul ediyorum",
+  "@formAcceptTerms": { "description": "Checkbox label" },
+
+  "formTermsRequired": "Koşulları kabul etmelisin",
+  "@formTermsRequired": { "description": "Validation error when the terms checkbox is not ticked" },
+
+  "formSubmit": "Gönder",
+  "@formSubmit": { "description": "Form submit button" },
+
+  "formReset": "Sıfırla",
+  "@formReset": { "description": "Form reset button" },
+
+  "formSubmitted": "Form gönderildi",
+  "@formSubmitted": { "description": "Dialog title after a valid submit" },
+
+  "formInvalid": "Lütfen hataları düzeltin",
+  "@formInvalid": { "description": "Snackbar when the form has validation errors" },
+
+  "keyboardVisible": "Klavye açık",
+  "@keyboardVisible": { "description": "Keyboard visibility status" },
+
+  "keyboardHidden": "Klavye kapalı",
+  "@keyboardHidden": { "description": "Keyboard visibility status" },
+
+  "keyboardTip": "Klavyeyi kapatmak için alanın dışına dokun.",
+  "@keyboardTip": { "description": "Hint shown while the keyboard is closed" }
 }
