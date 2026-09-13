@@ -1,0 +1,46 @@
+{
+  "@@locale": "tr",
+
+  "appTitle": "Flutter Best Practices",
+  "@appTitle": { "description": "App name shown in task switcher / browser tab" },
+
+  "language": "Dil",
+  "@language": { "description": "Tooltip of the language selector" },
+
+  "systemLanguage": "Sistem dili",
+  "@systemLanguage": { "description": "Language menu item that follows the device language" },
+
+  "hello": "Merhaba!",
+  "@hello": { "description": "A simple greeting" },
+
+  "welcome": "Hoş geldin, {name}!",
+  "@welcome": {
+    "placeholders": { "name": { "type": "String", "example": "John" } }
+  },
+
+  "itemCount": "{count, plural, =0{Öğe yok} =1{1 öğe} other{{count} öğe}}",
+  "@itemCount": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+
+  "userRole": "{role, select, admin{Yönetici} user{Kullanıcı} other{Misafir}}",
+  "@userRole": {
+    "placeholders": { "role": { "type": "String" } }
+  },
+
+  "lastLogin": "Son giriş: {date}",
+  "@lastLogin": {
+    "placeholders": { "date": { "type": "DateTime", "format": "yMMMd" } }
+  },
+
+  "price": "Fiyat: {amount}",
+  "@price": {
+    "placeholders": {
+      "amount": {
+        "type": "double",
+        "format": "currency",
+        "optionalParameters": { "name": "TRY", "decimalDigits": 2 }
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "@@locale": "en",
+
+  "appTitle": "Flutter Best Practices",
+  "@appTitle": { "description": "App name shown in task switcher / browser tab" },
+
+  "language": "Language",
+  "@language": { "description": "Tooltip of the language selector" },
+
+  "systemLanguage": "System language",
+  "@systemLanguage": { "description": "Language menu item that follows the device language" },
+
+  "hello": "Hello!",
+  "@hello": { "description": "A simple greeting" },
+
+  "welcome": "Welcome, {name}!",
+  "@welcome": {
+    "placeholders": { "name": { "type": "String", "example": "John" } }
+  },
+
+  "itemCount": "{count, plural, =0{No items} =1{1 item} other{{count} items}}",
+  "@itemCount": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+
+  "userRole": "{role, select, admin{Administrator} user{User} other{Guest}}",
+  "@userRole": {
+    "placeholders": { "role": { "type": "String" } }
+  },
+
+  "lastLogin": "Last login: {date}",
+  "@lastLogin": {
+    "placeholders": { "date": { "type": "DateTime", "format": "yMMMd" } }
+  },
+
+  "price": "Price: {amount}",
+  "@price": {
+    "placeholders": {
+      "amount": {
+        "type": "double",
+        "format": "currency",
+        "optionalParameters": { "name": "TRY", "decimalDigits": 2 }
+      }
+    }
+  }
+}
