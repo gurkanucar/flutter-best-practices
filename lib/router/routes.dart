@@ -33,6 +33,13 @@ abstract final class Routes {
   static const permissions = '/demos/permissions';
   static const bluetooth = '/demos/bluetooth';
   static const environment = '/demos/environment';
+  static const biometric = '/demos/biometric';
+  static const review = '/demos/review';
+  static const threeD = '/demos/3d';
+  static const otp = '/demos/otp';
+  static const onboarding = '/demos/onboarding';
+  static const tour = '/demos/tour';
+  static const tilt = '/demos/tilt';
 
   /// Locations that require a signed-in user (prefix match).
   static const protectedPrefixes = [profile, checkout];

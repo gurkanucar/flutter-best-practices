@@ -685,4 +685,207 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get fieldsResult => 'Form values';
+
+  @override
+  String get cancel => 'Cancel';
+
+  @override
+  String get biometricTitle => 'Biometric authentication';
+
+  @override
+  String get biometricUnsupported =>
+      'local_auth supports Android, iOS, macOS and Windows.';
+
+  @override
+  String get biometricDeviceSupported =>
+      'Device supports secure authentication';
+
+  @override
+  String get biometricHardware => 'Biometric hardware';
+
+  @override
+  String biometricEnrolled(String types) {
+    return 'Enrolled: $types';
+  }
+
+  @override
+  String get biometricNone => 'none';
+
+  @override
+  String get biometricAuthenticate => 'Authenticate (biometrics or device PIN)';
+
+  @override
+  String get biometricOnlyAuthenticate => 'Biometrics only';
+
+  @override
+  String get biometricReason => 'Confirm your identity to open the secure area';
+
+  @override
+  String get biometricPromptTitle => 'Authentication required';
+
+  @override
+  String get biometricPromptHint => 'Verify identity';
+
+  @override
+  String get biometricSuccess => 'Authenticated';
+
+  @override
+  String get biometricFailed => 'Not authenticated';
+
+  @override
+  String biometricError(String details) {
+    return 'Error: $details';
+  }
+
+  @override
+  String get reviewTitle => 'In-app review';
+
+  @override
+  String get reviewUnsupported =>
+      'in_app_review supports Android, iOS and macOS (store listing also on Windows).';
+
+  @override
+  String reviewAvailable(String value) {
+    return 'Review dialog available: $value';
+  }
+
+  @override
+  String get reviewWillAsk =>
+      'The review dialog is requested automatically after 3 completed actions (never from a \"Rate\" button).';
+
+  @override
+  String get reviewCompleteAction => 'Complete an action';
+
+  @override
+  String reviewProgress(int count) {
+    return 'Completed actions: $count';
+  }
+
+  @override
+  String get reviewRequested =>
+      'Review requested — the OS decides whether the dialog is shown.';
+
+  @override
+  String get reviewOpenStore => 'Open store listing (Rate us)';
+
+  @override
+  String get reviewStoreIdMissing =>
+      'Set the store id in InAppReviewPage to open the store listing on this platform.';
+
+  @override
+  String get threeDTitle => '3D viewer (ditredi)';
+
+  @override
+  String get threeDCube => 'Cube';
+
+  @override
+  String get threeDModel => 'OBJ model';
+
+  @override
+  String get threeDHint => 'Drag to rotate, pinch or scroll to zoom.';
+
+  @override
+  String get threeDReset => 'Reset view';
+
+  @override
+  String get next => 'Next';
+
+  @override
+  String get previous => 'Previous';
+
+  @override
+  String get skip => 'Skip';
+
+  @override
+  String get done => 'Done';
+
+  @override
+  String get otpTitle => 'OTP code (pinput)';
+
+  @override
+  String get otpInstruction =>
+      'Enter the 4-digit code we sent to your phone. Demo code: 2222';
+
+  @override
+  String get otpInvalid => 'Wrong code';
+
+  @override
+  String get otpVerified => 'Code verified';
+
+  @override
+  String get otpVerify => 'Verify';
+
+  @override
+  String get otpClear => 'Clear';
+
+  @override
+  String get otpObscured => 'Hidden PIN (6 digits)';
+
+  @override
+  String get onboardingTitle => 'Onboarding (introduction_screen)';
+
+  @override
+  String get onboardingPage1Title => 'Welcome';
+
+  @override
+  String get onboardingPage1Body =>
+      'Best practices for Flutter apps, in one place.';
+
+  @override
+  String get onboardingPage2Title => 'Works everywhere';
+
+  @override
+  String get onboardingPage2Body =>
+      'Android, iOS, web and desktop from one codebase.';
+
+  @override
+  String get onboardingPage3Title => 'Ready?';
+
+  @override
+  String get onboardingPage3Body => 'Tap Done to start exploring the demos.';
+
+  @override
+  String get tourTitle => 'Feature tour (showcaseview)';
+
+  @override
+  String get tourStart => 'Start tour';
+
+  @override
+  String get tourSearchTitle => 'Search';
+
+  @override
+  String get tourSearchBody => 'Find any demo quickly.';
+
+  @override
+  String get tourListTitle => 'Items';
+
+  @override
+  String get tourListBody => 'Tap an item to open its details.';
+
+  @override
+  String get tourFabTitle => 'Create';
+
+  @override
+  String get tourFabBody => 'Add a new item here.';
+
+  @override
+  String get tourFinished => 'Tour finished';
+
+  @override
+  String tourItem(int number) {
+    return 'Item $number';
+  }
+
+  @override
+  String get tiltTitle => 'Tilt effect (flutter_tilt)';
+
+  @override
+  String get tiltHint =>
+      'Move the pointer over the card, drag it, or tilt your phone.';
+
+  @override
+  String get tiltSensors => 'Use device sensors (Android, iOS, web)';
+
+  @override
+  String get tiltCardSubtitle => 'Parallax layers move with the tilt';
 }

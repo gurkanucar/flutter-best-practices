@@ -45,6 +45,13 @@ class HomePage extends StatelessWidget {
           _DemoTile(Icons.verified_user, l10n.permissionsTitle, Routes.permissions),
           _DemoTile(Icons.bluetooth, l10n.bluetoothTitle, Routes.bluetooth),
           _DemoTile(Icons.tune, l10n.environmentTitle, Routes.environment),
+          _DemoTile(Icons.fingerprint, l10n.biometricTitle, Routes.biometric),
+          _DemoTile(Icons.star_rate, l10n.reviewTitle, Routes.review),
+          _DemoTile(Icons.view_in_ar, l10n.threeDTitle, Routes.threeD),
+          _DemoTile(Icons.pin, l10n.otpTitle, Routes.otp),
+          _DemoTile(Icons.slideshow, l10n.onboardingTitle, Routes.onboarding),
+          _DemoTile(Icons.tour, l10n.tourTitle, Routes.tour),
+          _DemoTile(Icons.threed_rotation, l10n.tiltTitle, Routes.tilt),
         ],
       ),
     );

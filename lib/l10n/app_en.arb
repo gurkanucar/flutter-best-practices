@@ -663,5 +663,203 @@
   "@fieldsFillExample": { "description": "Fills the form programmatically with patchValue" },
 
   "fieldsResult": "Form values",
-  "@fieldsResult": { "description": "Result dialog title" }
+  "@fieldsResult": { "description": "Result dialog title" },
+
+  "cancel": "Cancel",
+  "@cancel": { "description": "Generic cancel button" },
+
+  "biometricTitle": "Biometric authentication",
+  "@biometricTitle": { "description": "local_auth demo title" },
+
+  "biometricUnsupported": "local_auth supports Android, iOS, macOS and Windows.",
+  "@biometricUnsupported": { "description": "Shown on web and Linux" },
+
+  "biometricDeviceSupported": "Device supports secure authentication",
+  "@biometricDeviceSupported": { "description": "isDeviceSupported result" },
+
+  "biometricHardware": "Biometric hardware",
+  "@biometricHardware": { "description": "canCheckBiometrics result" },
+
+  "biometricEnrolled": "Enrolled: {types}",
+  "@biometricEnrolled": {
+    "description": "getAvailableBiometrics result",
+    "placeholders": { "types": { "type": "String", "example": "strong, weak" } }
+  },
+
+  "biometricNone": "none",
+  "@biometricNone": { "description": "No enrolled biometrics" },
+
+  "biometricAuthenticate": "Authenticate (biometrics or device PIN)",
+  "@biometricAuthenticate": { "description": "authenticate with device credential fallback" },
+
+  "biometricOnlyAuthenticate": "Biometrics only",
+  "@biometricOnlyAuthenticate": { "description": "authenticate with biometricOnly: true" },
+
+  "biometricReason": "Confirm your identity to open the secure area",
+  "@biometricReason": { "description": "localizedReason shown in the system prompt" },
+
+  "biometricPromptTitle": "Authentication required",
+  "@biometricPromptTitle": { "description": "Android biometric prompt title" },
+
+  "biometricPromptHint": "Verify identity",
+  "@biometricPromptHint": { "description": "Android biometric prompt hint" },
+
+  "biometricSuccess": "Authenticated",
+  "@biometricSuccess": { "description": "authenticate returned true" },
+
+  "biometricFailed": "Not authenticated",
+  "@biometricFailed": { "description": "authenticate returned false or the user cancelled" },
+
+  "biometricError": "Error: {details}",
+  "@biometricError": {
+    "description": "LocalAuthException code",
+    "placeholders": { "details": { "type": "String", "example": "biometricLockout" } }
+  },
+
+  "reviewTitle": "In-app review",
+  "@reviewTitle": { "description": "in_app_review demo title" },
+
+  "reviewUnsupported": "in_app_review supports Android, iOS and macOS (store listing also on Windows).",
+  "@reviewUnsupported": { "description": "Shown on other platforms" },
+
+  "reviewAvailable": "Review dialog available: {value}",
+  "@reviewAvailable": {
+    "description": "isAvailable result",
+    "placeholders": { "value": { "type": "String", "example": "Yes" } }
+  },
+
+  "reviewWillAsk": "The review dialog is requested automatically after 3 completed actions (never from a \"Rate\" button).",
+  "@reviewWillAsk": { "description": "Explains the ReviewPromptPolicy" },
+
+  "reviewCompleteAction": "Complete an action",
+  "@reviewCompleteAction": { "description": "Simulates a meaningful user action" },
+
+  "reviewProgress": "Completed actions: {count}",
+  "@reviewProgress": {
+    "description": "Number of simulated actions",
+    "placeholders": { "count": { "type": "int" } }
+  },
+
+  "reviewRequested": "Review requested — the OS decides whether the dialog is shown.",
+  "@reviewRequested": { "description": "After requestReview" },
+
+  "reviewOpenStore": "Open store listing (Rate us)",
+  "@reviewOpenStore": { "description": "openStoreListing button" },
+
+  "reviewStoreIdMissing": "Set the store id in InAppReviewPage to open the store listing on this platform.",
+  "@reviewStoreIdMissing": { "description": "appStoreId / microsoftStoreId not configured" },
+
+  "threeDTitle": "3D viewer (ditredi)",
+  "@threeDTitle": { "description": "ditredi demo title" },
+
+  "threeDCube": "Cube",
+  "@threeDCube": { "description": "Cube scene" },
+
+  "threeDModel": "OBJ model",
+  "@threeDModel": { "description": "OBJ model scene" },
+
+  "threeDHint": "Drag to rotate, pinch or scroll to zoom.",
+  "@threeDHint": { "description": "Gesture hint" },
+
+  "threeDReset": "Reset view",
+  "@threeDReset": { "description": "Reset rotation and zoom" },
+
+  "next": "Next",
+  "@next": { "description": "Generic next button" },
+
+  "previous": "Previous",
+  "@previous": { "description": "Generic previous button" },
+
+  "skip": "Skip",
+  "@skip": { "description": "Generic skip button" },
+
+  "done": "Done",
+  "@done": { "description": "Generic done button" },
+
+  "otpTitle": "OTP code (pinput)",
+  "@otpTitle": { "description": "pinput demo title" },
+
+  "otpInstruction": "Enter the 4-digit code we sent to your phone. Demo code: 2222",
+  "@otpInstruction": { "description": "OTP instructions" },
+
+  "otpInvalid": "Wrong code",
+  "@otpInvalid": { "description": "OTP validation error" },
+
+  "otpVerified": "Code verified",
+  "@otpVerified": { "description": "OTP success" },
+
+  "otpVerify": "Verify",
+  "@otpVerify": { "description": "Validate the OTP form" },
+
+  "otpClear": "Clear",
+  "@otpClear": { "description": "Clear the OTP input" },
+
+  "otpObscured": "Hidden PIN (6 digits)",
+  "@otpObscured": { "description": "Obscured pinput example title" },
+
+  "onboardingTitle": "Onboarding (introduction_screen)",
+  "@onboardingTitle": { "description": "introduction_screen demo title" },
+
+  "onboardingPage1Title": "Welcome",
+  "@onboardingPage1Title": { "description": "Onboarding page 1 title" },
+
+  "onboardingPage1Body": "Best practices for Flutter apps, in one place.",
+  "@onboardingPage1Body": { "description": "Onboarding page 1 body" },
+
+  "onboardingPage2Title": "Works everywhere",
+  "@onboardingPage2Title": { "description": "Onboarding page 2 title" },
+
+  "onboardingPage2Body": "Android, iOS, web and desktop from one codebase.",
+  "@onboardingPage2Body": { "description": "Onboarding page 2 body" },
+
+  "onboardingPage3Title": "Ready?",
+  "@onboardingPage3Title": { "description": "Onboarding page 3 title" },
+
+  "onboardingPage3Body": "Tap Done to start exploring the demos.",
+  "@onboardingPage3Body": { "description": "Onboarding page 3 body" },
+
+  "tourTitle": "Feature tour (showcaseview)",
+  "@tourTitle": { "description": "showcaseview demo title" },
+
+  "tourStart": "Start tour",
+  "@tourStart": { "description": "Restart the showcase tour" },
+
+  "tourSearchTitle": "Search",
+  "@tourSearchTitle": { "description": "Tour step title" },
+
+  "tourSearchBody": "Find any demo quickly.",
+  "@tourSearchBody": { "description": "Tour step description" },
+
+  "tourListTitle": "Items",
+  "@tourListTitle": { "description": "Tour step title" },
+
+  "tourListBody": "Tap an item to open its details.",
+  "@tourListBody": { "description": "Tour step description" },
+
+  "tourFabTitle": "Create",
+  "@tourFabTitle": { "description": "Tour step title" },
+
+  "tourFabBody": "Add a new item here.",
+  "@tourFabBody": { "description": "Tour step description" },
+
+  "tourFinished": "Tour finished",
+  "@tourFinished": { "description": "Snackbar after the tour" },
+
+  "tourItem": "Item {number}",
+  "@tourItem": {
+    "description": "List item label",
+    "placeholders": { "number": { "type": "int" } }
+  },
+
+  "tiltTitle": "Tilt effect (flutter_tilt)",
+  "@tiltTitle": { "description": "flutter_tilt demo title" },
+
+  "tiltHint": "Move the pointer over the card, drag it, or tilt your phone.",
+  "@tiltHint": { "description": "Tilt gesture hint" },
+
+  "tiltSensors": "Use device sensors (Android, iOS, web)",
+  "@tiltSensors": { "description": "Toggle gyroscope tilt" },
+
+  "tiltCardSubtitle": "Parallax layers move with the tilt",
+  "@tiltCardSubtitle": { "description": "Tilt card subtitle" }
 }

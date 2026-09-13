@@ -683,4 +683,209 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get fieldsResult => 'Form değerleri';
+
+  @override
+  String get cancel => 'İptal';
+
+  @override
+  String get biometricTitle => 'Biyometrik doğrulama';
+
+  @override
+  String get biometricUnsupported =>
+      'local_auth yalnızca Android, iOS, macOS ve Windows\'ta çalışır.';
+
+  @override
+  String get biometricDeviceSupported =>
+      'Cihaz güvenli doğrulamayı destekliyor';
+
+  @override
+  String get biometricHardware => 'Biyometrik donanım';
+
+  @override
+  String biometricEnrolled(String types) {
+    return 'Kayıtlı: $types';
+  }
+
+  @override
+  String get biometricNone => 'yok';
+
+  @override
+  String get biometricAuthenticate => 'Doğrula (biyometri veya cihaz PIN\'i)';
+
+  @override
+  String get biometricOnlyAuthenticate => 'Yalnızca biyometri';
+
+  @override
+  String get biometricReason => 'Güvenli alanı açmak için kimliğini doğrula';
+
+  @override
+  String get biometricPromptTitle => 'Doğrulama gerekli';
+
+  @override
+  String get biometricPromptHint => 'Kimliğini doğrula';
+
+  @override
+  String get biometricSuccess => 'Doğrulandı';
+
+  @override
+  String get biometricFailed => 'Doğrulanmadı';
+
+  @override
+  String biometricError(String details) {
+    return 'Hata: $details';
+  }
+
+  @override
+  String get reviewTitle => 'Uygulama içi değerlendirme';
+
+  @override
+  String get reviewUnsupported =>
+      'in_app_review yalnızca Android, iOS ve macOS\'ta çalışır (mağaza sayfası Windows\'ta da açılır).';
+
+  @override
+  String reviewAvailable(String value) {
+    return 'Değerlendirme penceresi kullanılabilir: $value';
+  }
+
+  @override
+  String get reviewWillAsk =>
+      'Değerlendirme penceresi 3 işlem tamamlandıktan sonra otomatik istenir (asla bir \"Puan ver\" butonundan değil).';
+
+  @override
+  String get reviewCompleteAction => 'Bir işlem tamamla';
+
+  @override
+  String reviewProgress(int count) {
+    return 'Tamamlanan işlemler: $count';
+  }
+
+  @override
+  String get reviewRequested =>
+      'Değerlendirme istendi — pencerenin gösterilip gösterilmeyeceğine sistem karar verir.';
+
+  @override
+  String get reviewOpenStore => 'Mağaza sayfasını aç (Puan ver)';
+
+  @override
+  String get reviewStoreIdMissing =>
+      'Bu platformda mağaza sayfasını açmak için InAppReviewPage içindeki mağaza kimliğini ayarla.';
+
+  @override
+  String get threeDTitle => '3D görüntüleyici (ditredi)';
+
+  @override
+  String get threeDCube => 'Küp';
+
+  @override
+  String get threeDModel => 'OBJ model';
+
+  @override
+  String get threeDHint =>
+      'Döndürmek için sürükle, yakınlaştırmak için sıkıştır veya kaydır.';
+
+  @override
+  String get threeDReset => 'Görünümü sıfırla';
+
+  @override
+  String get next => 'İleri';
+
+  @override
+  String get previous => 'Geri';
+
+  @override
+  String get skip => 'Geç';
+
+  @override
+  String get done => 'Bitti';
+
+  @override
+  String get otpTitle => 'Doğrulama kodu (pinput)';
+
+  @override
+  String get otpInstruction =>
+      'Telefonuna gönderdiğimiz 4 haneli kodu gir. Demo kodu: 2222';
+
+  @override
+  String get otpInvalid => 'Kod hatalı';
+
+  @override
+  String get otpVerified => 'Kod doğrulandı';
+
+  @override
+  String get otpVerify => 'Doğrula';
+
+  @override
+  String get otpClear => 'Temizle';
+
+  @override
+  String get otpObscured => 'Gizli PIN (6 hane)';
+
+  @override
+  String get onboardingTitle => 'Tanıtım ekranı (introduction_screen)';
+
+  @override
+  String get onboardingPage1Title => 'Hoş geldin';
+
+  @override
+  String get onboardingPage1Body =>
+      'Flutter uygulamaları için en iyi pratikler tek bir yerde.';
+
+  @override
+  String get onboardingPage2Title => 'Her yerde çalışır';
+
+  @override
+  String get onboardingPage2Body =>
+      'Tek kod tabanıyla Android, iOS, web ve masaüstü.';
+
+  @override
+  String get onboardingPage3Title => 'Hazır mısın?';
+
+  @override
+  String get onboardingPage3Body => 'Örnekleri keşfetmek için Bitti\'ye dokun.';
+
+  @override
+  String get tourTitle => 'Özellik turu (showcaseview)';
+
+  @override
+  String get tourStart => 'Turu başlat';
+
+  @override
+  String get tourSearchTitle => 'Arama';
+
+  @override
+  String get tourSearchBody => 'Herhangi bir örneği hızlıca bul.';
+
+  @override
+  String get tourListTitle => 'Öğeler';
+
+  @override
+  String get tourListBody => 'Ayrıntılarını açmak için bir öğeye dokun.';
+
+  @override
+  String get tourFabTitle => 'Oluştur';
+
+  @override
+  String get tourFabBody => 'Buradan yeni öğe ekle.';
+
+  @override
+  String get tourFinished => 'Tur bitti';
+
+  @override
+  String tourItem(int number) {
+    return 'Öğe $number';
+  }
+
+  @override
+  String get tiltTitle => 'Eğim efekti (flutter_tilt)';
+
+  @override
+  String get tiltHint =>
+      'İmleci kartın üzerinde gezdir, sürükle veya telefonunu eğ.';
+
+  @override
+  String get tiltSensors => 'Cihaz sensörlerini kullan (Android, iOS, web)';
+
+  @override
+  String get tiltCardSubtitle =>
+      'Paralaks katmanlar eğimle birlikte hareket eder';
 }

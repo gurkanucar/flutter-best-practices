@@ -10,6 +10,8 @@
 	<string></string>
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>NSFaceIDUsageDescription</key>
+	<string>Unlock the app with Touch ID.</string>
 	<key>CFBundleLocalizations</key>
 	<array>
 		<string>en</string>

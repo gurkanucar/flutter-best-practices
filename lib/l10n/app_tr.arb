@@ -663,5 +663,203 @@
   "@fieldsFillExample": { "description": "Fills the form programmatically with patchValue" },
 
   "fieldsResult": "Form değerleri",
-  "@fieldsResult": { "description": "Result dialog title" }
+  "@fieldsResult": { "description": "Result dialog title" },
+
+  "cancel": "İptal",
+  "@cancel": { "description": "Generic cancel button" },
+
+  "biometricTitle": "Biyometrik doğrulama",
+  "@biometricTitle": { "description": "local_auth demo title" },
+
+  "biometricUnsupported": "local_auth yalnızca Android, iOS, macOS ve Windows'ta çalışır.",
+  "@biometricUnsupported": { "description": "Shown on web and Linux" },
+
+  "biometricDeviceSupported": "Cihaz güvenli doğrulamayı destekliyor",
+  "@biometricDeviceSupported": { "description": "isDeviceSupported result" },
+
+  "biometricHardware": "Biyometrik donanım",
+  "@biometricHardware": { "description": "canCheckBiometrics result" },
+
+  "biometricEnrolled": "Kayıtlı: {types}",
+  "@biometricEnrolled": {
+    "description": "getAvailableBiometrics result",
+    "placeholders": { "types": { "type": "String", "example": "strong, weak" } }
+  },
+
+  "biometricNone": "yok",
+  "@biometricNone": { "description": "No enrolled biometrics" },
+
+  "biometricAuthenticate": "Doğrula (biyometri veya cihaz PIN'i)",
+  "@biometricAuthenticate": { "description": "authenticate with device credential fallback" },
+
+  "biometricOnlyAuthenticate": "Yalnızca biyometri",
+  "@biometricOnlyAuthenticate": { "description": "authenticate with biometricOnly: true" },
+
+  "biometricReason": "Güvenli alanı açmak için kimliğini doğrula",
+  "@biometricReason": { "description": "localizedReason shown in the system prompt" },
+
+  "biometricPromptTitle": "Doğrulama gerekli",
+  "@biometricPromptTitle": { "description": "Android biometric prompt title" },
+
+  "biometricPromptHint": "Kimliğini doğrula",
+  "@biometricPromptHint": { "description": "Android biometric prompt hint" },
+
+  "biometricSuccess": "Doğrulandı",
+  "@biometricSuccess": { "description": "authenticate returned true" },
+
+  "biometricFailed": "Doğrulanmadı",
+  "@biometricFailed": { "description": "authenticate returned false or the user cancelled" },
+
+  "biometricError": "Hata: {details}",
+  "@biometricError": {
+    "description": "LocalAuthException code",
+    "placeholders": { "details": { "type": "String", "example": "biometricLockout" } }
+  },
+
+  "reviewTitle": "Uygulama içi değerlendirme",
+  "@reviewTitle": { "description": "in_app_review demo title" },
+
+  "reviewUnsupported": "in_app_review yalnızca Android, iOS ve macOS'ta çalışır (mağaza sayfası Windows'ta da açılır).",
+  "@reviewUnsupported": { "description": "Shown on other platforms" },
+
+  "reviewAvailable": "Değerlendirme penceresi kullanılabilir: {value}",
+  "@reviewAvailable": {
+    "description": "isAvailable result",
+    "placeholders": { "value": { "type": "String", "example": "Yes" } }
+  },
+
+  "reviewWillAsk": "Değerlendirme penceresi 3 işlem tamamlandıktan sonra otomatik istenir (asla bir \"Puan ver\" butonundan değil).",
+  "@reviewWillAsk": { "description": "Explains the ReviewPromptPolicy" },
+
+  "reviewCompleteAction": "Bir işlem tamamla",
+  "@reviewCompleteAction": { "description": "Simulates a meaningful user action" },
+
+  "reviewProgress": "Tamamlanan işlemler: {count}",
+  "@reviewProgress": {
+    "description": "Number of simulated actions",
+    "placeholders": { "count": { "type": "int" } }
+  },
+
+  "reviewRequested": "Değerlendirme istendi — pencerenin gösterilip gösterilmeyeceğine sistem karar verir.",
+  "@reviewRequested": { "description": "After requestReview" },
+
+  "reviewOpenStore": "Mağaza sayfasını aç (Puan ver)",
+  "@reviewOpenStore": { "description": "openStoreListing button" },
+
+  "reviewStoreIdMissing": "Bu platformda mağaza sayfasını açmak için InAppReviewPage içindeki mağaza kimliğini ayarla.",
+  "@reviewStoreIdMissing": { "description": "appStoreId / microsoftStoreId not configured" },
+
+  "threeDTitle": "3D görüntüleyici (ditredi)",
+  "@threeDTitle": { "description": "ditredi demo title" },
+
+  "threeDCube": "Küp",
+  "@threeDCube": { "description": "Cube scene" },
+
+  "threeDModel": "OBJ model",
+  "@threeDModel": { "description": "OBJ model scene" },
+
+  "threeDHint": "Döndürmek için sürükle, yakınlaştırmak için sıkıştır veya kaydır.",
+  "@threeDHint": { "description": "Gesture hint" },
+
+  "threeDReset": "Görünümü sıfırla",
+  "@threeDReset": { "description": "Reset rotation and zoom" },
+
+  "next": "İleri",
+  "@next": { "description": "Generic next button" },
+
+  "previous": "Geri",
+  "@previous": { "description": "Generic previous button" },
+
+  "skip": "Geç",
+  "@skip": { "description": "Generic skip button" },
+
+  "done": "Bitti",
+  "@done": { "description": "Generic done button" },
+
+  "otpTitle": "Doğrulama kodu (pinput)",
+  "@otpTitle": { "description": "pinput demo title" },
+
+  "otpInstruction": "Telefonuna gönderdiğimiz 4 haneli kodu gir. Demo kodu: 2222",
+  "@otpInstruction": { "description": "OTP instructions" },
+
+  "otpInvalid": "Kod hatalı",
+  "@otpInvalid": { "description": "OTP validation error" },
+
+  "otpVerified": "Kod doğrulandı",
+  "@otpVerified": { "description": "OTP success" },
+
+  "otpVerify": "Doğrula",
+  "@otpVerify": { "description": "Validate the OTP form" },
+
+  "otpClear": "Temizle",
+  "@otpClear": { "description": "Clear the OTP input" },
+
+  "otpObscured": "Gizli PIN (6 hane)",
+  "@otpObscured": { "description": "Obscured pinput example title" },
+
+  "onboardingTitle": "Tanıtım ekranı (introduction_screen)",
+  "@onboardingTitle": { "description": "introduction_screen demo title" },
+
+  "onboardingPage1Title": "Hoş geldin",
+  "@onboardingPage1Title": { "description": "Onboarding page 1 title" },
+
+  "onboardingPage1Body": "Flutter uygulamaları için en iyi pratikler tek bir yerde.",
+  "@onboardingPage1Body": { "description": "Onboarding page 1 body" },
+
+  "onboardingPage2Title": "Her yerde çalışır",
+  "@onboardingPage2Title": { "description": "Onboarding page 2 title" },
+
+  "onboardingPage2Body": "Tek kod tabanıyla Android, iOS, web ve masaüstü.",
+  "@onboardingPage2Body": { "description": "Onboarding page 2 body" },
+
+  "onboardingPage3Title": "Hazır mısın?",
+  "@onboardingPage3Title": { "description": "Onboarding page 3 title" },
+
+  "onboardingPage3Body": "Örnekleri keşfetmek için Bitti'ye dokun.",
+  "@onboardingPage3Body": { "description": "Onboarding page 3 body" },
+
+  "tourTitle": "Özellik turu (showcaseview)",
+  "@tourTitle": { "description": "showcaseview demo title" },
+
+  "tourStart": "Turu başlat",
+  "@tourStart": { "description": "Restart the showcase tour" },
+
+  "tourSearchTitle": "Arama",
+  "@tourSearchTitle": { "description": "Tour step title" },
+
+  "tourSearchBody": "Herhangi bir örneği hızlıca bul.",
+  "@tourSearchBody": { "description": "Tour step description" },
+
+  "tourListTitle": "Öğeler",
+  "@tourListTitle": { "description": "Tour step title" },
+
+  "tourListBody": "Ayrıntılarını açmak için bir öğeye dokun.",
+  "@tourListBody": { "description": "Tour step description" },
+
+  "tourFabTitle": "Oluştur",
+  "@tourFabTitle": { "description": "Tour step title" },
+
+  "tourFabBody": "Buradan yeni öğe ekle.",
+  "@tourFabBody": { "description": "Tour step description" },
+
+  "tourFinished": "Tur bitti",
+  "@tourFinished": { "description": "Snackbar after the tour" },
+
+  "tourItem": "Öğe {number}",
+  "@tourItem": {
+    "description": "List item label",
+    "placeholders": { "number": { "type": "int" } }
+  },
+
+  "tiltTitle": "Eğim efekti (flutter_tilt)",
+  "@tiltTitle": { "description": "flutter_tilt demo title" },
+
+  "tiltHint": "İmleci kartın üzerinde gezdir, sürükle veya telefonunu eğ.",
+  "@tiltHint": { "description": "Tilt gesture hint" },
+
+  "tiltSensors": "Cihaz sensörlerini kullan (Android, iOS, web)",
+  "@tiltSensors": { "description": "Toggle gyroscope tilt" },
+
+  "tiltCardSubtitle": "Paralaks katmanlar eğimle birlikte hareket eder",
+  "@tiltCardSubtitle": { "description": "Tilt card subtitle" }
 }

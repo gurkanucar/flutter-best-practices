@@ -1267,6 +1267,372 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Form values'**
   String get fieldsResult;
+
+  /// Generic cancel button
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get cancel;
+
+  /// local_auth demo title
+  ///
+  /// In en, this message translates to:
+  /// **'Biometric authentication'**
+  String get biometricTitle;
+
+  /// Shown on web and Linux
+  ///
+  /// In en, this message translates to:
+  /// **'local_auth supports Android, iOS, macOS and Windows.'**
+  String get biometricUnsupported;
+
+  /// isDeviceSupported result
+  ///
+  /// In en, this message translates to:
+  /// **'Device supports secure authentication'**
+  String get biometricDeviceSupported;
+
+  /// canCheckBiometrics result
+  ///
+  /// In en, this message translates to:
+  /// **'Biometric hardware'**
+  String get biometricHardware;
+
+  /// getAvailableBiometrics result
+  ///
+  /// In en, this message translates to:
+  /// **'Enrolled: {types}'**
+  String biometricEnrolled(String types);
+
+  /// No enrolled biometrics
+  ///
+  /// In en, this message translates to:
+  /// **'none'**
+  String get biometricNone;
+
+  /// authenticate with device credential fallback
+  ///
+  /// In en, this message translates to:
+  /// **'Authenticate (biometrics or device PIN)'**
+  String get biometricAuthenticate;
+
+  /// authenticate with biometricOnly: true
+  ///
+  /// In en, this message translates to:
+  /// **'Biometrics only'**
+  String get biometricOnlyAuthenticate;
+
+  /// localizedReason shown in the system prompt
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm your identity to open the secure area'**
+  String get biometricReason;
+
+  /// Android biometric prompt title
+  ///
+  /// In en, this message translates to:
+  /// **'Authentication required'**
+  String get biometricPromptTitle;
+
+  /// Android biometric prompt hint
+  ///
+  /// In en, this message translates to:
+  /// **'Verify identity'**
+  String get biometricPromptHint;
+
+  /// authenticate returned true
+  ///
+  /// In en, this message translates to:
+  /// **'Authenticated'**
+  String get biometricSuccess;
+
+  /// authenticate returned false or the user cancelled
+  ///
+  /// In en, this message translates to:
+  /// **'Not authenticated'**
+  String get biometricFailed;
+
+  /// LocalAuthException code
+  ///
+  /// In en, this message translates to:
+  /// **'Error: {details}'**
+  String biometricError(String details);
+
+  /// in_app_review demo title
+  ///
+  /// In en, this message translates to:
+  /// **'In-app review'**
+  String get reviewTitle;
+
+  /// Shown on other platforms
+  ///
+  /// In en, this message translates to:
+  /// **'in_app_review supports Android, iOS and macOS (store listing also on Windows).'**
+  String get reviewUnsupported;
+
+  /// isAvailable result
+  ///
+  /// In en, this message translates to:
+  /// **'Review dialog available: {value}'**
+  String reviewAvailable(String value);
+
+  /// Explains the ReviewPromptPolicy
+  ///
+  /// In en, this message translates to:
+  /// **'The review dialog is requested automatically after 3 completed actions (never from a \"Rate\" button).'**
+  String get reviewWillAsk;
+
+  /// Simulates a meaningful user action
+  ///
+  /// In en, this message translates to:
+  /// **'Complete an action'**
+  String get reviewCompleteAction;
+
+  /// Number of simulated actions
+  ///
+  /// In en, this message translates to:
+  /// **'Completed actions: {count}'**
+  String reviewProgress(int count);
+
+  /// After requestReview
+  ///
+  /// In en, this message translates to:
+  /// **'Review requested — the OS decides whether the dialog is shown.'**
+  String get reviewRequested;
+
+  /// openStoreListing button
+  ///
+  /// In en, this message translates to:
+  /// **'Open store listing (Rate us)'**
+  String get reviewOpenStore;
+
+  /// appStoreId / microsoftStoreId not configured
+  ///
+  /// In en, this message translates to:
+  /// **'Set the store id in InAppReviewPage to open the store listing on this platform.'**
+  String get reviewStoreIdMissing;
+
+  /// ditredi demo title
+  ///
+  /// In en, this message translates to:
+  /// **'3D viewer (ditredi)'**
+  String get threeDTitle;
+
+  /// Cube scene
+  ///
+  /// In en, this message translates to:
+  /// **'Cube'**
+  String get threeDCube;
+
+  /// OBJ model scene
+  ///
+  /// In en, this message translates to:
+  /// **'OBJ model'**
+  String get threeDModel;
+
+  /// Gesture hint
+  ///
+  /// In en, this message translates to:
+  /// **'Drag to rotate, pinch or scroll to zoom.'**
+  String get threeDHint;
+
+  /// Reset rotation and zoom
+  ///
+  /// In en, this message translates to:
+  /// **'Reset view'**
+  String get threeDReset;
+
+  /// Generic next button
+  ///
+  /// In en, this message translates to:
+  /// **'Next'**
+  String get next;
+
+  /// Generic previous button
+  ///
+  /// In en, this message translates to:
+  /// **'Previous'**
+  String get previous;
+
+  /// Generic skip button
+  ///
+  /// In en, this message translates to:
+  /// **'Skip'**
+  String get skip;
+
+  /// Generic done button
+  ///
+  /// In en, this message translates to:
+  /// **'Done'**
+  String get done;
+
+  /// pinput demo title
+  ///
+  /// In en, this message translates to:
+  /// **'OTP code (pinput)'**
+  String get otpTitle;
+
+  /// OTP instructions
+  ///
+  /// In en, this message translates to:
+  /// **'Enter the 4-digit code we sent to your phone. Demo code: 2222'**
+  String get otpInstruction;
+
+  /// OTP validation error
+  ///
+  /// In en, this message translates to:
+  /// **'Wrong code'**
+  String get otpInvalid;
+
+  /// OTP success
+  ///
+  /// In en, this message translates to:
+  /// **'Code verified'**
+  String get otpVerified;
+
+  /// Validate the OTP form
+  ///
+  /// In en, this message translates to:
+  /// **'Verify'**
+  String get otpVerify;
+
+  /// Clear the OTP input
+  ///
+  /// In en, this message translates to:
+  /// **'Clear'**
+  String get otpClear;
+
+  /// Obscured pinput example title
+  ///
+  /// In en, this message translates to:
+  /// **'Hidden PIN (6 digits)'**
+  String get otpObscured;
+
+  /// introduction_screen demo title
+  ///
+  /// In en, this message translates to:
+  /// **'Onboarding (introduction_screen)'**
+  String get onboardingTitle;
+
+  /// Onboarding page 1 title
+  ///
+  /// In en, this message translates to:
+  /// **'Welcome'**
+  String get onboardingPage1Title;
+
+  /// Onboarding page 1 body
+  ///
+  /// In en, this message translates to:
+  /// **'Best practices for Flutter apps, in one place.'**
+  String get onboardingPage1Body;
+
+  /// Onboarding page 2 title
+  ///
+  /// In en, this message translates to:
+  /// **'Works everywhere'**
+  String get onboardingPage2Title;
+
+  /// Onboarding page 2 body
+  ///
+  /// In en, this message translates to:
+  /// **'Android, iOS, web and desktop from one codebase.'**
+  String get onboardingPage2Body;
+
+  /// Onboarding page 3 title
+  ///
+  /// In en, this message translates to:
+  /// **'Ready?'**
+  String get onboardingPage3Title;
+
+  /// Onboarding page 3 body
+  ///
+  /// In en, this message translates to:
+  /// **'Tap Done to start exploring the demos.'**
+  String get onboardingPage3Body;
+
+  /// showcaseview demo title
+  ///
+  /// In en, this message translates to:
+  /// **'Feature tour (showcaseview)'**
+  String get tourTitle;
+
+  /// Restart the showcase tour
+  ///
+  /// In en, this message translates to:
+  /// **'Start tour'**
+  String get tourStart;
+
+  /// Tour step title
+  ///
+  /// In en, this message translates to:
+  /// **'Search'**
+  String get tourSearchTitle;
+
+  /// Tour step description
+  ///
+  /// In en, this message translates to:
+  /// **'Find any demo quickly.'**
+  String get tourSearchBody;
+
+  /// Tour step title
+  ///
+  /// In en, this message translates to:
+  /// **'Items'**
+  String get tourListTitle;
+
+  /// Tour step description
+  ///
+  /// In en, this message translates to:
+  /// **'Tap an item to open its details.'**
+  String get tourListBody;
+
+  /// Tour step title
+  ///
+  /// In en, this message translates to:
+  /// **'Create'**
+  String get tourFabTitle;
+
+  /// Tour step description
+  ///
+  /// In en, this message translates to:
+  /// **'Add a new item here.'**
+  String get tourFabBody;
+
+  /// Snackbar after the tour
+  ///
+  /// In en, this message translates to:
+  /// **'Tour finished'**
+  String get tourFinished;
+
+  /// List item label
+  ///
+  /// In en, this message translates to:
+  /// **'Item {number}'**
+  String tourItem(int number);
+
+  /// flutter_tilt demo title
+  ///
+  /// In en, this message translates to:
+  /// **'Tilt effect (flutter_tilt)'**
+  String get tiltTitle;
+
+  /// Tilt gesture hint
+  ///
+  /// In en, this message translates to:
+  /// **'Move the pointer over the card, drag it, or tilt your phone.'**
+  String get tiltHint;
+
+  /// Toggle gyroscope tilt
+  ///
+  /// In en, this message translates to:
+  /// **'Use device sensors (Android, iOS, web)'**
+  String get tiltSensors;
+
+  /// Tilt card subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Parallax layers move with the tilt'**
+  String get tiltCardSubtitle;
 }
 
 class _AppLocalizationsDelegate

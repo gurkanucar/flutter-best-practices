@@ -3,6 +3,13 @@ import 'package:material_ui/material_ui.dart';
 
 import '../app_settings/app_settings_page.dart';
 import '../auth/auth_controller.dart';
+import '../biometric/biometric_auth_page.dart';
+import '../review/in_app_review_page.dart';
+import '../three_d/three_d_page.dart';
+import '../onboarding/onboarding_page.dart';
+import '../otp/otp_page.dart';
+import '../tilt/tilt_page.dart';
+import '../tour/feature_tour_page.dart';
 import '../auth/login_page.dart';
 import '../checkout/checkout_page.dart';
 import '../checkout/order_complete_page.dart';
@@ -134,6 +141,13 @@ GoRouter createAppRouter(AuthController auth, {String initialLocation = Routes.h
       GoRoute(path: Routes.permissions, builder: (context, state) => const PermissionsPage()),
       GoRoute(path: Routes.bluetooth, builder: (context, state) => const BluetoothPage()),
       GoRoute(path: Routes.environment, builder: (context, state) => const EnvironmentPage()),
+      GoRoute(path: Routes.biometric, builder: (context, state) => const BiometricAuthPage()),
+      GoRoute(path: Routes.review, builder: (context, state) => const InAppReviewPage()),
+      GoRoute(path: Routes.threeD, builder: (context, state) => const ThreeDPage()),
+      GoRoute(path: Routes.otp, builder: (context, state) => const OtpPage()),
+      GoRoute(path: Routes.onboarding, builder: (context, state) => const OnboardingPage()),
+      GoRoute(path: Routes.tour, builder: (context, state) => const FeatureTourPage()),
+      GoRoute(path: Routes.tilt, builder: (context, state) => const TiltPage()),
     ],
   );
 }
