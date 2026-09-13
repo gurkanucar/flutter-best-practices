@@ -1,4 +1,4 @@
-package com.example.flutter_best_practices
+package com.gucardev.flutterbestpractices
 
 import io.flutter.embedding.android.FlutterActivity
 
