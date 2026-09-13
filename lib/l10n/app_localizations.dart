@@ -1021,6 +1021,252 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'flutter_blue_plus: commercial use requires a paid license.'**
   String get bluetoothLicenseNote;
+
+  /// Build environment demo page title
+  ///
+  /// In en, this message translates to:
+  /// **'Environment'**
+  String get environmentTitle;
+
+  /// APP_FLAVOR: dev / staging / prod
+  ///
+  /// In en, this message translates to:
+  /// **'Flavor'**
+  String get envFlavor;
+
+  /// Shown when the build didn't pass --dart-define-from-file
+  ///
+  /// In en, this message translates to:
+  /// **'default — no env file passed'**
+  String get envDefault;
+
+  /// debug / profile / release
+  ///
+  /// In en, this message translates to:
+  /// **'Build mode'**
+  String get envBuildMode;
+
+  /// API_BASE_URL value
+  ///
+  /// In en, this message translates to:
+  /// **'API base URL'**
+  String get envApiBaseUrl;
+
+  /// ENABLE_LOGGING value
+  ///
+  /// In en, this message translates to:
+  /// **'Logging'**
+  String get envLogging;
+
+  /// Whether SENTRY_DSN is set
+  ///
+  /// In en, this message translates to:
+  /// **'Crash reporting'**
+  String get envCrashReporting;
+
+  /// Empty environment value
+  ///
+  /// In en, this message translates to:
+  /// **'Not set'**
+  String get envNotSet;
+
+  /// Warning on the environment page
+  ///
+  /// In en, this message translates to:
+  /// **'These values come from --dart-define-from-file at build time and are compiled into the app. Never put secrets in them.'**
+  String get envSecretWarning;
+
+  /// flutter_form_builder field showcase page title
+  ///
+  /// In en, this message translates to:
+  /// **'All form fields'**
+  String get formFieldsTitle;
+
+  /// Section header
+  ///
+  /// In en, this message translates to:
+  /// **'Date & time'**
+  String get fieldsSectionDateTime;
+
+  /// Time-only picker label
+  ///
+  /// In en, this message translates to:
+  /// **'Meeting time'**
+  String get fieldsMeetingTime;
+
+  /// Date and time picker label
+  ///
+  /// In en, this message translates to:
+  /// **'Appointment (date + time)'**
+  String get fieldsAppointment;
+
+  /// Date range picker label
+  ///
+  /// In en, this message translates to:
+  /// **'Trip dates'**
+  String get fieldsTripDates;
+
+  /// Section header
+  ///
+  /// In en, this message translates to:
+  /// **'Sliders & numbers'**
+  String get fieldsSectionNumbers;
+
+  /// Slider label
+  ///
+  /// In en, this message translates to:
+  /// **'Volume'**
+  String get fieldsVolume;
+
+  /// Range slider label
+  ///
+  /// In en, this message translates to:
+  /// **'Price range'**
+  String get fieldsPriceRange;
+
+  /// Numeric text field label
+  ///
+  /// In en, this message translates to:
+  /// **'Age (optional)'**
+  String get fieldsAge;
+
+  /// Section header
+  ///
+  /// In en, this message translates to:
+  /// **'Choices'**
+  String get fieldsSectionChoices;
+
+  /// Switch label
+  ///
+  /// In en, this message translates to:
+  /// **'Subscribe to the newsletter'**
+  String get fieldsNewsletter;
+
+  /// Radio group label
+  ///
+  /// In en, this message translates to:
+  /// **'Preferred contact'**
+  String get fieldsContactMethod;
+
+  /// Radio option
+  ///
+  /// In en, this message translates to:
+  /// **'Phone'**
+  String get fieldsContactPhone;
+
+  /// Radio option
+  ///
+  /// In en, this message translates to:
+  /// **'SMS'**
+  String get fieldsContactSms;
+
+  /// Conditional phone field label
+  ///
+  /// In en, this message translates to:
+  /// **'Phone number'**
+  String get fieldsPhone;
+
+  /// Checkbox group label
+  ///
+  /// In en, this message translates to:
+  /// **'Interests (pick at least one)'**
+  String get fieldsInterests;
+
+  /// Checkbox option
+  ///
+  /// In en, this message translates to:
+  /// **'Design'**
+  String get fieldsInterestDesign;
+
+  /// Choice chips label
+  ///
+  /// In en, this message translates to:
+  /// **'T-shirt size'**
+  String get fieldsSize;
+
+  /// Filter chips label
+  ///
+  /// In en, this message translates to:
+  /// **'Pizza toppings'**
+  String get fieldsToppings;
+
+  /// Filter chip option
+  ///
+  /// In en, this message translates to:
+  /// **'Cheese'**
+  String get fieldsToppingCheese;
+
+  /// Filter chip option
+  ///
+  /// In en, this message translates to:
+  /// **'Mushroom'**
+  String get fieldsToppingMushroom;
+
+  /// Filter chip option
+  ///
+  /// In en, this message translates to:
+  /// **'Olive'**
+  String get fieldsToppingOlive;
+
+  /// Filter chip option
+  ///
+  /// In en, this message translates to:
+  /// **'Pepper'**
+  String get fieldsToppingPepper;
+
+  /// Section header
+  ///
+  /// In en, this message translates to:
+  /// **'Custom & dynamic fields'**
+  String get fieldsSectionCustom;
+
+  /// Custom star rating field label
+  ///
+  /// In en, this message translates to:
+  /// **'Rating'**
+  String get fieldsRating;
+
+  /// Custom color field label
+  ///
+  /// In en, this message translates to:
+  /// **'Favorite color'**
+  String get fieldsFavoriteColor;
+
+  /// Multiline text field label
+  ///
+  /// In en, this message translates to:
+  /// **'Notes'**
+  String get fieldsNotes;
+
+  /// Dynamic guest name field label
+  ///
+  /// In en, this message translates to:
+  /// **'Guest {number}'**
+  String fieldsGuestName(int number);
+
+  /// Adds a dynamic guest field
+  ///
+  /// In en, this message translates to:
+  /// **'Add guest'**
+  String get fieldsAddGuest;
+
+  /// Removes a dynamic guest field
+  ///
+  /// In en, this message translates to:
+  /// **'Remove guest'**
+  String get fieldsRemoveGuest;
+
+  /// Fills the form programmatically with patchValue
+  ///
+  /// In en, this message translates to:
+  /// **'Fill example'**
+  String get fieldsFillExample;
+
+  /// Result dialog title
+  ///
+  /// In en, this message translates to:
+  /// **'Form values'**
+  String get fieldsResult;
 }
 
 class _AppLocalizationsDelegate

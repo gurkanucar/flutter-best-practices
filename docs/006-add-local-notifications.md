@@ -163,7 +163,6 @@ Prints the install path → installed. Prints nothing → not installed.
 - Don't split the command over multiple lines when pasting: a missing trailing `` ` `` starts `setup.exe`
   without arguments (opens the installer UI) and then fails with
   `modify : The term 'modify' is not recognized`.
-- `profile.ps1 cannot be loaded because running scripts is disabled` at PowerShell startup is unrelated — ignore it.
 
 **Then rebuild:**
 ```bash

@@ -4,6 +4,7 @@ import 'package:material_ui/material_ui.dart';
 
 import 'auth/auth_controller.dart';
 import 'auth/auth_scope.dart';
+import 'config/environment_banner.dart';
 import 'l10n/app_localization_delegates.dart';
 import 'l10n/app_localizations.dart';
 import 'l10n/supported_languages.dart';
@@ -77,6 +78,8 @@ class _MainAppState extends State<MainApp> {
           onGenerateTitle: (context) => AppLocalizations.of(context).appTitle,
           localizationsDelegates: appLocalizationDelegates,
           supportedLocales: AppLocalizations.supportedLocales,
+          // "DEV" / "STAGING" ribbon from --dart-define-from-file (hidden in prod).
+          builder: (context, child) => EnvironmentBanner(child: child!),
         ),
       ),
     );

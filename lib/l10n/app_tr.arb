@@ -537,5 +537,131 @@
   },
 
   "bluetoothLicenseNote": "flutter_blue_plus: ticari kullanım ücretli lisans gerektirir.",
-  "@bluetoothLicenseNote": { "description": "License reminder on the BLE demo page" }
+  "@bluetoothLicenseNote": { "description": "License reminder on the BLE demo page" },
+
+  "environmentTitle": "Ortam",
+  "@environmentTitle": { "description": "Build environment demo page title" },
+
+  "envFlavor": "Ortam türü",
+  "@envFlavor": { "description": "APP_FLAVOR: dev / staging / prod" },
+
+  "envDefault": "varsayılan — env dosyası verilmedi",
+  "@envDefault": { "description": "Shown when the build didn't pass --dart-define-from-file" },
+
+  "envBuildMode": "Derleme modu",
+  "@envBuildMode": { "description": "debug / profile / release" },
+
+  "envApiBaseUrl": "API adresi",
+  "@envApiBaseUrl": { "description": "API_BASE_URL value" },
+
+  "envLogging": "Loglama",
+  "@envLogging": { "description": "ENABLE_LOGGING value" },
+
+  "envCrashReporting": "Hata raporlama",
+  "@envCrashReporting": { "description": "Whether SENTRY_DSN is set" },
+
+  "envNotSet": "Ayarlanmamış",
+  "@envNotSet": { "description": "Empty environment value" },
+
+  "envSecretWarning": "Bu değerler derleme sırasında --dart-define-from-file ile gelir ve uygulamanın içine gömülür. Buraya asla gizli bilgi koyma.",
+  "@envSecretWarning": { "description": "Warning on the environment page" },
+
+  "formFieldsTitle": "Tüm form alanları",
+  "@formFieldsTitle": { "description": "flutter_form_builder field showcase page title" },
+
+  "fieldsSectionDateTime": "Tarih ve saat",
+  "@fieldsSectionDateTime": { "description": "Section header" },
+
+  "fieldsMeetingTime": "Toplantı saati",
+  "@fieldsMeetingTime": { "description": "Time-only picker label" },
+
+  "fieldsAppointment": "Randevu (tarih + saat)",
+  "@fieldsAppointment": { "description": "Date and time picker label" },
+
+  "fieldsTripDates": "Seyahat tarihleri",
+  "@fieldsTripDates": { "description": "Date range picker label" },
+
+  "fieldsSectionNumbers": "Kaydırıcılar ve sayılar",
+  "@fieldsSectionNumbers": { "description": "Section header" },
+
+  "fieldsVolume": "Ses düzeyi",
+  "@fieldsVolume": { "description": "Slider label" },
+
+  "fieldsPriceRange": "Fiyat aralığı",
+  "@fieldsPriceRange": { "description": "Range slider label" },
+
+  "fieldsAge": "Yaş (isteğe bağlı)",
+  "@fieldsAge": { "description": "Numeric text field label" },
+
+  "fieldsSectionChoices": "Seçimler",
+  "@fieldsSectionChoices": { "description": "Section header" },
+
+  "fieldsNewsletter": "Bültene abone ol",
+  "@fieldsNewsletter": { "description": "Switch label" },
+
+  "fieldsContactMethod": "Tercih edilen iletişim",
+  "@fieldsContactMethod": { "description": "Radio group label" },
+
+  "fieldsContactPhone": "Telefon",
+  "@fieldsContactPhone": { "description": "Radio option" },
+
+  "fieldsContactSms": "SMS",
+  "@fieldsContactSms": { "description": "Radio option" },
+
+  "fieldsPhone": "Telefon numarası",
+  "@fieldsPhone": { "description": "Conditional phone field label" },
+
+  "fieldsInterests": "İlgi alanları (en az bir tane seç)",
+  "@fieldsInterests": { "description": "Checkbox group label" },
+
+  "fieldsInterestDesign": "Tasarım",
+  "@fieldsInterestDesign": { "description": "Checkbox option" },
+
+  "fieldsSize": "Tişört bedeni",
+  "@fieldsSize": { "description": "Choice chips label" },
+
+  "fieldsToppings": "Pizza malzemeleri",
+  "@fieldsToppings": { "description": "Filter chips label" },
+
+  "fieldsToppingCheese": "Peynir",
+  "@fieldsToppingCheese": { "description": "Filter chip option" },
+
+  "fieldsToppingMushroom": "Mantar",
+  "@fieldsToppingMushroom": { "description": "Filter chip option" },
+
+  "fieldsToppingOlive": "Zeytin",
+  "@fieldsToppingOlive": { "description": "Filter chip option" },
+
+  "fieldsToppingPepper": "Biber",
+  "@fieldsToppingPepper": { "description": "Filter chip option" },
+
+  "fieldsSectionCustom": "Özel ve dinamik alanlar",
+  "@fieldsSectionCustom": { "description": "Section header" },
+
+  "fieldsRating": "Puan",
+  "@fieldsRating": { "description": "Custom star rating field label" },
+
+  "fieldsFavoriteColor": "Favori renk",
+  "@fieldsFavoriteColor": { "description": "Custom color field label" },
+
+  "fieldsNotes": "Notlar",
+  "@fieldsNotes": { "description": "Multiline text field label" },
+
+  "fieldsGuestName": "{number}. misafir",
+  "@fieldsGuestName": {
+    "description": "Dynamic guest name field label",
+    "placeholders": { "number": { "type": "int" } }
+  },
+
+  "fieldsAddGuest": "Misafir ekle",
+  "@fieldsAddGuest": { "description": "Adds a dynamic guest field" },
+
+  "fieldsRemoveGuest": "Misafiri kaldır",
+  "@fieldsRemoveGuest": { "description": "Removes a dynamic guest field" },
+
+  "fieldsFillExample": "Örnek doldur",
+  "@fieldsFillExample": { "description": "Fills the form programmatically with patchValue" },
+
+  "fieldsResult": "Form değerleri",
+  "@fieldsResult": { "description": "Result dialog title" }
 }

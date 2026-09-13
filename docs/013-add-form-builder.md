@@ -57,7 +57,10 @@ final _formKey = GlobalKey<FormBuilderState>();
 
 FormBuilder(
   key: _formKey,
-  child: ListView(
+  // ⚠️ Not ListView: it builds children lazily. Fields that were never on screen aren't registered,
+  // so saveAndValidate() skips them, patchValue() ignores them and form.value lacks them.
+  child: SingleChildScrollView(
+    child: Column(
     children: [
       FormBuilderTextField(
         name: SignUpFields.email,                       // key in the value map
@@ -111,6 +114,7 @@ FormBuilder(
         validator: (value) => value == true ? null : l10n.formTermsRequired,
       ),
     ],
+    ),
   ),
 )
 ```
@@ -167,6 +171,176 @@ class SignUpData extends Equatable {
 - Equatable: see [011](011-add-equatable.md). `EquatableConfig.stringify` is `true` in debug, so
   classes with secrets must override `stringify => false`.
 
+## More field types — `lib/forms/form_fields_page.dart`
+**Home → Demos → All form fields** shows every built-in field plus custom, conditional and dynamic fields.
+
+| Field | Value in `form.value` | Example |
+|---|---|---|
+| `FormBuilderTextField` | `String?` (or anything via `valueTransformer`) | name, notes (`maxLines`, `maxLength`), age → `int?` |
+| `FormBuilderDateTimePicker(inputType: InputType.time)` | `DateTime?` | meeting time |
+| `FormBuilderDateTimePicker(inputType: InputType.both)` | `DateTime?` | appointment |
+| `FormBuilderDateRangePicker` | `DateTimeRange?` | trip dates |
+| `FormBuilderSlider` | `double` | volume 0–100 |
+| `FormBuilderRangeSlider` | `RangeValues` | price range |
+| `FormBuilderSwitch` | `bool` | newsletter |
+| `FormBuilderCheckbox` | `bool` | accept terms |
+| `FormBuilderRadioGroup<T>` | `T?` | contact method |
+| `FormBuilderCheckboxGroup<T>` | `List<T>?` | interests |
+| `FormBuilderChoiceChips<T>` | `T?` (single) | T-shirt size |
+| `FormBuilderFilterChips<T>` | `List<T>?` (multiple) | pizza toppings |
+| `FormBuilderDropdown<T>` | `T?` | role (sign-up form) |
+| `FormBuilderField<T>` (custom) | `T?` | star rating, color |
+
+### Date, time and range
+```dart
+FormBuilderDateTimePicker(
+  name: FieldNames.meetingTime,
+  inputType: InputType.time,                       // date | time | both
+  format: DateFormat.jm(locale),                   // "9:30 AM" / "09:30"
+  validator: FormBuilderValidators.required(),
+),
+FormBuilderDateRangePicker(
+  name: FieldNames.tripDates,
+  firstDate: DateUtils.dateOnly(DateTime.now()),
+  lastDate: DateTime.now().add(const Duration(days: 365)),
+  format: DateFormat.yMMMd(locale),
+),
+```
+
+### Sliders and numbers
+```dart
+FormBuilderSlider(
+  name: FieldNames.volume,
+  min: 0, max: 100, divisions: 20, initialValue: 40,
+  displayValues: DisplayValues.current,            // all | current | minMax | none
+),
+FormBuilderRangeSlider(
+  name: FieldNames.priceRange,
+  min: 0, max: 10000, divisions: 20,
+  initialValue: const RangeValues(1000, 5000),
+),
+FormBuilderTextField(
+  name: FieldNames.age,
+  keyboardType: TextInputType.number,
+  valueTransformer: (value) => int.tryParse(value ?? ''),     // form.value['age'] is int?
+  validator: FormBuilderValidators.compose([
+    FormBuilderValidators.integer(checkNullOrEmpty: false),   // optional field
+    FormBuilderValidators.min(18, checkNullOrEmpty: false),
+    FormBuilderValidators.max(120, checkNullOrEmpty: false),
+  ]),
+),
+```
+
+### Choices
+```dart
+FormBuilderRadioGroup<String>(
+  name: FieldNames.contact,
+  validator: FormBuilderValidators.required(),
+  options: [
+    FormBuilderFieldOption(value: 'email', child: Text(l10n.formEmail)),
+    FormBuilderFieldOption(value: 'phone', child: Text(l10n.fieldsContactPhone)),
+  ],
+),
+FormBuilderCheckboxGroup<String>(
+  name: FieldNames.interests,
+  validator: FormBuilderValidators.minLength(1),   // at least one checked
+  options: const [FormBuilderFieldOption(value: 'flutter', child: Text('Flutter'))],
+),
+FormBuilderChoiceChips<String>(
+  name: FieldNames.size,
+  spacing: 8,
+  options: const [FormBuilderChipOption(value: 'S'), FormBuilderChipOption(value: 'M')],   // label = value
+),
+FormBuilderFilterChips<String>(
+  name: FieldNames.toppings,
+  options: [FormBuilderChipOption(value: 'cheese', child: Text(l10n.fieldsToppingCheese))],
+),
+```
+Layout: `orientation: OptionsOrientation.horizontal | vertical | wrap | auto`.
+
+### Custom field — any widget
+```dart
+FormBuilderField<int>(
+  name: FieldNames.rating,
+  validator: FormBuilderValidators.required(),
+  builder: (field) => InputDecorator(
+    decoration: InputDecoration(labelText: l10n.fieldsRating, errorText: field.errorText, border: InputBorder.none),
+    child: Row(children: [
+      for (var star = 1; star <= 5; star++)
+        IconButton(
+          icon: Icon(star <= (field.value ?? 0) ? Icons.star : Icons.star_border),
+          onPressed: () => field.didChange(star),   // set value
+        ),
+    ]),
+  ),
+)
+```
+Same pattern for the color picker (`FormBuilderField<Color>`), signature pads, file pickers, maps…
+
+### Conditional field
+```dart
+FormBuilderRadioGroup<String>(
+  name: FieldNames.contact,
+  onChanged: (value) => setState(() => _contact = value),
+  ...
+),
+if (_contact == 'phone')
+  FormBuilderTextField(
+    name: FieldNames.phone,
+    validator: FormBuilderValidators.compose([
+      FormBuilderValidators.required(),
+      FormBuilderValidators.phoneNumber(),
+    ]),
+  ),
+```
+Hidden fields aren't validated. With `FormBuilder(clearValueOnUnregister: true)` their value also disappears
+from `form.value` when they're removed.
+
+### Dynamic fields (add / remove)
+```dart
+final _guestIds = <int>[];
+int _nextGuestId = 1;
+
+for (final (index, id) in _guestIds.indexed)
+  FormBuilderTextField(
+    key: ValueKey(id),                              // stable identity when others are removed
+    name: FieldNames.guest(id),                     // 'guest_1', 'guest_2', ...
+    decoration: InputDecoration(
+      labelText: l10n.fieldsGuestName(index + 1),
+      suffixIcon: IconButton(
+        icon: const Icon(Icons.remove_circle_outline),
+        onPressed: () => setState(() => _guestIds.remove(id)),
+      ),
+    ),
+  ),
+TextButton(onPressed: () => setState(() => _guestIds.add(_nextGuestId++)), child: Text(l10n.fieldsAddGuest)),
+```
+Use an increasing id, not the list index, for `name` and `key`.
+
+### Fill programmatically (edit an existing record)
+```dart
+_formKey.currentState?.patchValue({
+  FieldNames.meetingTime: DateTime(2026, 1, 1, 9, 30),
+  FieldNames.priceRange: const RangeValues(2000, 8000),
+  FieldNames.interests: ['flutter', 'dart'],
+  FieldNames.rating: 4,
+  FieldNames.color: Colors.green,
+});
+```
+
+### Tests — `test/form_fields_test.dart`
+Empty submit errors, `patchValue` + submit result, conditional phone field, add/remove guests.
+
+### Even more fields
+[`form_builder_extra_fields`](https://pub.dev/packages/form_builder_extra_fields) (13.x, `material_ui`-based):
+typeahead/autocomplete, searchable dropdown, color picker, signature pad, rating bar, touch spin, cupertino pickers.
+Its own dependencies (`flutter_typeahead`, `dropdown_search`, `flutter_colorpicker`, `signature`,
+`flutter_rating_bar`) may still use `package:flutter/material.dart` — test each field in this app before relying on it
+(a "No Material widget found" error means that dependency isn't migrated). Also:
+[`form_builder_image_picker`](https://pub.dev/packages/form_builder_image_picker),
+[`form_builder_file_picker`](https://pub.dev/packages/form_builder_file_picker),
+[`form_builder_phone_field`](https://pub.dev/packages/form_builder_phone_field).
+
 ## Validators cheat sheet (`FormBuilderValidators.`)
 
 | Group | Validators |
@@ -208,7 +382,8 @@ testWidgets('empty submit shows Turkish validator errors', (tester) async {
 ```
 Covered: English + Turkish required errors, valid submit dialog, password mismatch, keyboard hint,
 `SignUpData` equality and password not in `toString`.
-- Long forms in a `ListView` build lazily — use `tester.scrollUntilVisible(...)` before tapping lower widgets.
+- Long forms are taller than the test screen (800×600) — `tester.scrollUntilVisible(...)` then
+  `tester.ensureVisible(...)` before tapping lower widgets, otherwise the tap misses.
 - Find text fields by label: `find.widgetWithText(TextField, 'Email')`.
 
 ## Troubleshooting
@@ -221,3 +396,4 @@ Covered: English + Turkish required errors, valid submit dialog, password mismat
 | Optional field shows "cannot be empty" | v11 validators check null/empty → `checkNullOrEmpty: false` |
 | `match('pattern')` doesn't compile | v11 needs `match(RegExp('pattern'))` |
 | Value missing from the map | Typo in `name:` — use constants |
+| Required field below the fold isn't validated / `patchValue` ignores it / missing from `form.value` | Fields are inside a lazy `ListView` and were never built → use `SingleChildScrollView` + `Column` |

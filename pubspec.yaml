@@ -51,6 +51,76 @@ dev_dependencies:
   drift_dev: ^2.35.0
   build_runner: ^2.16.1
   hive_ce_generator: ^1.11.3
+  rps: ^0.10.1
+
+# Project commands (like npm scripts), powered by the `rps` dev dependency.
+#   dart run rps ls                         → list all commands
+#   dart run rps start dev -d windows       → extra arguments are appended
+#   dart run rps build apk staging
+# Windows runs them with cmd (set in rps.yaml), macOS/Linux with bash. See docs/007-run-and-build.md.
+scripts:
+  gen:
+    $description: Code generation (Hive adapters, Drift) + localizations
+    $script: dart run build_runner build
+    $after: flutter gen-l10n
+  check:
+    $description: gen, then analyze and test (run before committing)
+    $before: rps gen
+    $script: flutter analyze
+    $after: flutter test
+  clean:
+    $description: Delete build outputs
+    $script: flutter clean
+
+  env:
+    init-prod:
+      $description: Create env/prod.json from env/prod.example.json (never overwrites an existing file)
+      $script:
+        $windows: if not exist env\prod.json copy env\prod.example.json env\prod.json
+        $default: cp -n env/prod.example.json env/prod.json
+
+  # Not named `run`: that's a built-in rps command (`rps run <script>`), so `rps run dev` would look for a
+  # script called `dev` and fail with "Missing script".
+  start:
+    dev:
+      $description: Debug run with env/dev.json (append -d <device>)
+      $script: flutter run --dart-define-from-file=env/dev.json
+    staging:
+      $description: Debug run with env/staging.json
+      $script: flutter run --dart-define-from-file=env/staging.json
+    prod:
+      $description: Release run with env/prod.json (create it from env/prod.example.json)
+      $script: flutter run --release --dart-define-from-file=env/prod.json
+
+  test:
+    staging:
+      $description: Tests with env/staging.json values
+      $script: flutter test --dart-define-from-file=env/staging.json
+
+  build:
+    # Runs before every `rps build ...` command.
+    $before: rps gen
+    apk:
+      dev: flutter build apk --release --dart-define-from-file=env/dev.json
+      staging: flutter build apk --release --dart-define-from-file=env/staging.json
+      prod: flutter build apk --release --obfuscate --split-debug-info=build-symbols/apk/prod --dart-define-from-file=env/prod.json
+    appbundle:
+      staging: flutter build appbundle --release --dart-define-from-file=env/staging.json
+      prod: flutter build appbundle --release --obfuscate --split-debug-info=build-symbols/appbundle/prod --dart-define-from-file=env/prod.json
+    ipa:
+      staging: flutter build ipa --release --dart-define-from-file=env/staging.json
+      prod: flutter build ipa --release --obfuscate --split-debug-info=build-symbols/ipa/prod --dart-define-from-file=env/prod.json
+    macos:
+      prod: flutter build macos --release --obfuscate --split-debug-info=build-symbols/macos/prod --dart-define-from-file=env/prod.json
+    windows:
+      dev: flutter build windows --debug --dart-define-from-file=env/dev.json
+      staging: flutter build windows --release --dart-define-from-file=env/staging.json
+      prod: flutter build windows --release --obfuscate --split-debug-info=build-symbols/windows/prod --dart-define-from-file=env/prod.json
+    linux:
+      prod: flutter build linux --release --dart-define-from-file=env/prod.json
+    web:
+      staging: flutter build web --release --dart-define-from-file=env/staging.json
+      prod: flutter build web --release --dart-define-from-file=env/prod.json
 
 
 flutter:

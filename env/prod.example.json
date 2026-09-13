@@ -1,0 +1,6 @@
+{
+  "APP_FLAVOR": "prod",
+  "API_BASE_URL": "https://api.example.com",
+  "ENABLE_LOGGING": "false",
+  "SENTRY_DSN": "https://<public-key>@o0.ingest.sentry.io/<project-id>"
+}

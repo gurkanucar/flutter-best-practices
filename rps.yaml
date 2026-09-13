@@ -1,0 +1,8 @@
+# rps interpreter settings only — the scripts themselves stay in pubspec.yaml
+# (rps uses pubspec.yaml scripts when this file has no `scripts:` key).
+#
+# Windows default is PowerShell, which loads the user's PowerShell profile before every command and
+# prints "profile.ps1 cannot be loaded because running scripts is disabled" on machines with a
+# restricted execution policy. cmd has no profile; our scripts are plain flutter/dart commands.
+windows:
+  interpreter: cmd

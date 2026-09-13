@@ -8,6 +8,7 @@ import '../checkout/checkout_page.dart';
 import '../checkout/order_complete_page.dart';
 import '../connectivity/connectivity_page.dart';
 import '../device_info/device_info_page.dart';
+import '../forms/form_fields_page.dart';
 import '../forms/sign_up_form_page.dart';
 import '../home_page.dart';
 import '../products/product.dart';
@@ -16,6 +17,7 @@ import '../products/product_list_page.dart';
 import '../profile/edit_profile_page.dart';
 import '../profile/profile_page.dart';
 import '../bluetooth/bluetooth_page.dart';
+import '../config/environment_page.dart';
 import '../media/image_demo_page.dart';
 import '../permissions/permissions_page.dart';
 import '../media/photo_viewer_page.dart';
@@ -120,6 +122,7 @@ GoRouter createAppRouter(AuthController auth, {String initialLocation = Routes.h
       GoRoute(path: Routes.connectivity, builder: (context, state) => const ConnectivityPage()),
       GoRoute(path: Routes.appSettings, builder: (context, state) => const AppSettingsPage()),
       GoRoute(path: Routes.signUpForm, builder: (context, state) => const SignUpFormPage()),
+      GoRoute(path: Routes.formFields, builder: (context, state) => const FormFieldsPage()),
       GoRoute(path: Routes.hiveNotes, builder: (context, state) => const NotesPage()),
       GoRoute(path: Routes.driftTodos, builder: (context, state) => const TodosPage()),
       GoRoute(path: Routes.images, builder: (context, state) => const ImageDemoPage()),
@@ -130,6 +133,7 @@ GoRouter createAppRouter(AuthController auth, {String initialLocation = Routes.h
       GoRoute(path: Routes.pdf, builder: (context, state) => const PdfViewerPage()),
       GoRoute(path: Routes.permissions, builder: (context, state) => const PermissionsPage()),
       GoRoute(path: Routes.bluetooth, builder: (context, state) => const BluetoothPage()),
+      GoRoute(path: Routes.environment, builder: (context, state) => const EnvironmentPage()),
     ],
   );
 }

@@ -537,5 +537,131 @@
   },
 
   "bluetoothLicenseNote": "flutter_blue_plus: commercial use requires a paid license.",
-  "@bluetoothLicenseNote": { "description": "License reminder on the BLE demo page" }
+  "@bluetoothLicenseNote": { "description": "License reminder on the BLE demo page" },
+
+  "environmentTitle": "Environment",
+  "@environmentTitle": { "description": "Build environment demo page title" },
+
+  "envFlavor": "Flavor",
+  "@envFlavor": { "description": "APP_FLAVOR: dev / staging / prod" },
+
+  "envDefault": "default — no env file passed",
+  "@envDefault": { "description": "Shown when the build didn't pass --dart-define-from-file" },
+
+  "envBuildMode": "Build mode",
+  "@envBuildMode": { "description": "debug / profile / release" },
+
+  "envApiBaseUrl": "API base URL",
+  "@envApiBaseUrl": { "description": "API_BASE_URL value" },
+
+  "envLogging": "Logging",
+  "@envLogging": { "description": "ENABLE_LOGGING value" },
+
+  "envCrashReporting": "Crash reporting",
+  "@envCrashReporting": { "description": "Whether SENTRY_DSN is set" },
+
+  "envNotSet": "Not set",
+  "@envNotSet": { "description": "Empty environment value" },
+
+  "envSecretWarning": "These values come from --dart-define-from-file at build time and are compiled into the app. Never put secrets in them.",
+  "@envSecretWarning": { "description": "Warning on the environment page" },
+
+  "formFieldsTitle": "All form fields",
+  "@formFieldsTitle": { "description": "flutter_form_builder field showcase page title" },
+
+  "fieldsSectionDateTime": "Date & time",
+  "@fieldsSectionDateTime": { "description": "Section header" },
+
+  "fieldsMeetingTime": "Meeting time",
+  "@fieldsMeetingTime": { "description": "Time-only picker label" },
+
+  "fieldsAppointment": "Appointment (date + time)",
+  "@fieldsAppointment": { "description": "Date and time picker label" },
+
+  "fieldsTripDates": "Trip dates",
+  "@fieldsTripDates": { "description": "Date range picker label" },
+
+  "fieldsSectionNumbers": "Sliders & numbers",
+  "@fieldsSectionNumbers": { "description": "Section header" },
+
+  "fieldsVolume": "Volume",
+  "@fieldsVolume": { "description": "Slider label" },
+
+  "fieldsPriceRange": "Price range",
+  "@fieldsPriceRange": { "description": "Range slider label" },
+
+  "fieldsAge": "Age (optional)",
+  "@fieldsAge": { "description": "Numeric text field label" },
+
+  "fieldsSectionChoices": "Choices",
+  "@fieldsSectionChoices": { "description": "Section header" },
+
+  "fieldsNewsletter": "Subscribe to the newsletter",
+  "@fieldsNewsletter": { "description": "Switch label" },
+
+  "fieldsContactMethod": "Preferred contact",
+  "@fieldsContactMethod": { "description": "Radio group label" },
+
+  "fieldsContactPhone": "Phone",
+  "@fieldsContactPhone": { "description": "Radio option" },
+
+  "fieldsContactSms": "SMS",
+  "@fieldsContactSms": { "description": "Radio option" },
+
+  "fieldsPhone": "Phone number",
+  "@fieldsPhone": { "description": "Conditional phone field label" },
+
+  "fieldsInterests": "Interests (pick at least one)",
+  "@fieldsInterests": { "description": "Checkbox group label" },
+
+  "fieldsInterestDesign": "Design",
+  "@fieldsInterestDesign": { "description": "Checkbox option" },
+
+  "fieldsSize": "T-shirt size",
+  "@fieldsSize": { "description": "Choice chips label" },
+
+  "fieldsToppings": "Pizza toppings",
+  "@fieldsToppings": { "description": "Filter chips label" },
+
+  "fieldsToppingCheese": "Cheese",
+  "@fieldsToppingCheese": { "description": "Filter chip option" },
+
+  "fieldsToppingMushroom": "Mushroom",
+  "@fieldsToppingMushroom": { "description": "Filter chip option" },
+
+  "fieldsToppingOlive": "Olive",
+  "@fieldsToppingOlive": { "description": "Filter chip option" },
+
+  "fieldsToppingPepper": "Pepper",
+  "@fieldsToppingPepper": { "description": "Filter chip option" },
+
+  "fieldsSectionCustom": "Custom & dynamic fields",
+  "@fieldsSectionCustom": { "description": "Section header" },
+
+  "fieldsRating": "Rating",
+  "@fieldsRating": { "description": "Custom star rating field label" },
+
+  "fieldsFavoriteColor": "Favorite color",
+  "@fieldsFavoriteColor": { "description": "Custom color field label" },
+
+  "fieldsNotes": "Notes",
+  "@fieldsNotes": { "description": "Multiline text field label" },
+
+  "fieldsGuestName": "Guest {number}",
+  "@fieldsGuestName": {
+    "description": "Dynamic guest name field label",
+    "placeholders": { "number": { "type": "int" } }
+  },
+
+  "fieldsAddGuest": "Add guest",
+  "@fieldsAddGuest": { "description": "Adds a dynamic guest field" },
+
+  "fieldsRemoveGuest": "Remove guest",
+  "@fieldsRemoveGuest": { "description": "Removes a dynamic guest field" },
+
+  "fieldsFillExample": "Fill example",
+  "@fieldsFillExample": { "description": "Fills the form programmatically with patchValue" },
+
+  "fieldsResult": "Form values",
+  "@fieldsResult": { "description": "Result dialog title" }
 }

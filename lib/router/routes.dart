@@ -24,6 +24,7 @@ abstract final class Routes {
   static const connectivity = '/demos/connectivity';
   static const appSettings = '/demos/app-settings';
   static const signUpForm = '/demos/form';
+  static const formFields = '/demos/form-fields';
   static const hiveNotes = '/demos/hive';
   static const driftTodos = '/demos/drift';
   static const images = '/demos/images';
@@ -31,6 +32,7 @@ abstract final class Routes {
   static const pdf = '/demos/pdf';
   static const permissions = '/demos/permissions';
   static const bluetooth = '/demos/bluetooth';
+  static const environment = '/demos/environment';
 
   /// Locations that require a signed-in user (prefix match).
   static const protectedPrefixes = [profile, checkout];

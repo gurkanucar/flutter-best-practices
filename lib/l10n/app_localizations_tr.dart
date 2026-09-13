@@ -557,4 +557,130 @@ class AppLocalizationsTr extends AppLocalizations {
   @override
   String get bluetoothLicenseNote =>
       'flutter_blue_plus: ticari kullanım ücretli lisans gerektirir.';
+
+  @override
+  String get environmentTitle => 'Ortam';
+
+  @override
+  String get envFlavor => 'Ortam türü';
+
+  @override
+  String get envDefault => 'varsayılan — env dosyası verilmedi';
+
+  @override
+  String get envBuildMode => 'Derleme modu';
+
+  @override
+  String get envApiBaseUrl => 'API adresi';
+
+  @override
+  String get envLogging => 'Loglama';
+
+  @override
+  String get envCrashReporting => 'Hata raporlama';
+
+  @override
+  String get envNotSet => 'Ayarlanmamış';
+
+  @override
+  String get envSecretWarning =>
+      'Bu değerler derleme sırasında --dart-define-from-file ile gelir ve uygulamanın içine gömülür. Buraya asla gizli bilgi koyma.';
+
+  @override
+  String get formFieldsTitle => 'Tüm form alanları';
+
+  @override
+  String get fieldsSectionDateTime => 'Tarih ve saat';
+
+  @override
+  String get fieldsMeetingTime => 'Toplantı saati';
+
+  @override
+  String get fieldsAppointment => 'Randevu (tarih + saat)';
+
+  @override
+  String get fieldsTripDates => 'Seyahat tarihleri';
+
+  @override
+  String get fieldsSectionNumbers => 'Kaydırıcılar ve sayılar';
+
+  @override
+  String get fieldsVolume => 'Ses düzeyi';
+
+  @override
+  String get fieldsPriceRange => 'Fiyat aralığı';
+
+  @override
+  String get fieldsAge => 'Yaş (isteğe bağlı)';
+
+  @override
+  String get fieldsSectionChoices => 'Seçimler';
+
+  @override
+  String get fieldsNewsletter => 'Bültene abone ol';
+
+  @override
+  String get fieldsContactMethod => 'Tercih edilen iletişim';
+
+  @override
+  String get fieldsContactPhone => 'Telefon';
+
+  @override
+  String get fieldsContactSms => 'SMS';
+
+  @override
+  String get fieldsPhone => 'Telefon numarası';
+
+  @override
+  String get fieldsInterests => 'İlgi alanları (en az bir tane seç)';
+
+  @override
+  String get fieldsInterestDesign => 'Tasarım';
+
+  @override
+  String get fieldsSize => 'Tişört bedeni';
+
+  @override
+  String get fieldsToppings => 'Pizza malzemeleri';
+
+  @override
+  String get fieldsToppingCheese => 'Peynir';
+
+  @override
+  String get fieldsToppingMushroom => 'Mantar';
+
+  @override
+  String get fieldsToppingOlive => 'Zeytin';
+
+  @override
+  String get fieldsToppingPepper => 'Biber';
+
+  @override
+  String get fieldsSectionCustom => 'Özel ve dinamik alanlar';
+
+  @override
+  String get fieldsRating => 'Puan';
+
+  @override
+  String get fieldsFavoriteColor => 'Favori renk';
+
+  @override
+  String get fieldsNotes => 'Notlar';
+
+  @override
+  String fieldsGuestName(int number) {
+    return '$number. misafir';
+  }
+
+  @override
+  String get fieldsAddGuest => 'Misafir ekle';
+
+  @override
+  String get fieldsRemoveGuest => 'Misafiri kaldır';
+
+  @override
+  String get fieldsFillExample => 'Örnek doldur';
+
+  @override
+  String get fieldsResult => 'Form değerleri';
 }

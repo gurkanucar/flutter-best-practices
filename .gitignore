@@ -36,6 +36,14 @@ migrate_working_dir/
 # Localization (gen-l10n report of missing translations)
 untranslated.json
 
+# Environment files: dev/staging are committed; prod and personal overrides are not.
+# Copy env/prod.example.json → env/prod.json locally or create it in CI.
+env/prod.json
+env/*.local.json
+
+# Obfuscation symbols from --split-debug-info (upload to crash reporting, don't commit)
+/build-symbols/
+
 # Symbolication related
 app.*.symbols
 

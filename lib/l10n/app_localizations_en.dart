@@ -559,4 +559,130 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get bluetoothLicenseNote =>
       'flutter_blue_plus: commercial use requires a paid license.';
+
+  @override
+  String get environmentTitle => 'Environment';
+
+  @override
+  String get envFlavor => 'Flavor';
+
+  @override
+  String get envDefault => 'default — no env file passed';
+
+  @override
+  String get envBuildMode => 'Build mode';
+
+  @override
+  String get envApiBaseUrl => 'API base URL';
+
+  @override
+  String get envLogging => 'Logging';
+
+  @override
+  String get envCrashReporting => 'Crash reporting';
+
+  @override
+  String get envNotSet => 'Not set';
+
+  @override
+  String get envSecretWarning =>
+      'These values come from --dart-define-from-file at build time and are compiled into the app. Never put secrets in them.';
+
+  @override
+  String get formFieldsTitle => 'All form fields';
+
+  @override
+  String get fieldsSectionDateTime => 'Date & time';
+
+  @override
+  String get fieldsMeetingTime => 'Meeting time';
+
+  @override
+  String get fieldsAppointment => 'Appointment (date + time)';
+
+  @override
+  String get fieldsTripDates => 'Trip dates';
+
+  @override
+  String get fieldsSectionNumbers => 'Sliders & numbers';
+
+  @override
+  String get fieldsVolume => 'Volume';
+
+  @override
+  String get fieldsPriceRange => 'Price range';
+
+  @override
+  String get fieldsAge => 'Age (optional)';
+
+  @override
+  String get fieldsSectionChoices => 'Choices';
+
+  @override
+  String get fieldsNewsletter => 'Subscribe to the newsletter';
+
+  @override
+  String get fieldsContactMethod => 'Preferred contact';
+
+  @override
+  String get fieldsContactPhone => 'Phone';
+
+  @override
+  String get fieldsContactSms => 'SMS';
+
+  @override
+  String get fieldsPhone => 'Phone number';
+
+  @override
+  String get fieldsInterests => 'Interests (pick at least one)';
+
+  @override
+  String get fieldsInterestDesign => 'Design';
+
+  @override
+  String get fieldsSize => 'T-shirt size';
+
+  @override
+  String get fieldsToppings => 'Pizza toppings';
+
+  @override
+  String get fieldsToppingCheese => 'Cheese';
+
+  @override
+  String get fieldsToppingMushroom => 'Mushroom';
+
+  @override
+  String get fieldsToppingOlive => 'Olive';
+
+  @override
+  String get fieldsToppingPepper => 'Pepper';
+
+  @override
+  String get fieldsSectionCustom => 'Custom & dynamic fields';
+
+  @override
+  String get fieldsRating => 'Rating';
+
+  @override
+  String get fieldsFavoriteColor => 'Favorite color';
+
+  @override
+  String get fieldsNotes => 'Notes';
+
+  @override
+  String fieldsGuestName(int number) {
+    return 'Guest $number';
+  }
+
+  @override
+  String get fieldsAddGuest => 'Add guest';
+
+  @override
+  String get fieldsRemoveGuest => 'Remove guest';
+
+  @override
+  String get fieldsFillExample => 'Fill example';
+
+  @override
+  String get fieldsResult => 'Form values';
 }
