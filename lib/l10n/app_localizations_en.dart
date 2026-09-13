@@ -67,4 +67,44 @@ class AppLocalizationsEn extends AppLocalizations {
 
     return 'Price: $amountString';
   }
+
+  @override
+  String get notifications => 'Notifications';
+
+  @override
+  String get notificationChannelName => 'General';
+
+  @override
+  String get showNotification => 'Show notification';
+
+  @override
+  String scheduleNotification(int seconds) {
+    return 'Schedule in $seconds seconds';
+  }
+
+  @override
+  String get cancelNotifications => 'Cancel all';
+
+  @override
+  String get notificationTitle => 'Hello from Flutter Best Practices';
+
+  @override
+  String get notificationBody => 'This is a local notification.';
+
+  @override
+  String notificationScheduled(int seconds) {
+    return 'Notification scheduled in $seconds seconds';
+  }
+
+  @override
+  String get notificationPermissionDenied => 'Notification permission denied';
+
+  @override
+  String get schedulingNotSupported =>
+      'Scheduled notifications are not supported on this platform';
+
+  @override
+  String lastTappedNotification(String payload) {
+    return 'Last tapped notification: $payload';
+  }
 }

@@ -151,6 +151,72 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Price: {amount}'**
   String price(double amount);
+
+  /// Title of the notification demo section
+  ///
+  /// In en, this message translates to:
+  /// **'Notifications'**
+  String get notifications;
+
+  /// Android notification channel name, shown in system app settings
+  ///
+  /// In en, this message translates to:
+  /// **'General'**
+  String get notificationChannelName;
+
+  /// Button that shows a notification immediately
+  ///
+  /// In en, this message translates to:
+  /// **'Show notification'**
+  String get showNotification;
+
+  /// Button that schedules a notification
+  ///
+  /// In en, this message translates to:
+  /// **'Schedule in {seconds} seconds'**
+  String scheduleNotification(int seconds);
+
+  /// Button that cancels all notifications
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel all'**
+  String get cancelNotifications;
+
+  /// Title of the demo notification
+  ///
+  /// In en, this message translates to:
+  /// **'Hello from Flutter Best Practices'**
+  String get notificationTitle;
+
+  /// Body of the demo notification
+  ///
+  /// In en, this message translates to:
+  /// **'This is a local notification.'**
+  String get notificationBody;
+
+  /// Snackbar after scheduling a notification
+  ///
+  /// In en, this message translates to:
+  /// **'Notification scheduled in {seconds} seconds'**
+  String notificationScheduled(int seconds);
+
+  /// Snackbar when the user denies notification permission
+  ///
+  /// In en, this message translates to:
+  /// **'Notification permission denied'**
+  String get notificationPermissionDenied;
+
+  /// Shown on web and Linux, which have no scheduler
+  ///
+  /// In en, this message translates to:
+  /// **'Scheduled notifications are not supported on this platform'**
+  String get schedulingNotSupported;
+
+  /// Payload of the notification the user tapped
+  ///
+  /// In en, this message translates to:
+  /// **'Last tapped notification: {payload}'**
+  String lastTappedNotification(String payload);
 }
 
 class _AppLocalizationsDelegate

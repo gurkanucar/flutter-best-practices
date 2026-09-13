@@ -42,5 +42,47 @@
         "optionalParameters": { "name": "TRY", "decimalDigits": 2 }
       }
     }
+  },
+
+  "notifications": "Bildirimler",
+  "@notifications": { "description": "Title of the notification demo section" },
+
+  "notificationChannelName": "Genel",
+  "@notificationChannelName": { "description": "Android notification channel name, shown in system app settings" },
+
+  "showNotification": "Bildirim göster",
+  "@showNotification": { "description": "Button that shows a notification immediately" },
+
+  "scheduleNotification": "{seconds} saniye sonra planla",
+  "@scheduleNotification": {
+    "description": "Button that schedules a notification",
+    "placeholders": { "seconds": { "type": "int" } }
+  },
+
+  "cancelNotifications": "Tümünü iptal et",
+  "@cancelNotifications": { "description": "Button that cancels all notifications" },
+
+  "notificationTitle": "Flutter Best Practices'ten merhaba",
+  "@notificationTitle": { "description": "Title of the demo notification" },
+
+  "notificationBody": "Bu bir yerel bildirim.",
+  "@notificationBody": { "description": "Body of the demo notification" },
+
+  "notificationScheduled": "Bildirim {seconds} saniye sonra gösterilecek",
+  "@notificationScheduled": {
+    "description": "Snackbar after scheduling a notification",
+    "placeholders": { "seconds": { "type": "int" } }
+  },
+
+  "notificationPermissionDenied": "Bildirim izni verilmedi",
+  "@notificationPermissionDenied": { "description": "Snackbar when the user denies notification permission" },
+
+  "schedulingNotSupported": "Planlı bildirimler bu platformda desteklenmiyor",
+  "@schedulingNotSupported": { "description": "Shown on web and Linux, which have no scheduler" },
+
+  "lastTappedNotification": "Son dokunulan bildirim: {payload}",
+  "@lastTappedNotification": {
+    "description": "Payload of the notification the user tapped",
+    "placeholders": { "payload": { "type": "String", "example": "demo-now" } }
   }
 }

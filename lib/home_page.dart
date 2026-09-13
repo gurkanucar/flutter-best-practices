@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'l10n/l10n_extension.dart';
 import 'l10n/language_selector.dart';
+import 'notifications/notification_demo_section.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -26,6 +27,8 @@ class HomePage extends StatelessWidget {
           Text(l10n.userRole('admin')),
           Text(l10n.lastLogin(DateTime.now())),
           Text(l10n.price(149.9)),
+          const Divider(height: 32),
+          const NotificationDemoSection(),
         ],
       ),
     );

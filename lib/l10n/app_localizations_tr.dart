@@ -67,4 +67,44 @@ class AppLocalizationsTr extends AppLocalizations {
 
     return 'Fiyat: $amountString';
   }
+
+  @override
+  String get notifications => 'Bildirimler';
+
+  @override
+  String get notificationChannelName => 'Genel';
+
+  @override
+  String get showNotification => 'Bildirim göster';
+
+  @override
+  String scheduleNotification(int seconds) {
+    return '$seconds saniye sonra planla';
+  }
+
+  @override
+  String get cancelNotifications => 'Tümünü iptal et';
+
+  @override
+  String get notificationTitle => 'Flutter Best Practices\'ten merhaba';
+
+  @override
+  String get notificationBody => 'Bu bir yerel bildirim.';
+
+  @override
+  String notificationScheduled(int seconds) {
+    return 'Bildirim $seconds saniye sonra gösterilecek';
+  }
+
+  @override
+  String get notificationPermissionDenied => 'Bildirim izni verilmedi';
+
+  @override
+  String get schedulingNotSupported =>
+      'Planlı bildirimler bu platformda desteklenmiyor';
+
+  @override
+  String lastTappedNotification(String payload) {
+    return 'Son dokunulan bildirim: $payload';
+  }
 }
