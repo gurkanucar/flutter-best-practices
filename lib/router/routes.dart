@@ -1,0 +1,37 @@
+/// Every location in one place — no string typos across the app.
+abstract final class Routes {
+  static const home = '/';
+  static const login = '/login';
+
+  static const products = '/products';
+  static String productsSortedBy(String sort) =>
+      Uri(path: products, queryParameters: {'sort': sort}).toString();
+  static String productDetail(String id) => '$products/$id';
+
+  static const profile = '/profile';
+  static const editProfile = '/profile/edit';
+
+  /// Protected route: data goes in the URL (not `extra`) so it survives the login redirect.
+  static const checkout = '/checkout';
+  static String checkoutFor(String productId) =>
+      Uri(path: checkout, queryParameters: {'productId': productId}).toString();
+
+  static const orderComplete = '/order-complete';
+  static String orderCompleteFor(String orderId) =>
+      Uri(path: orderComplete, queryParameters: {'orderId': orderId}).toString();
+
+  static const deviceInfo = '/demos/device-info';
+  static const connectivity = '/demos/connectivity';
+  static const appSettings = '/demos/app-settings';
+  static const signUpForm = '/demos/form';
+  static const hiveNotes = '/demos/hive';
+  static const driftTodos = '/demos/drift';
+  static const images = '/demos/images';
+  static const photoViewer = '/demos/images/viewer';
+  static const pdf = '/demos/pdf';
+  static const permissions = '/demos/permissions';
+  static const bluetooth = '/demos/bluetooth';
+
+  /// Locations that require a signed-in user (prefix match).
+  static const protectedPrefixes = [profile, checkout];
+}

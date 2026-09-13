@@ -137,5 +137,9 @@ flutter run -d macos
 | `cmdline-tools component is missing` | Android Studio → SDK Manager → SDK Tools → *Android SDK Command-line Tools* |
 | Android: `this and base files have different roots` | `kotlin.incremental=false` in `android/gradle.properties` ([006](006-add-local-notifications.md)) |
 | Windows: `Cannot open include file: 'atlbase.h'` | Install C++ ATL ([006](006-add-local-notifications.md#windows-install-c-atl-required-to-build)) |
+| Windows: pdfrx build fails creating symlinks | Enable **Developer Mode** ([016](016-add-pdfrx.md)) |
+| Windows: `C1041: cannot open program database` / "file is being used by another process" | Two builds ran at the same time (e.g. Android + Windows) — build one platform at a time, retry |
+| Android: `Dependency ':permission_handler_android' requires ... compileSdk of at least 37` | `compileSdk = 37` in `android/app/build.gradle.kts` (SDK Platform 37 installed) ([015](015-add-permission-handler.md)) |
+| `WARNING: Your app uses the following plugins that apply Kotlin Gradle Plugin (KGP)` | Warning only — the plugins still build; upgrade them when migrated versions are released |
 | iOS: `No valid code signing certificates` | Select a Team in Xcode → Signing & Capabilities |
 | Several devices, wrong one picked | Always pass `-d <id>` |

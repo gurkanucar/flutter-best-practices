@@ -1,12 +1,10 @@
-import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:material_ui/material_ui.dart';
 
-import 'app_settings/app_settings_page.dart';
-import 'connectivity/connectivity_page.dart';
-import 'device_info/device_info_page.dart';
-import 'forms/sign_up_form_page.dart';
 import 'l10n/l10n_extension.dart';
 import 'l10n/language_selector.dart';
 import 'notifications/notification_demo_section.dart';
+import 'router/routes.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -35,10 +33,16 @@ class HomePage extends StatelessWidget {
           const NotificationDemoSection(),
           const Divider(height: 32),
           Text(l10n.demos, style: Theme.of(context).textTheme.titleLarge),
-          _DemoTile(Icons.phone_android, l10n.deviceInfoTitle, (_) => const DeviceInfoPage()),
-          _DemoTile(Icons.wifi, l10n.connectivityTitle, (_) => const ConnectivityPage()),
-          _DemoTile(Icons.settings, l10n.appSettingsTitle, (_) => const AppSettingsPage()),
-          _DemoTile(Icons.edit_note, l10n.formTitle, (_) => const SignUpFormPage()),
+          _DemoTile(Icons.phone_android, l10n.deviceInfoTitle, Routes.deviceInfo),
+          _DemoTile(Icons.wifi, l10n.connectivityTitle, Routes.connectivity),
+          _DemoTile(Icons.settings, l10n.appSettingsTitle, Routes.appSettings),
+          _DemoTile(Icons.edit_note, l10n.formTitle, Routes.signUpForm),
+          _DemoTile(Icons.sticky_note_2, l10n.hiveTitle, Routes.hiveNotes),
+          _DemoTile(Icons.checklist, l10n.driftTitle, Routes.driftTodos),
+          _DemoTile(Icons.image, l10n.imagesTitle, Routes.images),
+          _DemoTile(Icons.picture_as_pdf, l10n.pdfTitle, Routes.pdf),
+          _DemoTile(Icons.verified_user, l10n.permissionsTitle, Routes.permissions),
+          _DemoTile(Icons.bluetooth, l10n.bluetoothTitle, Routes.bluetooth),
         ],
       ),
     );
@@ -46,11 +50,11 @@ class HomePage extends StatelessWidget {
 }
 
 class _DemoTile extends StatelessWidget {
-  const _DemoTile(this.icon, this.title, this.pageBuilder);
+  const _DemoTile(this.icon, this.title, this.location);
 
   final IconData icon;
   final String title;
-  final WidgetBuilder pageBuilder;
+  final String location;
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +63,8 @@ class _DemoTile extends StatelessWidget {
       leading: Icon(icon),
       title: Text(title),
       trailing: const Icon(Icons.chevron_right),
-      onTap: () => Navigator.of(context).push(MaterialPageRoute<void>(builder: pageBuilder)),
+      // push: opens above the bottom navigation, back returns here.
+      onTap: () => context.push(location),
     );
   }
 }

@@ -1,17 +1,14 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_best_practices/forms/sign_up_data.dart';
 import 'package:flutter_best_practices/forms/sign_up_form_page.dart';
 import 'package:flutter_best_practices/l10n/app_localizations.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:form_builder_validators/form_builder_validators.dart';
+import 'package:flutter_best_practices/l10n/app_localization_delegates.dart';
 
 Widget wrap(Widget child, {Locale locale = const Locale('en')}) => MaterialApp(
       locale: locale,
-      localizationsDelegates: const [
-        ...AppLocalizations.localizationsDelegates,
-        FormBuilderLocalizations.delegate,
-      ],
+      localizationsDelegates: appLocalizationDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
       home: child,
     );

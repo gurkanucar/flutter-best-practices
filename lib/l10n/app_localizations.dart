@@ -547,6 +547,480 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Tap outside a field to close the keyboard.'**
   String get keyboardTip;
+
+  /// Bottom navigation tab
+  ///
+  /// In en, this message translates to:
+  /// **'Home'**
+  String get navHome;
+
+  /// Bottom navigation tab and product list title
+  ///
+  /// In en, this message translates to:
+  /// **'Products'**
+  String get navProducts;
+
+  /// Bottom navigation tab and profile title
+  ///
+  /// In en, this message translates to:
+  /// **'Profile'**
+  String get navProfile;
+
+  /// Login page title
+  ///
+  /// In en, this message translates to:
+  /// **'Sign in'**
+  String get loginTitle;
+
+  /// Login and edit profile text field label
+  ///
+  /// In en, this message translates to:
+  /// **'User name'**
+  String get loginUserName;
+
+  /// Login button
+  ///
+  /// In en, this message translates to:
+  /// **'Sign in'**
+  String get loginButton;
+
+  /// Shown when a protected page redirected to login
+  ///
+  /// In en, this message translates to:
+  /// **'Sign in to open {location}'**
+  String loginRequiredFor(String location);
+
+  /// Logout action
+  ///
+  /// In en, this message translates to:
+  /// **'Sign out'**
+  String get logout;
+
+  /// Current user on the profile page
+  ///
+  /// In en, this message translates to:
+  /// **'Signed in as {name}'**
+  String profileGreeting(String name);
+
+  /// Opens the edit profile page
+  ///
+  /// In en, this message translates to:
+  /// **'Edit name'**
+  String get profileEdit;
+
+  /// Snackbar after the edit page returned a new name
+  ///
+  /// In en, this message translates to:
+  /// **'Name updated'**
+  String get profileNameUpdated;
+
+  /// App version from package_info_plus
+  ///
+  /// In en, this message translates to:
+  /// **'Version {version} ({buildNumber})'**
+  String appVersion(String version, String buildNumber);
+
+  /// Generic save button
+  ///
+  /// In en, this message translates to:
+  /// **'Save'**
+  String get save;
+
+  /// Sort products by name
+  ///
+  /// In en, this message translates to:
+  /// **'By name'**
+  String get productsSortName;
+
+  /// Sort products by price
+  ///
+  /// In en, this message translates to:
+  /// **'By price'**
+  String get productsSortPrice;
+
+  /// Opens checkout for the product
+  ///
+  /// In en, this message translates to:
+  /// **'Buy'**
+  String get productBuy;
+
+  /// Explains how the detail page got its data
+  ///
+  /// In en, this message translates to:
+  /// **'Product object passed with extra (no lookup).'**
+  String get productPassedWithExtra;
+
+  /// Explains how the detail page got its data
+  ///
+  /// In en, this message translates to:
+  /// **'Product looked up by the id in the URL.'**
+  String get productLoadedById;
+
+  /// Unknown product id in the URL
+  ///
+  /// In en, this message translates to:
+  /// **'Product {id} not found'**
+  String productNotFound(String id);
+
+  /// Checkout page title
+  ///
+  /// In en, this message translates to:
+  /// **'Checkout'**
+  String get checkoutTitle;
+
+  /// Completes the demo order
+  ///
+  /// In en, this message translates to:
+  /// **'Place order'**
+  String get checkoutPlaceOrder;
+
+  /// Order complete page title
+  ///
+  /// In en, this message translates to:
+  /// **'Order complete'**
+  String get orderCompleteTitle;
+
+  /// Order confirmation; explains the disabled back navigation
+  ///
+  /// In en, this message translates to:
+  /// **'Order #{orderId} received. Going back is disabled on this page.'**
+  String orderCompleteMessage(String orderId);
+
+  /// Button that goes to the home page
+  ///
+  /// In en, this message translates to:
+  /// **'Back to home'**
+  String get backToHome;
+
+  /// 404 page title
+  ///
+  /// In en, this message translates to:
+  /// **'Page not found'**
+  String get notFoundTitle;
+
+  /// 404 page message
+  ///
+  /// In en, this message translates to:
+  /// **'There is no page for {location}'**
+  String notFoundMessage(String location);
+
+  /// Unsaved changes dialog title
+  ///
+  /// In en, this message translates to:
+  /// **'Leave this page?'**
+  String get discardChangesTitle;
+
+  /// Unsaved changes dialog message
+  ///
+  /// In en, this message translates to:
+  /// **'Your unsaved changes will be lost.'**
+  String get discardChangesMessage;
+
+  /// Leave the page and discard changes
+  ///
+  /// In en, this message translates to:
+  /// **'Leave'**
+  String get discard;
+
+  /// Stay on the page
+  ///
+  /// In en, this message translates to:
+  /// **'Stay'**
+  String get stay;
+
+  /// Generic add button tooltip
+  ///
+  /// In en, this message translates to:
+  /// **'Add'**
+  String get add;
+
+  /// Hive demo page title
+  ///
+  /// In en, this message translates to:
+  /// **'Notes (Hive CE)'**
+  String get hiveTitle;
+
+  /// Note input label
+  ///
+  /// In en, this message translates to:
+  /// **'Write a note'**
+  String get notesHint;
+
+  /// Empty notes list
+  ///
+  /// In en, this message translates to:
+  /// **'No notes yet'**
+  String get notesEmpty;
+
+  /// Pin a note to the top
+  ///
+  /// In en, this message translates to:
+  /// **'Pin'**
+  String get pin;
+
+  /// Unpin a note
+  ///
+  /// In en, this message translates to:
+  /// **'Unpin'**
+  String get unpin;
+
+  /// Drift demo page title
+  ///
+  /// In en, this message translates to:
+  /// **'Todos (Drift)'**
+  String get driftTitle;
+
+  /// Todo input label
+  ///
+  /// In en, this message translates to:
+  /// **'New todo'**
+  String get todosHint;
+
+  /// Empty todo list
+  ///
+  /// In en, this message translates to:
+  /// **'Nothing to do'**
+  String get todosEmpty;
+
+  /// image_picker + flutter_image_compress demo title
+  ///
+  /// In en, this message translates to:
+  /// **'Pick & compress images'**
+  String get imagesTitle;
+
+  /// Pick an image from the gallery / files
+  ///
+  /// In en, this message translates to:
+  /// **'Gallery'**
+  String get pickFromGallery;
+
+  /// Take a photo with the camera
+  ///
+  /// In en, this message translates to:
+  /// **'Camera'**
+  String get pickFromCamera;
+
+  /// Original image size
+  ///
+  /// In en, this message translates to:
+  /// **'Original: {size}'**
+  String imageOriginal(String size);
+
+  /// Compressed image size and saving
+  ///
+  /// In en, this message translates to:
+  /// **'Compressed: {size} ({percent}% smaller)'**
+  String imageCompressed(String size, int percent);
+
+  /// Shown on Windows and Linux
+  ///
+  /// In en, this message translates to:
+  /// **'Image compression isn\'t supported on this platform.'**
+  String get compressUnsupported;
+
+  /// Nothing picked yet
+  ///
+  /// In en, this message translates to:
+  /// **'No image selected'**
+  String get noImageSelected;
+
+  /// Hint above the thumbnails
+  ///
+  /// In en, this message translates to:
+  /// **'Tap an image to zoom.'**
+  String get tapToZoom;
+
+  /// photo_view page title
+  ///
+  /// In en, this message translates to:
+  /// **'Photo viewer'**
+  String get photoViewerTitle;
+
+  /// pdfrx demo title
+  ///
+  /// In en, this message translates to:
+  /// **'PDF viewer'**
+  String get pdfTitle;
+
+  /// Current page of the PDF
+  ///
+  /// In en, this message translates to:
+  /// **'Page {page} / {count}'**
+  String pdfPage(int page, int count);
+
+  /// Go to the previous PDF page
+  ///
+  /// In en, this message translates to:
+  /// **'Previous page'**
+  String get previousPage;
+
+  /// Go to the next PDF page
+  ///
+  /// In en, this message translates to:
+  /// **'Next page'**
+  String get nextPage;
+
+  /// permission_handler demo title
+  ///
+  /// In en, this message translates to:
+  /// **'Permissions'**
+  String get permissionsTitle;
+
+  /// Shown on macOS and Linux
+  ///
+  /// In en, this message translates to:
+  /// **'permission_handler only supports Android, iOS, Windows and web.'**
+  String get permissionsUnsupported;
+
+  /// permission_handler Windows limitation
+  ///
+  /// In en, this message translates to:
+  /// **'On Windows every permission is reported as granted.'**
+  String get permissionsWindowsNote;
+
+  /// Camera permission
+  ///
+  /// In en, this message translates to:
+  /// **'Camera'**
+  String get permissionCamera;
+
+  /// Photo library permission
+  ///
+  /// In en, this message translates to:
+  /// **'Photos'**
+  String get permissionPhotos;
+
+  /// Location permission
+  ///
+  /// In en, this message translates to:
+  /// **'Location (while in use)'**
+  String get permissionLocation;
+
+  /// Android 12+ BLUETOOTH_SCAN permission
+  ///
+  /// In en, this message translates to:
+  /// **'Bluetooth scan'**
+  String get permissionBluetoothScan;
+
+  /// Android 12+ BLUETOOTH_CONNECT permission
+  ///
+  /// In en, this message translates to:
+  /// **'Bluetooth connect'**
+  String get permissionBluetoothConnect;
+
+  /// Request a permission
+  ///
+  /// In en, this message translates to:
+  /// **'Request'**
+  String get permissionRequest;
+
+  /// Permission status
+  ///
+  /// In en, this message translates to:
+  /// **'Granted'**
+  String get permissionStatusGranted;
+
+  /// Permission status
+  ///
+  /// In en, this message translates to:
+  /// **'Denied'**
+  String get permissionStatusDenied;
+
+  /// Permission status
+  ///
+  /// In en, this message translates to:
+  /// **'Permanently denied — change it in settings'**
+  String get permissionStatusPermanentlyDenied;
+
+  /// Permission status
+  ///
+  /// In en, this message translates to:
+  /// **'Restricted (e.g. parental controls)'**
+  String get permissionStatusRestricted;
+
+  /// Permission status (iOS selected photos)
+  ///
+  /// In en, this message translates to:
+  /// **'Limited access'**
+  String get permissionStatusLimited;
+
+  /// Permission status (iOS provisional notifications)
+  ///
+  /// In en, this message translates to:
+  /// **'Provisional'**
+  String get permissionStatusProvisional;
+
+  /// flutter_blue_plus demo title
+  ///
+  /// In en, this message translates to:
+  /// **'Bluetooth LE'**
+  String get bluetoothTitle;
+
+  /// No BLE adapter / unsupported browser
+  ///
+  /// In en, this message translates to:
+  /// **'Bluetooth LE isn\'t available on this device.'**
+  String get bluetoothUnsupported;
+
+  /// Bluetooth adapter state
+  ///
+  /// In en, this message translates to:
+  /// **'Adapter: {state}'**
+  String bluetoothAdapterState(String state);
+
+  /// Turn Bluetooth on (Android)
+  ///
+  /// In en, this message translates to:
+  /// **'Turn on'**
+  String get bluetoothTurnOn;
+
+  /// Start a BLE scan
+  ///
+  /// In en, this message translates to:
+  /// **'Scan'**
+  String get bluetoothScan;
+
+  /// Stop the BLE scan
+  ///
+  /// In en, this message translates to:
+  /// **'Stop'**
+  String get bluetoothStopScan;
+
+  /// Empty scan result list
+  ///
+  /// In en, this message translates to:
+  /// **'No devices found yet'**
+  String get bluetoothNoDevices;
+
+  /// Device without an advertised name
+  ///
+  /// In en, this message translates to:
+  /// **'Unnamed device'**
+  String get bluetoothUnnamed;
+
+  /// Connect to a BLE device
+  ///
+  /// In en, this message translates to:
+  /// **'Connect'**
+  String get bluetoothConnect;
+
+  /// Disconnect from a BLE device
+  ///
+  /// In en, this message translates to:
+  /// **'Disconnect'**
+  String get bluetoothDisconnect;
+
+  /// Number of discovered GATT services
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =1{1 service} other{{count} services}}'**
+  String bluetoothServices(int count);
+
+  /// License reminder on the BLE demo page
+  ///
+  /// In en, this message translates to:
+  /// **'flutter_blue_plus: commercial use requires a paid license.'**
+  String get bluetoothLicenseNote;
 }
 
 class _AppLocalizationsDelegate

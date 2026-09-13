@@ -286,4 +286,277 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get keyboardTip => 'Tap outside a field to close the keyboard.';
+
+  @override
+  String get navHome => 'Home';
+
+  @override
+  String get navProducts => 'Products';
+
+  @override
+  String get navProfile => 'Profile';
+
+  @override
+  String get loginTitle => 'Sign in';
+
+  @override
+  String get loginUserName => 'User name';
+
+  @override
+  String get loginButton => 'Sign in';
+
+  @override
+  String loginRequiredFor(String location) {
+    return 'Sign in to open $location';
+  }
+
+  @override
+  String get logout => 'Sign out';
+
+  @override
+  String profileGreeting(String name) {
+    return 'Signed in as $name';
+  }
+
+  @override
+  String get profileEdit => 'Edit name';
+
+  @override
+  String get profileNameUpdated => 'Name updated';
+
+  @override
+  String appVersion(String version, String buildNumber) {
+    return 'Version $version ($buildNumber)';
+  }
+
+  @override
+  String get save => 'Save';
+
+  @override
+  String get productsSortName => 'By name';
+
+  @override
+  String get productsSortPrice => 'By price';
+
+  @override
+  String get productBuy => 'Buy';
+
+  @override
+  String get productPassedWithExtra =>
+      'Product object passed with extra (no lookup).';
+
+  @override
+  String get productLoadedById => 'Product looked up by the id in the URL.';
+
+  @override
+  String productNotFound(String id) {
+    return 'Product $id not found';
+  }
+
+  @override
+  String get checkoutTitle => 'Checkout';
+
+  @override
+  String get checkoutPlaceOrder => 'Place order';
+
+  @override
+  String get orderCompleteTitle => 'Order complete';
+
+  @override
+  String orderCompleteMessage(String orderId) {
+    return 'Order #$orderId received. Going back is disabled on this page.';
+  }
+
+  @override
+  String get backToHome => 'Back to home';
+
+  @override
+  String get notFoundTitle => 'Page not found';
+
+  @override
+  String notFoundMessage(String location) {
+    return 'There is no page for $location';
+  }
+
+  @override
+  String get discardChangesTitle => 'Leave this page?';
+
+  @override
+  String get discardChangesMessage => 'Your unsaved changes will be lost.';
+
+  @override
+  String get discard => 'Leave';
+
+  @override
+  String get stay => 'Stay';
+
+  @override
+  String get add => 'Add';
+
+  @override
+  String get hiveTitle => 'Notes (Hive CE)';
+
+  @override
+  String get notesHint => 'Write a note';
+
+  @override
+  String get notesEmpty => 'No notes yet';
+
+  @override
+  String get pin => 'Pin';
+
+  @override
+  String get unpin => 'Unpin';
+
+  @override
+  String get driftTitle => 'Todos (Drift)';
+
+  @override
+  String get todosHint => 'New todo';
+
+  @override
+  String get todosEmpty => 'Nothing to do';
+
+  @override
+  String get imagesTitle => 'Pick & compress images';
+
+  @override
+  String get pickFromGallery => 'Gallery';
+
+  @override
+  String get pickFromCamera => 'Camera';
+
+  @override
+  String imageOriginal(String size) {
+    return 'Original: $size';
+  }
+
+  @override
+  String imageCompressed(String size, int percent) {
+    return 'Compressed: $size ($percent% smaller)';
+  }
+
+  @override
+  String get compressUnsupported =>
+      'Image compression isn\'t supported on this platform.';
+
+  @override
+  String get noImageSelected => 'No image selected';
+
+  @override
+  String get tapToZoom => 'Tap an image to zoom.';
+
+  @override
+  String get photoViewerTitle => 'Photo viewer';
+
+  @override
+  String get pdfTitle => 'PDF viewer';
+
+  @override
+  String pdfPage(int page, int count) {
+    return 'Page $page / $count';
+  }
+
+  @override
+  String get previousPage => 'Previous page';
+
+  @override
+  String get nextPage => 'Next page';
+
+  @override
+  String get permissionsTitle => 'Permissions';
+
+  @override
+  String get permissionsUnsupported =>
+      'permission_handler only supports Android, iOS, Windows and web.';
+
+  @override
+  String get permissionsWindowsNote =>
+      'On Windows every permission is reported as granted.';
+
+  @override
+  String get permissionCamera => 'Camera';
+
+  @override
+  String get permissionPhotos => 'Photos';
+
+  @override
+  String get permissionLocation => 'Location (while in use)';
+
+  @override
+  String get permissionBluetoothScan => 'Bluetooth scan';
+
+  @override
+  String get permissionBluetoothConnect => 'Bluetooth connect';
+
+  @override
+  String get permissionRequest => 'Request';
+
+  @override
+  String get permissionStatusGranted => 'Granted';
+
+  @override
+  String get permissionStatusDenied => 'Denied';
+
+  @override
+  String get permissionStatusPermanentlyDenied =>
+      'Permanently denied — change it in settings';
+
+  @override
+  String get permissionStatusRestricted =>
+      'Restricted (e.g. parental controls)';
+
+  @override
+  String get permissionStatusLimited => 'Limited access';
+
+  @override
+  String get permissionStatusProvisional => 'Provisional';
+
+  @override
+  String get bluetoothTitle => 'Bluetooth LE';
+
+  @override
+  String get bluetoothUnsupported =>
+      'Bluetooth LE isn\'t available on this device.';
+
+  @override
+  String bluetoothAdapterState(String state) {
+    return 'Adapter: $state';
+  }
+
+  @override
+  String get bluetoothTurnOn => 'Turn on';
+
+  @override
+  String get bluetoothScan => 'Scan';
+
+  @override
+  String get bluetoothStopScan => 'Stop';
+
+  @override
+  String get bluetoothNoDevices => 'No devices found yet';
+
+  @override
+  String get bluetoothUnnamed => 'Unnamed device';
+
+  @override
+  String get bluetoothConnect => 'Connect';
+
+  @override
+  String get bluetoothDisconnect => 'Disconnect';
+
+  @override
+  String bluetoothServices(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count services',
+      one: '1 service',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get bluetoothLicenseNote =>
+      'flutter_blue_plus: commercial use requires a paid license.';
 }

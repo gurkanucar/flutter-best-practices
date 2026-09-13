@@ -6,7 +6,9 @@ plugins {
 
 android {
     namespace = "com.gucardev.flutterbestpractices"
-    compileSdk = flutter.compileSdkVersion
+    // permission_handler_android 14.1 is built against SDK 37 (Flutter's default is 36).
+    // Only the compile SDK changes; targetSdk/minSdk (runtime behavior, supported devices) stay the same.
+    compileSdk = 37
     ndkVersion = flutter.ndkVersion
 
     compileOptions {

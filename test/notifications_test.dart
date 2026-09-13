@@ -1,11 +1,12 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_best_practices/home_page.dart';
+import 'package:flutter_best_practices/l10n/app_localization_delegates.dart';
 import 'package:flutter_best_practices/l10n/app_localizations.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 Widget wrap(Widget child, {Locale locale = const Locale('en')}) => MaterialApp(
       locale: locale,
-      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      localizationsDelegates: appLocalizationDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
       home: child,
     );

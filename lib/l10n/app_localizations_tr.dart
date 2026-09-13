@@ -286,4 +286,275 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get keyboardTip => 'Klavyeyi kapatmak için alanın dışına dokun.';
+
+  @override
+  String get navHome => 'Ana sayfa';
+
+  @override
+  String get navProducts => 'Ürünler';
+
+  @override
+  String get navProfile => 'Profil';
+
+  @override
+  String get loginTitle => 'Giriş yap';
+
+  @override
+  String get loginUserName => 'Kullanıcı adı';
+
+  @override
+  String get loginButton => 'Giriş yap';
+
+  @override
+  String loginRequiredFor(String location) {
+    return '$location sayfasını açmak için giriş yap';
+  }
+
+  @override
+  String get logout => 'Çıkış yap';
+
+  @override
+  String profileGreeting(String name) {
+    return '$name olarak giriş yapıldı';
+  }
+
+  @override
+  String get profileEdit => 'Adı düzenle';
+
+  @override
+  String get profileNameUpdated => 'Ad güncellendi';
+
+  @override
+  String appVersion(String version, String buildNumber) {
+    return 'Sürüm $version ($buildNumber)';
+  }
+
+  @override
+  String get save => 'Kaydet';
+
+  @override
+  String get productsSortName => 'Ada göre';
+
+  @override
+  String get productsSortPrice => 'Fiyata göre';
+
+  @override
+  String get productBuy => 'Satın al';
+
+  @override
+  String get productPassedWithExtra =>
+      'Ürün nesnesi extra ile geldi (arama yapılmadı).';
+
+  @override
+  String get productLoadedById => 'Ürün URL\'deki id ile bulundu.';
+
+  @override
+  String productNotFound(String id) {
+    return '$id numaralı ürün bulunamadı';
+  }
+
+  @override
+  String get checkoutTitle => 'Ödeme';
+
+  @override
+  String get checkoutPlaceOrder => 'Siparişi ver';
+
+  @override
+  String get orderCompleteTitle => 'Sipariş tamamlandı';
+
+  @override
+  String orderCompleteMessage(String orderId) {
+    return '#$orderId numaralı sipariş alındı. Bu sayfada geri gitmek kapalı.';
+  }
+
+  @override
+  String get backToHome => 'Ana sayfaya dön';
+
+  @override
+  String get notFoundTitle => 'Sayfa bulunamadı';
+
+  @override
+  String notFoundMessage(String location) {
+    return '$location için bir sayfa yok';
+  }
+
+  @override
+  String get discardChangesTitle => 'Sayfadan çıkılsın mı?';
+
+  @override
+  String get discardChangesMessage => 'Kaydedilmemiş değişiklikler kaybolacak.';
+
+  @override
+  String get discard => 'Çık';
+
+  @override
+  String get stay => 'Kal';
+
+  @override
+  String get add => 'Ekle';
+
+  @override
+  String get hiveTitle => 'Notlar (Hive CE)';
+
+  @override
+  String get notesHint => 'Bir not yaz';
+
+  @override
+  String get notesEmpty => 'Henüz not yok';
+
+  @override
+  String get pin => 'Sabitle';
+
+  @override
+  String get unpin => 'Sabitlemeyi kaldır';
+
+  @override
+  String get driftTitle => 'Yapılacaklar (Drift)';
+
+  @override
+  String get todosHint => 'Yeni görev';
+
+  @override
+  String get todosEmpty => 'Yapılacak bir şey yok';
+
+  @override
+  String get imagesTitle => 'Görsel seç ve sıkıştır';
+
+  @override
+  String get pickFromGallery => 'Galeri';
+
+  @override
+  String get pickFromCamera => 'Kamera';
+
+  @override
+  String imageOriginal(String size) {
+    return 'Orijinal: $size';
+  }
+
+  @override
+  String imageCompressed(String size, int percent) {
+    return 'Sıkıştırılmış: $size (%$percent daha küçük)';
+  }
+
+  @override
+  String get compressUnsupported =>
+      'Görsel sıkıştırma bu platformda desteklenmiyor.';
+
+  @override
+  String get noImageSelected => 'Görsel seçilmedi';
+
+  @override
+  String get tapToZoom => 'Yakınlaştırmak için görsele dokun.';
+
+  @override
+  String get photoViewerTitle => 'Fotoğraf görüntüleyici';
+
+  @override
+  String get pdfTitle => 'PDF görüntüleyici';
+
+  @override
+  String pdfPage(int page, int count) {
+    return 'Sayfa $page / $count';
+  }
+
+  @override
+  String get previousPage => 'Önceki sayfa';
+
+  @override
+  String get nextPage => 'Sonraki sayfa';
+
+  @override
+  String get permissionsTitle => 'İzinler';
+
+  @override
+  String get permissionsUnsupported =>
+      'permission_handler yalnızca Android, iOS, Windows ve web\'de çalışır.';
+
+  @override
+  String get permissionsWindowsNote =>
+      'Windows\'ta tüm izinler verilmiş olarak görünür.';
+
+  @override
+  String get permissionCamera => 'Kamera';
+
+  @override
+  String get permissionPhotos => 'Fotoğraflar';
+
+  @override
+  String get permissionLocation => 'Konum (kullanırken)';
+
+  @override
+  String get permissionBluetoothScan => 'Bluetooth tarama';
+
+  @override
+  String get permissionBluetoothConnect => 'Bluetooth bağlantı';
+
+  @override
+  String get permissionRequest => 'İste';
+
+  @override
+  String get permissionStatusGranted => 'Verildi';
+
+  @override
+  String get permissionStatusDenied => 'Reddedildi';
+
+  @override
+  String get permissionStatusPermanentlyDenied =>
+      'Kalıcı olarak reddedildi — ayarlardan değiştir';
+
+  @override
+  String get permissionStatusRestricted => 'Kısıtlı (ör. ebeveyn denetimi)';
+
+  @override
+  String get permissionStatusLimited => 'Sınırlı erişim';
+
+  @override
+  String get permissionStatusProvisional => 'Geçici';
+
+  @override
+  String get bluetoothTitle => 'Bluetooth LE';
+
+  @override
+  String get bluetoothUnsupported => 'Bu cihazda Bluetooth LE kullanılamıyor.';
+
+  @override
+  String bluetoothAdapterState(String state) {
+    return 'Adaptör: $state';
+  }
+
+  @override
+  String get bluetoothTurnOn => 'Aç';
+
+  @override
+  String get bluetoothScan => 'Tara';
+
+  @override
+  String get bluetoothStopScan => 'Durdur';
+
+  @override
+  String get bluetoothNoDevices => 'Henüz cihaz bulunamadı';
+
+  @override
+  String get bluetoothUnnamed => 'İsimsiz cihaz';
+
+  @override
+  String get bluetoothConnect => 'Bağlan';
+
+  @override
+  String get bluetoothDisconnect => 'Bağlantıyı kes';
+
+  @override
+  String bluetoothServices(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count servis',
+      one: '1 servis',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get bluetoothLicenseNote =>
+      'flutter_blue_plus: ticari kullanım ücretli lisans gerektirir.';
 }

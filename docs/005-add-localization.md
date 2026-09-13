@@ -155,6 +155,22 @@ Commit these files — the app doesn't compile without them on a fresh checkout 
 
 ### 6. Configure `MaterialApp`
 
+> **This project now uses `package:material_ui`** ([020](020-add-go-router.md#material_ui-migration)).
+> The generated `AppLocalizations.localizationsDelegates` still lists `flutter_localizations`' Material/Cupertino
+> delegates, which `material_ui` widgets can't see → `No MaterialLocalizations found`. Use the shared list
+> instead (in the app **and** in widget tests):
+> ```dart
+> // lib/l10n/app_localization_delegates.dart
+> final List<LocalizationsDelegate<dynamic>> appLocalizationDelegates = [
+>   AppLocalizations.delegate,
+>   ...GlobalMaterialLocalizations.delegates,   // from package:material_ui
+>   FormBuilderLocalizations.delegate,
+> ];
+> ```
+> The snippets below show the plain `flutter/material.dart` setup; in this project replace
+> `AppLocalizations.localizationsDelegates` with `appLocalizationDelegates` and `MaterialApp` with
+> `MaterialApp.router` ([020](020-add-go-router.md)).
+
 **a) Follow the device language (simplest):**
 ```dart
 import 'package:flutter/material.dart';

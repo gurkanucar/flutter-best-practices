@@ -261,5 +261,281 @@
   "@keyboardHidden": { "description": "Keyboard visibility status" },
 
   "keyboardTip": "Tap outside a field to close the keyboard.",
-  "@keyboardTip": { "description": "Hint shown while the keyboard is closed" }
+  "@keyboardTip": { "description": "Hint shown while the keyboard is closed" },
+
+  "navHome": "Home",
+  "@navHome": { "description": "Bottom navigation tab" },
+
+  "navProducts": "Products",
+  "@navProducts": { "description": "Bottom navigation tab and product list title" },
+
+  "navProfile": "Profile",
+  "@navProfile": { "description": "Bottom navigation tab and profile title" },
+
+  "loginTitle": "Sign in",
+  "@loginTitle": { "description": "Login page title" },
+
+  "loginUserName": "User name",
+  "@loginUserName": { "description": "Login and edit profile text field label" },
+
+  "loginButton": "Sign in",
+  "@loginButton": { "description": "Login button" },
+
+  "loginRequiredFor": "Sign in to open {location}",
+  "@loginRequiredFor": {
+    "description": "Shown when a protected page redirected to login",
+    "placeholders": { "location": { "type": "String", "example": "/profile" } }
+  },
+
+  "logout": "Sign out",
+  "@logout": { "description": "Logout action" },
+
+  "profileGreeting": "Signed in as {name}",
+  "@profileGreeting": {
+    "description": "Current user on the profile page",
+    "placeholders": { "name": { "type": "String", "example": "Ada" } }
+  },
+
+  "profileEdit": "Edit name",
+  "@profileEdit": { "description": "Opens the edit profile page" },
+
+  "profileNameUpdated": "Name updated",
+  "@profileNameUpdated": { "description": "Snackbar after the edit page returned a new name" },
+
+  "appVersion": "Version {version} ({buildNumber})",
+  "@appVersion": {
+    "description": "App version from package_info_plus",
+    "placeholders": {
+      "version": { "type": "String", "example": "1.2.0" },
+      "buildNumber": { "type": "String", "example": "42" }
+    }
+  },
+
+  "save": "Save",
+  "@save": { "description": "Generic save button" },
+
+  "productsSortName": "By name",
+  "@productsSortName": { "description": "Sort products by name" },
+
+  "productsSortPrice": "By price",
+  "@productsSortPrice": { "description": "Sort products by price" },
+
+  "productBuy": "Buy",
+  "@productBuy": { "description": "Opens checkout for the product" },
+
+  "productPassedWithExtra": "Product object passed with extra (no lookup).",
+  "@productPassedWithExtra": { "description": "Explains how the detail page got its data" },
+
+  "productLoadedById": "Product looked up by the id in the URL.",
+  "@productLoadedById": { "description": "Explains how the detail page got its data" },
+
+  "productNotFound": "Product {id} not found",
+  "@productNotFound": {
+    "description": "Unknown product id in the URL",
+    "placeholders": { "id": { "type": "String", "example": "42" } }
+  },
+
+  "checkoutTitle": "Checkout",
+  "@checkoutTitle": { "description": "Checkout page title" },
+
+  "checkoutPlaceOrder": "Place order",
+  "@checkoutPlaceOrder": { "description": "Completes the demo order" },
+
+  "orderCompleteTitle": "Order complete",
+  "@orderCompleteTitle": { "description": "Order complete page title" },
+
+  "orderCompleteMessage": "Order #{orderId} received. Going back is disabled on this page.",
+  "@orderCompleteMessage": {
+    "description": "Order confirmation; explains the disabled back navigation",
+    "placeholders": { "orderId": { "type": "String", "example": "12345" } }
+  },
+
+  "backToHome": "Back to home",
+  "@backToHome": { "description": "Button that goes to the home page" },
+
+  "notFoundTitle": "Page not found",
+  "@notFoundTitle": { "description": "404 page title" },
+
+  "notFoundMessage": "There is no page for {location}",
+  "@notFoundMessage": {
+    "description": "404 page message",
+    "placeholders": { "location": { "type": "String", "example": "/unknown" } }
+  },
+
+  "discardChangesTitle": "Leave this page?",
+  "@discardChangesTitle": { "description": "Unsaved changes dialog title" },
+
+  "discardChangesMessage": "Your unsaved changes will be lost.",
+  "@discardChangesMessage": { "description": "Unsaved changes dialog message" },
+
+  "discard": "Leave",
+  "@discard": { "description": "Leave the page and discard changes" },
+
+  "stay": "Stay",
+  "@stay": { "description": "Stay on the page" },
+
+  "add": "Add",
+  "@add": { "description": "Generic add button tooltip" },
+
+  "hiveTitle": "Notes (Hive CE)",
+  "@hiveTitle": { "description": "Hive demo page title" },
+
+  "notesHint": "Write a note",
+  "@notesHint": { "description": "Note input label" },
+
+  "notesEmpty": "No notes yet",
+  "@notesEmpty": { "description": "Empty notes list" },
+
+  "pin": "Pin",
+  "@pin": { "description": "Pin a note to the top" },
+
+  "unpin": "Unpin",
+  "@unpin": { "description": "Unpin a note" },
+
+  "driftTitle": "Todos (Drift)",
+  "@driftTitle": { "description": "Drift demo page title" },
+
+  "todosHint": "New todo",
+  "@todosHint": { "description": "Todo input label" },
+
+  "todosEmpty": "Nothing to do",
+  "@todosEmpty": { "description": "Empty todo list" },
+
+  "imagesTitle": "Pick & compress images",
+  "@imagesTitle": { "description": "image_picker + flutter_image_compress demo title" },
+
+  "pickFromGallery": "Gallery",
+  "@pickFromGallery": { "description": "Pick an image from the gallery / files" },
+
+  "pickFromCamera": "Camera",
+  "@pickFromCamera": { "description": "Take a photo with the camera" },
+
+  "imageOriginal": "Original: {size}",
+  "@imageOriginal": {
+    "description": "Original image size",
+    "placeholders": { "size": { "type": "String", "example": "2.4 MB" } }
+  },
+
+  "imageCompressed": "Compressed: {size} ({percent}% smaller)",
+  "@imageCompressed": {
+    "description": "Compressed image size and saving",
+    "placeholders": {
+      "size": { "type": "String", "example": "310.2 KB" },
+      "percent": { "type": "int" }
+    }
+  },
+
+  "compressUnsupported": "Image compression isn't supported on this platform.",
+  "@compressUnsupported": { "description": "Shown on Windows and Linux" },
+
+  "noImageSelected": "No image selected",
+  "@noImageSelected": { "description": "Nothing picked yet" },
+
+  "tapToZoom": "Tap an image to zoom.",
+  "@tapToZoom": { "description": "Hint above the thumbnails" },
+
+  "photoViewerTitle": "Photo viewer",
+  "@photoViewerTitle": { "description": "photo_view page title" },
+
+  "pdfTitle": "PDF viewer",
+  "@pdfTitle": { "description": "pdfrx demo title" },
+
+  "pdfPage": "Page {page} / {count}",
+  "@pdfPage": {
+    "description": "Current page of the PDF",
+    "placeholders": { "page": { "type": "int" }, "count": { "type": "int" } }
+  },
+
+  "previousPage": "Previous page",
+  "@previousPage": { "description": "Go to the previous PDF page" },
+
+  "nextPage": "Next page",
+  "@nextPage": { "description": "Go to the next PDF page" },
+
+  "permissionsTitle": "Permissions",
+  "@permissionsTitle": { "description": "permission_handler demo title" },
+
+  "permissionsUnsupported": "permission_handler only supports Android, iOS, Windows and web.",
+  "@permissionsUnsupported": { "description": "Shown on macOS and Linux" },
+
+  "permissionsWindowsNote": "On Windows every permission is reported as granted.",
+  "@permissionsWindowsNote": { "description": "permission_handler Windows limitation" },
+
+  "permissionCamera": "Camera",
+  "@permissionCamera": { "description": "Camera permission" },
+
+  "permissionPhotos": "Photos",
+  "@permissionPhotos": { "description": "Photo library permission" },
+
+  "permissionLocation": "Location (while in use)",
+  "@permissionLocation": { "description": "Location permission" },
+
+  "permissionBluetoothScan": "Bluetooth scan",
+  "@permissionBluetoothScan": { "description": "Android 12+ BLUETOOTH_SCAN permission" },
+
+  "permissionBluetoothConnect": "Bluetooth connect",
+  "@permissionBluetoothConnect": { "description": "Android 12+ BLUETOOTH_CONNECT permission" },
+
+  "permissionRequest": "Request",
+  "@permissionRequest": { "description": "Request a permission" },
+
+  "permissionStatusGranted": "Granted",
+  "@permissionStatusGranted": { "description": "Permission status" },
+
+  "permissionStatusDenied": "Denied",
+  "@permissionStatusDenied": { "description": "Permission status" },
+
+  "permissionStatusPermanentlyDenied": "Permanently denied — change it in settings",
+  "@permissionStatusPermanentlyDenied": { "description": "Permission status" },
+
+  "permissionStatusRestricted": "Restricted (e.g. parental controls)",
+  "@permissionStatusRestricted": { "description": "Permission status" },
+
+  "permissionStatusLimited": "Limited access",
+  "@permissionStatusLimited": { "description": "Permission status (iOS selected photos)" },
+
+  "permissionStatusProvisional": "Provisional",
+  "@permissionStatusProvisional": { "description": "Permission status (iOS provisional notifications)" },
+
+  "bluetoothTitle": "Bluetooth LE",
+  "@bluetoothTitle": { "description": "flutter_blue_plus demo title" },
+
+  "bluetoothUnsupported": "Bluetooth LE isn't available on this device.",
+  "@bluetoothUnsupported": { "description": "No BLE adapter / unsupported browser" },
+
+  "bluetoothAdapterState": "Adapter: {state}",
+  "@bluetoothAdapterState": {
+    "description": "Bluetooth adapter state",
+    "placeholders": { "state": { "type": "String", "example": "on" } }
+  },
+
+  "bluetoothTurnOn": "Turn on",
+  "@bluetoothTurnOn": { "description": "Turn Bluetooth on (Android)" },
+
+  "bluetoothScan": "Scan",
+  "@bluetoothScan": { "description": "Start a BLE scan" },
+
+  "bluetoothStopScan": "Stop",
+  "@bluetoothStopScan": { "description": "Stop the BLE scan" },
+
+  "bluetoothNoDevices": "No devices found yet",
+  "@bluetoothNoDevices": { "description": "Empty scan result list" },
+
+  "bluetoothUnnamed": "Unnamed device",
+  "@bluetoothUnnamed": { "description": "Device without an advertised name" },
+
+  "bluetoothConnect": "Connect",
+  "@bluetoothConnect": { "description": "Connect to a BLE device" },
+
+  "bluetoothDisconnect": "Disconnect",
+  "@bluetoothDisconnect": { "description": "Disconnect from a BLE device" },
+
+  "bluetoothServices": "{count, plural, =1{1 service} other{{count} services}}",
+  "@bluetoothServices": {
+    "description": "Number of discovered GATT services",
+    "placeholders": { "count": { "type": "int" } }
+  },
+
+  "bluetoothLicenseNote": "flutter_blue_plus: commercial use requires a paid license.",
+  "@bluetoothLicenseNote": { "description": "License reminder on the BLE demo page" }
 }

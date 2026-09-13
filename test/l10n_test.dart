@@ -1,5 +1,8 @@
-import 'package:flutter/material.dart';
+import 'package:flutter_best_practices/auth/auth_controller.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_best_practices/home_page.dart';
+import 'package:flutter_best_practices/l10n/app_localization_delegates.dart';
 import 'package:flutter_best_practices/l10n/app_localizations.dart';
 import 'package:flutter_best_practices/l10n/language_selector.dart';
 import 'package:flutter_best_practices/l10n/supported_languages.dart';
@@ -8,7 +11,7 @@ import 'package:flutter_test/flutter_test.dart';
 
 Widget wrap(Widget child, {Locale locale = const Locale('en')}) => MaterialApp(
       locale: locale,
-      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      localizationsDelegates: appLocalizationDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
       home: child,
     );
@@ -49,7 +52,8 @@ void main() {
 
   testWidgets('language selector switches between system, Turkish and English',
       (tester) async {
-    await tester.pumpWidget(const MainApp());
+    FlutterSecureStorage.setMockInitialValues({});
+    await tester.pumpWidget(MainApp(auth: AuthController()));
     await tester.pumpAndSettle();
     expect(find.text('Hello!'), findsOneWidget); // test device locale = en_US
 

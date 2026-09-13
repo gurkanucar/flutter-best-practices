@@ -1,44 +1,50 @@
 # Forms with flutter_form_builder + form_builder_validators
 
-- [`flutter_form_builder`](https://pub.dev/packages/flutter_form_builder) **10.3.x** — `FormBuilder` + ready-made fields;
+- [`flutter_form_builder`](https://pub.dev/packages/flutter_form_builder) **11.x** — `FormBuilder` + ready-made fields;
   collects all values into a `Map` with one call.
 - [`form_builder_validators`](https://pub.dev/packages/form_builder_validators) **11.x** — reusable validators
   with translated error messages (incl. Turkish).
 
 Pure Dart/Flutter, all platforms.
 
-> ⚠️ **Why 10.3.x and not 11.x?** `flutter_form_builder` 11.0.0 moved to the separate
-> [`material_ui`](https://pub.dev/packages/material_ui) package. Its `TextField`, `Material`, `Theme` are
-> **different classes** from `package:flutter/material.dart`. Inside our `flutter/material` `MaterialApp`
-> a v11 field throws **`No Material widget found`** (verified with a widget test).
-> Stay on 10.x until the whole app migrates to `material_ui`
-> (all imports + `material_ui`'s `MaterialApp`/localization delegates), then upgrade.
+> ⚠️ **`flutter_form_builder` 11 is built on [`material_ui`](https://pub.dev/packages/material_ui).**
+> Its `TextField`, `Material`, `Theme` are **different classes** from `package:flutter/material.dart`.
+> Inside a `flutter/material` `MaterialApp` a v11 field throws **`No Material widget found`**
+> (verified with a widget test). This project is migrated to `material_ui`
+> ([020](020-add-go-router.md#material_ui-migration)), so it uses 11.x.
+> Apps still on `flutter/material.dart` must pin `flutter_form_builder: ^10.3.0+2`.
 
 ## Steps
 
 ### 1. Add dependencies
 ```bash
-flutter pub add "flutter_form_builder:^10.3.0+2" form_builder_validators
+flutter pub add "flutter_form_builder:^11.0.0" form_builder_validators
 ```
 In PowerShell keep the quotes — otherwise `^` is swallowed and the version is pinned exactly.
 
 `pubspec.yaml`:
 ```yaml
 dependencies:
-  # 11.x is built on package:material_ui and crashes inside a package:flutter/material.dart app.
-  flutter_form_builder: ^10.3.0+2
+  # 11.x uses package:material_ui — the app is migrated to material_ui, so this is fine.
+  flutter_form_builder: ^11.0.0
   form_builder_validators: ^11.3.0
 ```
 
 ### 2. Translated validator messages — `lib/main.dart`
+`lib/l10n/app_localization_delegates.dart` (used by `main.dart` and every widget test):
 ```dart
 import 'package:form_builder_validators/form_builder_validators.dart';
+import 'package:material_ui/material_ui.dart';
 
-MaterialApp(
-  localizationsDelegates: const [
-    ...AppLocalizations.localizationsDelegates,
-    FormBuilderLocalizations.delegate,
-  ],
+final List<LocalizationsDelegate<dynamic>> appLocalizationDelegates = [
+  AppLocalizations.delegate,
+  ...GlobalMaterialLocalizations.delegates,   // material_ui: Widgets + Material + Cupertino
+  FormBuilderLocalizations.delegate,          // translated validator error messages
+];
+
+// main.dart
+MaterialApp.router(
+  localizationsDelegates: appLocalizationDelegates,
   supportedLocales: AppLocalizations.supportedLocales,   // en + tr — both supported by the validators
 )
 ```
@@ -188,10 +194,7 @@ for name/email/password so password managers work.
 ```dart
 Widget wrap(Widget child, {Locale locale = const Locale('en')}) => MaterialApp(
       locale: locale,
-      localizationsDelegates: const [
-        ...AppLocalizations.localizationsDelegates,
-        FormBuilderLocalizations.delegate,
-      ],
+      localizationsDelegates: appLocalizationDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
       home: child,
     );
@@ -211,7 +214,8 @@ Covered: English + Turkish required errors, valid submit dialog, password mismat
 ## Troubleshooting
 | Problem | Fix |
 |---|---|
-| `No Material widget found` from a `FormBuilder*` field | You're on `flutter_form_builder` 11.x in a `flutter/material` app → use `^10.3.0+2` (or migrate app to `material_ui`) |
+| `No Material widget found` from a `FormBuilder*` field | 11.x inside a `flutter/material` app → migrate the app to `material_ui` ([020](020-add-go-router.md#material_ui-migration)) or pin `^10.3.0+2` |
+| `No MaterialLocalizations found` | Using `AppLocalizations.localizationsDelegates` → use `appLocalizationDelegates` (material_ui delegates) |
 | Error messages always English | Add `FormBuilderLocalizations.delegate` to `localizationsDelegates` |
 | `form.value` is empty | You called `validate()` — use `saveAndValidate()` or read `instantValue` |
 | Optional field shows "cannot be empty" | v11 validators check null/empty → `checkNullOrEmpty: false` |

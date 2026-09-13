@@ -261,5 +261,281 @@
   "@keyboardHidden": { "description": "Keyboard visibility status" },
 
   "keyboardTip": "Klavyeyi kapatmak için alanın dışına dokun.",
-  "@keyboardTip": { "description": "Hint shown while the keyboard is closed" }
+  "@keyboardTip": { "description": "Hint shown while the keyboard is closed" },
+
+  "navHome": "Ana sayfa",
+  "@navHome": { "description": "Bottom navigation tab" },
+
+  "navProducts": "Ürünler",
+  "@navProducts": { "description": "Bottom navigation tab and product list title" },
+
+  "navProfile": "Profil",
+  "@navProfile": { "description": "Bottom navigation tab and profile title" },
+
+  "loginTitle": "Giriş yap",
+  "@loginTitle": { "description": "Login page title" },
+
+  "loginUserName": "Kullanıcı adı",
+  "@loginUserName": { "description": "Login and edit profile text field label" },
+
+  "loginButton": "Giriş yap",
+  "@loginButton": { "description": "Login button" },
+
+  "loginRequiredFor": "{location} sayfasını açmak için giriş yap",
+  "@loginRequiredFor": {
+    "description": "Shown when a protected page redirected to login",
+    "placeholders": { "location": { "type": "String", "example": "/profile" } }
+  },
+
+  "logout": "Çıkış yap",
+  "@logout": { "description": "Logout action" },
+
+  "profileGreeting": "{name} olarak giriş yapıldı",
+  "@profileGreeting": {
+    "description": "Current user on the profile page",
+    "placeholders": { "name": { "type": "String", "example": "Ada" } }
+  },
+
+  "profileEdit": "Adı düzenle",
+  "@profileEdit": { "description": "Opens the edit profile page" },
+
+  "profileNameUpdated": "Ad güncellendi",
+  "@profileNameUpdated": { "description": "Snackbar after the edit page returned a new name" },
+
+  "appVersion": "Sürüm {version} ({buildNumber})",
+  "@appVersion": {
+    "description": "App version from package_info_plus",
+    "placeholders": {
+      "version": { "type": "String", "example": "1.2.0" },
+      "buildNumber": { "type": "String", "example": "42" }
+    }
+  },
+
+  "save": "Kaydet",
+  "@save": { "description": "Generic save button" },
+
+  "productsSortName": "Ada göre",
+  "@productsSortName": { "description": "Sort products by name" },
+
+  "productsSortPrice": "Fiyata göre",
+  "@productsSortPrice": { "description": "Sort products by price" },
+
+  "productBuy": "Satın al",
+  "@productBuy": { "description": "Opens checkout for the product" },
+
+  "productPassedWithExtra": "Ürün nesnesi extra ile geldi (arama yapılmadı).",
+  "@productPassedWithExtra": { "description": "Explains how the detail page got its data" },
+
+  "productLoadedById": "Ürün URL'deki id ile bulundu.",
+  "@productLoadedById": { "description": "Explains how the detail page got its data" },
+
+  "productNotFound": "{id} numaralı ürün bulunamadı",
+  "@productNotFound": {
+    "description": "Unknown product id in the URL",
+    "placeholders": { "id": { "type": "String", "example": "42" } }
+  },
+
+  "checkoutTitle": "Ödeme",
+  "@checkoutTitle": { "description": "Checkout page title" },
+
+  "checkoutPlaceOrder": "Siparişi ver",
+  "@checkoutPlaceOrder": { "description": "Completes the demo order" },
+
+  "orderCompleteTitle": "Sipariş tamamlandı",
+  "@orderCompleteTitle": { "description": "Order complete page title" },
+
+  "orderCompleteMessage": "#{orderId} numaralı sipariş alındı. Bu sayfada geri gitmek kapalı.",
+  "@orderCompleteMessage": {
+    "description": "Order confirmation; explains the disabled back navigation",
+    "placeholders": { "orderId": { "type": "String", "example": "12345" } }
+  },
+
+  "backToHome": "Ana sayfaya dön",
+  "@backToHome": { "description": "Button that goes to the home page" },
+
+  "notFoundTitle": "Sayfa bulunamadı",
+  "@notFoundTitle": { "description": "404 page title" },
+
+  "notFoundMessage": "{location} için bir sayfa yok",
+  "@notFoundMessage": {
+    "description": "404 page message",
+    "placeholders": { "location": { "type": "String", "example": "/unknown" } }
+  },
+
+  "discardChangesTitle": "Sayfadan çıkılsın mı?",
+  "@discardChangesTitle": { "description": "Unsaved changes dialog title" },
+
+  "discardChangesMessage": "Kaydedilmemiş değişiklikler kaybolacak.",
+  "@discardChangesMessage": { "description": "Unsaved changes dialog message" },
+
+  "discard": "Çık",
+  "@discard": { "description": "Leave the page and discard changes" },
+
+  "stay": "Kal",
+  "@stay": { "description": "Stay on the page" },
+
+  "add": "Ekle",
+  "@add": { "description": "Generic add button tooltip" },
+
+  "hiveTitle": "Notlar (Hive CE)",
+  "@hiveTitle": { "description": "Hive demo page title" },
+
+  "notesHint": "Bir not yaz",
+  "@notesHint": { "description": "Note input label" },
+
+  "notesEmpty": "Henüz not yok",
+  "@notesEmpty": { "description": "Empty notes list" },
+
+  "pin": "Sabitle",
+  "@pin": { "description": "Pin a note to the top" },
+
+  "unpin": "Sabitlemeyi kaldır",
+  "@unpin": { "description": "Unpin a note" },
+
+  "driftTitle": "Yapılacaklar (Drift)",
+  "@driftTitle": { "description": "Drift demo page title" },
+
+  "todosHint": "Yeni görev",
+  "@todosHint": { "description": "Todo input label" },
+
+  "todosEmpty": "Yapılacak bir şey yok",
+  "@todosEmpty": { "description": "Empty todo list" },
+
+  "imagesTitle": "Görsel seç ve sıkıştır",
+  "@imagesTitle": { "description": "image_picker + flutter_image_compress demo title" },
+
+  "pickFromGallery": "Galeri",
+  "@pickFromGallery": { "description": "Pick an image from the gallery / files" },
+
+  "pickFromCamera": "Kamera",
+  "@pickFromCamera": { "description": "Take a photo with the camera" },
+
+  "imageOriginal": "Orijinal: {size}",
+  "@imageOriginal": {
+    "description": "Original image size",
+    "placeholders": { "size": { "type": "String", "example": "2.4 MB" } }
+  },
+
+  "imageCompressed": "Sıkıştırılmış: {size} (%{percent} daha küçük)",
+  "@imageCompressed": {
+    "description": "Compressed image size and saving",
+    "placeholders": {
+      "size": { "type": "String", "example": "310.2 KB" },
+      "percent": { "type": "int" }
+    }
+  },
+
+  "compressUnsupported": "Görsel sıkıştırma bu platformda desteklenmiyor.",
+  "@compressUnsupported": { "description": "Shown on Windows and Linux" },
+
+  "noImageSelected": "Görsel seçilmedi",
+  "@noImageSelected": { "description": "Nothing picked yet" },
+
+  "tapToZoom": "Yakınlaştırmak için görsele dokun.",
+  "@tapToZoom": { "description": "Hint above the thumbnails" },
+
+  "photoViewerTitle": "Fotoğraf görüntüleyici",
+  "@photoViewerTitle": { "description": "photo_view page title" },
+
+  "pdfTitle": "PDF görüntüleyici",
+  "@pdfTitle": { "description": "pdfrx demo title" },
+
+  "pdfPage": "Sayfa {page} / {count}",
+  "@pdfPage": {
+    "description": "Current page of the PDF",
+    "placeholders": { "page": { "type": "int" }, "count": { "type": "int" } }
+  },
+
+  "previousPage": "Önceki sayfa",
+  "@previousPage": { "description": "Go to the previous PDF page" },
+
+  "nextPage": "Sonraki sayfa",
+  "@nextPage": { "description": "Go to the next PDF page" },
+
+  "permissionsTitle": "İzinler",
+  "@permissionsTitle": { "description": "permission_handler demo title" },
+
+  "permissionsUnsupported": "permission_handler yalnızca Android, iOS, Windows ve web'de çalışır.",
+  "@permissionsUnsupported": { "description": "Shown on macOS and Linux" },
+
+  "permissionsWindowsNote": "Windows'ta tüm izinler verilmiş olarak görünür.",
+  "@permissionsWindowsNote": { "description": "permission_handler Windows limitation" },
+
+  "permissionCamera": "Kamera",
+  "@permissionCamera": { "description": "Camera permission" },
+
+  "permissionPhotos": "Fotoğraflar",
+  "@permissionPhotos": { "description": "Photo library permission" },
+
+  "permissionLocation": "Konum (kullanırken)",
+  "@permissionLocation": { "description": "Location permission" },
+
+  "permissionBluetoothScan": "Bluetooth tarama",
+  "@permissionBluetoothScan": { "description": "Android 12+ BLUETOOTH_SCAN permission" },
+
+  "permissionBluetoothConnect": "Bluetooth bağlantı",
+  "@permissionBluetoothConnect": { "description": "Android 12+ BLUETOOTH_CONNECT permission" },
+
+  "permissionRequest": "İste",
+  "@permissionRequest": { "description": "Request a permission" },
+
+  "permissionStatusGranted": "Verildi",
+  "@permissionStatusGranted": { "description": "Permission status" },
+
+  "permissionStatusDenied": "Reddedildi",
+  "@permissionStatusDenied": { "description": "Permission status" },
+
+  "permissionStatusPermanentlyDenied": "Kalıcı olarak reddedildi — ayarlardan değiştir",
+  "@permissionStatusPermanentlyDenied": { "description": "Permission status" },
+
+  "permissionStatusRestricted": "Kısıtlı (ör. ebeveyn denetimi)",
+  "@permissionStatusRestricted": { "description": "Permission status" },
+
+  "permissionStatusLimited": "Sınırlı erişim",
+  "@permissionStatusLimited": { "description": "Permission status (iOS selected photos)" },
+
+  "permissionStatusProvisional": "Geçici",
+  "@permissionStatusProvisional": { "description": "Permission status (iOS provisional notifications)" },
+
+  "bluetoothTitle": "Bluetooth LE",
+  "@bluetoothTitle": { "description": "flutter_blue_plus demo title" },
+
+  "bluetoothUnsupported": "Bu cihazda Bluetooth LE kullanılamıyor.",
+  "@bluetoothUnsupported": { "description": "No BLE adapter / unsupported browser" },
+
+  "bluetoothAdapterState": "Adaptör: {state}",
+  "@bluetoothAdapterState": {
+    "description": "Bluetooth adapter state",
+    "placeholders": { "state": { "type": "String", "example": "on" } }
+  },
+
+  "bluetoothTurnOn": "Aç",
+  "@bluetoothTurnOn": { "description": "Turn Bluetooth on (Android)" },
+
+  "bluetoothScan": "Tara",
+  "@bluetoothScan": { "description": "Start a BLE scan" },
+
+  "bluetoothStopScan": "Durdur",
+  "@bluetoothStopScan": { "description": "Stop the BLE scan" },
+
+  "bluetoothNoDevices": "Henüz cihaz bulunamadı",
+  "@bluetoothNoDevices": { "description": "Empty scan result list" },
+
+  "bluetoothUnnamed": "İsimsiz cihaz",
+  "@bluetoothUnnamed": { "description": "Device without an advertised name" },
+
+  "bluetoothConnect": "Bağlan",
+  "@bluetoothConnect": { "description": "Connect to a BLE device" },
+
+  "bluetoothDisconnect": "Bağlantıyı kes",
+  "@bluetoothDisconnect": { "description": "Disconnect from a BLE device" },
+
+  "bluetoothServices": "{count, plural, =1{1 servis} other{{count} servis}}",
+  "@bluetoothServices": {
+    "description": "Number of discovered GATT services",
+    "placeholders": { "count": { "type": "int" } }
+  },
+
+  "bluetoothLicenseNote": "flutter_blue_plus: ticari kullanım ücretli lisans gerektirir.",
+  "@bluetoothLicenseNote": { "description": "License reminder on the BLE demo page" }
 }
