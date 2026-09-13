@@ -21,6 +21,29 @@ flutter pub add screen_protector
 No permissions or native setup. `protectDataLeakageWithImage('LaunchImage')` needs an image set with that name in
 `ios/Runner/Assets.xcassets`.
 
+**Android build fix (AGP 9 + `android.builtInKotlin=false`).** The plugin applies `kotlin-android` only on AGP < 9
+and otherwise relies on AGP's built-in Kotlin. Flutter's template sets `android.builtInKotlin=false`, so the
+plugin's Kotlin sources are never compiled and the build fails with:
+```
+GeneratedPluginRegistrant.java: error: cannot find symbol
+  new com.prongbang.screen_protector.ScreenProtectorPlugin()
+```
+Workaround in `android/build.gradle.kts` (applies Kotlin to that plugin project only):
+```kotlin
+subprojects {
+    if (name == "screen_protector") {
+        pluginManager.withPlugin("com.android.library") {
+            pluginManager.apply("org.jetbrains.kotlin.android")
+            tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
+                compilerOptions.jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
+            }
+        }
+    }
+}
+```
+Remove it once the plugin fixes this or the project switches to `android.builtInKotlin=true` (only possible when no
+plugin applies KGP anymore — see the build warning listing them).
+
 ### 2. What each call does
 | Dart | Android | iOS |
 |---|---|---|
